@@ -1,0 +1,16 @@
+<resources>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">p1Xryrw-ITsG9Cz__AdBCz4rcSS_rktkMEgGE</string>
+    <string name="CodePushPublicKey">-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA28oeNxERFYQ1qb//vH2i
+lvZJ7kPX5ObZwLBahwp0+qa1OoTgfEl+4wEyUHPYKMHUj41/a1+t8s3162FJIMN2
+ARIoZ+Larkbw69lp3Y3y7hLmIFngbP9jho6Le1Cjv1A2v6A91m6QeByjgVXmXydz
+jOP72Yxs9yTsua4dYEFLPpzLdcUVmvV0Au4sedDgJF09FYArdGDAhKhSs2EgWkIP
+j6hRGuPTSMX7WSrFXNHCBSKgKjFdjKTkp4TJaVaRAnDyGo/pbXcNl40xQ5TgLwYH
+j8zkJ5x6RdlMmXXylcQ1fg5W6p7LpMEoSEZb+nMlGgnjd1UhJXJI6+7nSiXz+YyT
+zQIDAQAB
+-----END PUBLIC KEY-----</string>
+    <string name="app_name">코스미</string>
+    <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true">ENABLE_IN_JS</string>
+    <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true">ALWAYS_SEND</string>
+    <string name="kakao_app_key">40eaf1aa2d8e73c44352a0a80ba73735</string>
+</resources>
