@@ -55,9 +55,6 @@ import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.bugsnag.BugsnagReactNative;
 import com.reactnativecommunity.rnpermissions.RNPermissionsPackage; 
 
-// will remove
-import org.pentarex.rngallerymanager.RNGalleryManagerPackage;
-
 public class MainApplication extends NavigationApplication {
     @Override
     public void onCreate() {
@@ -100,7 +97,6 @@ public class MainApplication extends NavigationApplication {
                 new SplashScreenReactPackage(),
                 new RNKakaoLoginsPackage(),
                 new IDFAPackage(),
-                new RNGalleryManagerPackage(),
                 new ImageResizerPackage(),
                 new RNFetchBlobPackage(),
                 new PickerPackage(),
