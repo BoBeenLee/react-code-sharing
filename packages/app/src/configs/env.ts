@@ -10,7 +10,7 @@ interface IEnvironment {
 
 interface IEnvironmentEntry {
   REACT_ENV: string;
-  GA_KEY?: string;
+  WEBVIEW_URL: string;
 }
 
 const REACT_ENV = _.defaultTo((config as any).REACT_ENV, "staging") as keyof IEnvironment;
@@ -19,22 +19,22 @@ const REACT_ENV = _.defaultTo((config as any).REACT_ENV, "staging") as keyof IEn
 const env: IEnvironment = {
   development: {
     REACT_ENV,
-    GA_KEY: "GA_KEY"
+    WEBVIEW_URL: "http://localhost:8000/"
   },
   production: {
     REACT_ENV,
-    GA_KEY: "GA_KEY"
+    WEBVIEW_URL: "http://localhost:8000/"
   },
   staging: {
     REACT_ENV,
-    GA_KEY: "GA_KEY"
+    WEBVIEW_URL: "http://localhost:8000/"
   },
   storybook: {
     REACT_ENV,
-    GA_KEY: "GA_KEY"
+    WEBVIEW_URL: "http://localhost:8000/"
   }
 };
 
 export const isStorybook = () => REACT_ENV === "storybook";
 
-export default env[REACT_ENV] || {};
+export default env[REACT_ENV] || {} as IEnvironmentEntry; 

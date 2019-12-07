@@ -6,6 +6,7 @@ import styled from "styled-components/native";
 import XEIcon from "src/components/icon/XEIcon";
 import { Bold12, Bold20 } from "src/components/text/Typographies";
 import images from "src/images";
+import TestWebview from "src/screens/webview/TestWebview";
 import { IStore } from "src/stores/Store";
 
 interface IInject {
@@ -36,6 +37,7 @@ class SplashScreen extends React.Component<IInject> {
     return (
       <Container>
         <Text>{this.props.store!.appStateStatus}1</Text>
+        <TestWebview />
         <LottieView
           style={{
             backgroundColor: "#eee",
