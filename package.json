@@ -15,7 +15,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@gitlab.com:blended.dev/fitsme/functions.git"
+		"url": "git@gitlab.com:rnapp/rnapp/rnapp.git"
 	},
 	"author": "",
 	"license": "ISC",

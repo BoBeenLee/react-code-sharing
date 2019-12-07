@@ -1,4 +1,4 @@
-package kr.fitsme.app;
+package kr.rnapp.app;
 
 import android.app.Application;
 import android.content.Context;
@@ -13,7 +13,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Arrays;
 
-import kr.fitsme.app.BuildConfig;
+import kr.rnapp.app.BuildConfig;
 
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;

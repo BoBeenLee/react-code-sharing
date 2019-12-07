@@ -1,9 +1,9 @@
-package kr.fitsme.app;
+package kr.rnapp.app;
 
 import android.os.Build;
 import android.os.Bundle;
 
-import kr.fitsme.app.MainApplication;
+import kr.rnapp.app.MainApplication;
 
 import com.reactnativenavigation.NavigationActivity;
 import com.reactnativenavigation.utils.CommandListenerAdapter;

@@ -143,7 +143,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "kr.fitsme.app"
+        applicationId "kr.rnapp.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         missingDimensionStrategy "RNN.reactNativeVersion", "reactNative60" // See note below!
