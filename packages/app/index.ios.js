@@ -1,29 +1,18 @@
 import { Navigation } from "react-native-navigation";
 
-import env from "src/configs/env";
-import { setupReactotron } from "./ReactotronConfig";
-import App from "./src/App";
-import Store from "./src/stores/Store";
+import { isStorybook } from "src/configs/env";
+import { registerScreens } from "src/screens";
+import { start as navigatorStart } from "src/utils/navigator";
 
 async function start() {
-    const store = Store.create();
-
-    setupReactotron(store);
-
-    Navigation.registerComponent(`navigation.playground.WelcomeScreen`, () => App);
+    registerScreens();
 
     Navigation.events().registerAppLaunchedListener(() => {
-        Navigation.setRoot({
-            root: {
-                component: {
-                    name: "navigation.playground.WelcomeScreen"
-                }
-            }
-        });
+        navigatorStart();
     });
 }
 
-if (env.isStorybook) {
+if (isStorybook()) {
     // tslint:disable-next-line:no-var-requires
     const startStorybook = require("/storybook/storybook").default;
     startStorybook();

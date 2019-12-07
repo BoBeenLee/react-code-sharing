@@ -46,7 +46,7 @@ npm ci
 - add specific project
 
 ```sh
-    npx lerna add <npm-library-name> --scope=@fitsme/product
+    npx lerna add <npm-library-name> --scope=@rnapp/app
 ```
 
 - add devDependencies
@@ -58,7 +58,7 @@ npm ci
 - Add local package to another package
 
 ```sh
-    npx lerna add @fitsme/product
+    npx lerna add @rnapp/app
 ```
 
 ### **Run npm command**
@@ -70,7 +70,7 @@ npm ci
 - if pecific project
 
 ```sh
-   npx lerna run --scope="@fitsme/product" lint
+   npx lerna run --scope="@rnapp/app" lint
 ```
 
 ### **Run arbitrary command**
@@ -82,7 +82,7 @@ npm ci
 - if pecific project
 
 ```sh
-   npx lerna exec --scope="@fitsme/product" -- rm -rf ./node_modules
+   npx lerna exec --scope="@rnapp/app" -- rm -rf ./node_modules
 ```
 
 

@@ -1,7 +1,6 @@
 import LottieView from 'lottie-react-native';
 import { inject, observer } from "mobx-react";
 import React from "react";
-import Splash from "react-native-splash-screen";
 import styled from "styled-components/native";
 
 import XEIcon from "src/components/icon/XEIcon";
@@ -32,15 +31,11 @@ const Text = styled(Bold20)`
 @observer
 class SplashScreen extends React.Component<IInject> {
   public animation: any = null;
-  public componentDidMount() {
-    this.animation.play();
-    Splash.hide();
-  }
 
   public render() {
     return (
       <Container>
-        <Text>{this.props.store!.text}1</Text>
+        <Text>{this.props.store!.appStateStatus}1</Text>
         <LottieView
           style={{
             backgroundColor: "#eee",

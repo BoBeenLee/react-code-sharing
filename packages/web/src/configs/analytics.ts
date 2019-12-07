@@ -1,11 +1,20 @@
-import Pixel from "react-facebook-pixel";
 import GA, { EventArgs } from "react-ga";
 import env from "src/configs/env";
+
+export enum EventType {
+  TEST = "TEST",
+}
+
+export enum CategoryType {
+  TEST = "TEST"
+}
 
 export interface IPixelEvent {
   key: string;
   data: { [$key: string]: any };
 }
+
+export const URI_MAX_LENGTH = 20;
 
 export const sendGAEvent = ({ action, category, label, value }: EventArgs) => {
   if (env.GA_KEY) {
@@ -21,17 +30,5 @@ export const sendGAEvent = ({ action, category, label, value }: EventArgs) => {
 export const sendGAPageview = (url: string) => {
   if (env.GA_KEY) {
     GA.pageview(url);
-  }
-};
-
-export const sendPixelEvent = (key: string, data: { [key: string]: any }) => {
-  if (env.PIXEL_KEY) {
-    Pixel.trackCustom(key, data);
-  }
-};
-
-export const sendPixelPageview = () => {
-  if (env.PIXEL_KEY) {
-    Pixel.pageView();
   }
 };
