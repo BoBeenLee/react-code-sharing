@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "FitsMe.app"
-               BlueprintName = "FitsMe"
-               ReferencedContainer = "container:FitsMe.xcodeproj">
+               BuildableName = "RNApp.app"
+               BlueprintName = "RNApp"
+               ReferencedContainer = "container:RNApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "FitsMeTests.xctest"
-               BlueprintName = "FitsMeTests"
-               ReferencedContainer = "container:FitsMe.xcodeproj">
+               BuildableName = "RNAppTests.xctest"
+               BlueprintName = "RNAppTests"
+               ReferencedContainer = "container:RNApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "FitsMeTests.xctest"
-               BlueprintName = "FitsMeTests"
-               ReferencedContainer = "container:FitsMe.xcodeproj">
+               BuildableName = "RNAppTests.xctest"
+               BlueprintName = "RNAppTests"
+               ReferencedContainer = "container:RNApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "FitsMe.app"
-            BlueprintName = "FitsMe"
-            ReferencedContainer = "container:FitsMe.xcodeproj">
+            BuildableName = "RNApp.app"
+            BlueprintName = "RNApp"
+            ReferencedContainer = "container:RNApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "FitsMe.app"
-            BlueprintName = "FitsMe"
-            ReferencedContainer = "container:FitsMe.xcodeproj">
+            BuildableName = "RNApp.app"
+            BlueprintName = "RNApp"
+            ReferencedContainer = "container:RNApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "FitsMe.app"
-            BlueprintName = "FitsMe"
-            ReferencedContainer = "container:FitsMe.xcodeproj">
+            BuildableName = "RNApp.app"
+            BlueprintName = "RNApp"
+            ReferencedContainer = "container:RNApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

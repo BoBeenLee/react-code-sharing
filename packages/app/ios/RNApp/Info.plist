@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>FITSME</string>
+	<string>RNApp</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIconName</key>
@@ -38,7 +38,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fitsme</string>
+				<string>rnapp</string>
 			</array>
 		</dict>
 	</array>
@@ -59,7 +59,7 @@
   <key>FacebookAppID</key>
   <string>1902652103167623</string>
   <key>FacebookDisplayName</key>
-  <string>FITSME</string>
+  <string>RNApp</string>
   <key>ITSAppUsesNonExemptEncryption</key>
   <false/>
   <key>KAKAO_APP_KEY</key>

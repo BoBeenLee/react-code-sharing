@@ -6,7 +6,7 @@
 	<string>development</string>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:fitsme.page.link</string>
+		<string>applinks:rnapp.page.link</string>
 	</array>
 </dict>
 </plist>

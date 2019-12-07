@@ -24,7 +24,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [FIROptions defaultOptions].deepLinkURLScheme = @"fitsme";
+    [FIROptions defaultOptions].deepLinkURLScheme = @"rnapp";
     [FIRApp configure];
     [RNFirebaseNotifications configure];
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];

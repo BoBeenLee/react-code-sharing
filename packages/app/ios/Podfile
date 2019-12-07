@@ -2,7 +2,7 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'FitsMe' do
+target 'RNApp' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
@@ -35,7 +35,7 @@ target 'FitsMe' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  # Pods for FitsMe
+  # Pods for RNApp
   use_native_modules!
   pod 'ReactNativeNavigation', :podspec => '../node_modules/react-native-navigation/ReactNativeNavigation.podspec'
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
@@ -58,12 +58,12 @@ target 'FitsMe' do
 
   pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications.podspec"
 
-  target 'FitsMe-tvOSTests' do
+  target 'RNApp-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'FitsMeTests' do
+  target 'RNAppTests' do
     inherit! :search_paths
     # Pods for testing
   end
