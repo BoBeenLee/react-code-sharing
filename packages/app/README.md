@@ -1,3 +1,5 @@
+- Fitsme -> RNApp 이름 변경 작업
+
 # Sample
 
 ## Android
