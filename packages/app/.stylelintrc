@@ -9,7 +9,7 @@
     "declaration-block-no-redundant-longhand-properties": null,
     "block-closing-brace-newline-before": null,
     "indentation": null,
-    "property-no-unknown": [ true, {
+    "property-no-unknown": [true, {
       "ignoreProperties": [
         "padding-vertical",
         "padding-horizontal",
@@ -19,9 +19,10 @@
         "shadow-offset",
         "shadow-radius",
         "shadow-opacity",
-        "text-align-vertical"
+        "include-font-padding",
+        "text-align-vertical",
+        "resize-mode"
       ]
-    }
-    ]
+    }]
   }
 }

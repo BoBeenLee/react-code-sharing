@@ -1,5 +1,26 @@
 {
+	"name": "react-webview-share",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "lerna run build --parallel",
+		"deploy:staging": "lerna run deploy:staging",
+		"deploy:production": "lerna run deploy:production",
+		"lint": "lerna run lint --parallel",
+		"lint:fix": "lerna run lint --fix",
+		"test": "lerna run test --parallel",
+		"type-check": "lerna run type-check --parallel",
+		"postinstall": "lerna bootstrap"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@gitlab.com:blended.dev/fitsme/functions.git"
+	},
+	"author": "",
+	"license": "ISC",
 	"devDependencies": {
-		"lerna": "^2.11.0"
+		"lerna": "3.16.4",
+		"prettier": "^1.18.2"
 	}
 }

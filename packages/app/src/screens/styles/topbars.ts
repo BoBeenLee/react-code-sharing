@@ -1,9 +1,10 @@
+import colors from "src/styles/colors";
 
 const baseTopBar = (name = "") => ({
   animate: true,
   backButtonHidden: true,
   background: {
-    color: "white"
+    color: colors.gray450
   },
   title: {
     text: name
@@ -15,7 +16,7 @@ const backTopBar = (name = "") => ({
   animate: true,
   backButtonHidden: false,
   background: {
-    color: "white"
+    color: colors.white
   },
   title: {
     text: name

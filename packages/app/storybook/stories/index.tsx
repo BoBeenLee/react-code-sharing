@@ -1,1 +1,1 @@
-import "./Color.stories";
+import "./Text.stories";

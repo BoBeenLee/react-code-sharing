@@ -1,46 +1,34 @@
+import AsyncStorage from "@react-native-community/async-storage";
 import _ from "lodash";
 import React from "react";
 import { mst } from "reactotron-mst";
-import Reactotron from "reactotron-react-native";
+import Reactotron, { trackGlobalErrors } from "reactotron-react-native";
 
-import { IStore } from "src/stores";
-import { isProduction } from "./src/configs/environment";
-import AsyncStorage from "./src/utils/asyncStorage";
+import { IStore } from "./src/stores/Store";
 
-const isReactotron = () => {
+export const isReactotron = () => {
   return __DEV__;
 };
 
 let overlay = _.identity;
-const setupReactotron = (store: IStore) => {
-  (Reactotron as any)
+export const setupReactotron = (store: IStore) => {
+  Reactotron.setAsyncStorageHandler(AsyncStorage)
     .configure({
       name: "app"
     })
+    .use(trackGlobalErrors({}))
     .useReactNative()
     .use(mst())
     .connect();
   (Reactotron as any).trackMstNode(store);
-  Reactotron.use(__ => ({
-    onCommand: async ({ type, payload }) => {
-      if (type === "custom" && payload === "clearAllAsyncStorage") {
-        await AsyncStorage.clear();
-      }
-    }
-  }));
-
   overlay = (Reactotron as any).overlay;
   (console as any).tron = Reactotron;
 };
 
-const withOverlay: any = (App: React.ReactNode) => {
+export const withOverlay: any = (App: React.ReactNode) => {
   return overlay(App);
 };
 
 const reactotronLog = (args: any) => {
-  if (!isProduction()) {
-    Reactotron.log(args);
-  }
+  (Reactotron as any).log(args);
 };
-
-export { setupReactotron, withOverlay, isReactotron, reactotronLog };

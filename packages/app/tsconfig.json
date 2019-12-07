@@ -1,25 +1,25 @@
 {
   "compilerOptions": {
+    "module": "esnext",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "jsx": "react-native",
+    "isolatedModules": true,
+    "jsx": "react",
+    "lib": ["es6"],
     "moduleResolution": "node",
     "noEmit": true,
+    "strict": true,
+    "target": "esnext",
     "sourceMap": true,
-    "target": "es2015",
     "typeRoots": ["./typings", "./node_modules/@types"],
     "skipLibCheck": true,
-    "strict": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": false,
-    "baseUrl": ".",
-    "paths": {
-      "assets-images": ["assets/images"],
-      "assets-captchas": ["assets/images/captcha"]
-    }
+    "baseUrl": "."
   },
-  "exclude": ["node_modules", "**/__mocks__/*", "**/__tests__/*"]
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
 }

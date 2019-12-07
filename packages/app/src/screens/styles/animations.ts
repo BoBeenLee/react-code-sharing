@@ -1,26 +1,50 @@
 import { Platform } from "react-native";
 
-const rightToleftTransitions = Platform.OS === "android" ? {
-  pop: {
-    content: {
-      x: {
-        duration: 300,
-        from: 0,
-        interpolation: "decelerate",
-        to: 1000
+// tslint:disable:object-literal-sort-keys
+export const pushTransition =
+  Platform.OS === "android"
+    ? {
+        push: {
+          content: {
+            x: {
+              from: 2000,
+              to: 0,
+              duration: 380
+            }
+          }
+        },
+        pop: {
+          content: {
+            x: {
+              from: 0,
+              to: 2000,
+              duration: 400
+            }
+          }
+        }
       }
-    }
-  },
-  push: {
-    content: {
-      x: {
-        duration: 500,
-        from: 1000,
-        interpolation: "accelerate",
-        to: 0
-      }
-    }
-  }
-} : undefined;
+    : undefined;
 
-export default { rightToleftTransitions };
+export const fadeTransition =
+  Platform.OS === "android"
+    ? {
+        pop: {
+          content: {
+            alpha: {
+              duration: 300,
+              from: 1,
+              to: 0
+            }
+          }
+        },
+        push: {
+          content: {
+            alpha: {
+              duration: 300,
+              from: 0,
+              to: 1
+            }
+          }
+        }
+      }
+    : undefined;

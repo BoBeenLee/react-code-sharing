@@ -1,0 +1,60 @@
+import LottieView from 'lottie-react-native';
+import { inject, observer } from "mobx-react";
+import React from "react";
+import Splash from "react-native-splash-screen";
+import styled from "styled-components/native";
+
+import XEIcon from "src/components/icon/XEIcon";
+import { Bold12, Bold20 } from "src/components/text/Typographies";
+import images from "src/images";
+import { IStore } from "src/stores/Store";
+
+interface IInject {
+  store?: IStore;
+}
+
+const Container = styled.View`
+  width: 100%;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Text = styled(Bold20)`
+  color: #000;
+`;
+
+@inject(
+  ({ store }: { store: IStore }): IInject => ({
+    store
+  })
+)
+@observer
+class SplashScreen extends React.Component<IInject> {
+  public animation: any = null;
+  public componentDidMount() {
+    this.animation.play();
+    Splash.hide();
+  }
+
+  public render() {
+    return (
+      <Container>
+        <Text>{this.props.store!.text}1</Text>
+        <LottieView
+          style={{
+            backgroundColor: "#eee",
+            opacity: 0.5
+          }}
+          ref={animation => {
+            this.animation = animation;
+          }}
+          source={images.animation}
+        />
+        <XEIcon name="close" color="#800" size={50} />
+      </Container>
+    );
+  }
+}
+
+export default SplashScreen;

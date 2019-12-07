@@ -1,70 +1,47 @@
 {
   "project_info": {
-    "project_number": "345412109988",
-    "firebase_url": "https://example.app.firebaseio.com",
-    "project_id": "example.app",
-    "storage_bucket": "example.app.appspot.com"
+    "project_number": "729865146079",
+    "firebase_url": "https://fitsme-staging.firebaseio.com",
+    "project_id": "fitsme-staging",
+    "storage_bucket": "fitsme-staging.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:345412109988:android:56073d3c4bea6b61",
+        "mobilesdk_app_id": "1:729865146079:android:1ec7739544849fc8",
         "android_client_info": {
-          "package_name": "io.example.app"
+          "package_name": "kr.fitsme.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "345412109988-40hofu8qjphcrfaq1f989ln0il2n1gpb.apps.googleusercontent.com",
+          "client_id":
+            "729865146079-bacu7t6jagh2c1rh0chq5nf10ft1end2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC3ncD63h8qKiD_KAVEfMhGn_9r1JxGppY"
+          "current_key": "AIzaSyByTW_AoiwnJvft728ahzuHbArqKn_twaE"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:345412109988:android:dcb5de4515ae4c9e",
-        "android_client_info": {
-          "package_name": "io.example.app"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "345412109988-40hofu8qjphcrfaq1f989ln0il2n1gpb.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyC3ncD63h8qKiD_KAVEfMhGn_9r1JxGppY"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id":
+                "729865146079-bacu7t6jagh2c1rh0chq5nf10ft1end2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id":
+                "729865146079-o6jmm3u2upo948k2cdr01d3qgkb4dmvs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kr.fitsme.app"
+              }
+            }
+          ]
         }
       }
     }

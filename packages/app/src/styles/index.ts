@@ -1,4 +1,0 @@
-export { default as colors } from "./colors";
-export { default as fontSizes } from "./fontSizes";
-export { default as dimensions } from "./dimensions";
-export { default as zIndex } from "./zIndex";
