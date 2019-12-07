@@ -1,5 +1,3 @@
-- Fitsme -> RNApp 이름 변경 작업
-
 # Sample
 
 ## Android
@@ -7,7 +5,7 @@
 ### aab 테스트 진행
 
 0. npm run android:aab
-1. bundletool build-apks --bundle=./android/app/build/outputs/bundle/release/app-release.aab --output=./android/app/build/outputs/bundle/release/app-release.apks --ks=./android/app/fitsme-production-key.keystore --ks-pass=pass:android --ks-key-alias=fitsme-production-alias --key-pass=pass:android
+1. bundletool build-apks --bundle=./android/app/build/outputs/bundle/release/app-release.aab --output=./android/app/build/outputs/bundle/release/app-release.apks --ks=./android/app/rnapp-production-key.keystore --ks-pass=pass:android --ks-key-alias=rnapp-production-alias --key-pass=pass:android
 2. bundletool install-apks --apks=./android/app/build/outputs/bundle/release/app-release.apks --device-id=LMX625ON6PLF5HJZPJ
 
 ## Code Push
@@ -15,16 +13,16 @@
 - 코드푸쉬 키 가져오는 커멘드
 
 ```
-appcenter codepush deployment list -a cosmochain/fitsme-ios
-appcenter codepush deployment list -a cosmochain/fitsme-android
+appcenter codepush deployment list -a appcenter/RNApp
+appcenter codepush deployment list -a appcenter/RNApp
 ```
 
 - 코드푸쉬 apply 예시
 
 ```
-code-push release-react cosmochain/fitsme-android android -d Staging -m true --privateKeyPath ~/private.pem --description "헬로우 월드44"
+code-push release-react cosmochain/rnapp-android android -d Staging -m true --privateKeyPath ~/private.pem --description "헬로우 월드44"
 
-code-push release-react cosmochain/fitsme-ios ios -d Staging -m true --privateKeyPath ~/private.pem --description "헬로우 월드44" --plistFile "ios/FitsMe/Info.plist"
+code-push release-react cosmochain/rnapp-ios ios -d Staging -m true --privateKeyPath ~/private.pem --description "헬로우 월드44" --plistFile "ios/RNApp/Info.plist"
 ```
 
 - Code Push cli 설치 https://github.com/Microsoft/code-push/tree/master/cli#installation
