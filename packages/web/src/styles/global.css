@@ -1,29 +1,68 @@
-@font-face {
-  font-family: "Noto Sans KR", sans-serif;
-  src: url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&subset=korean");
-}
-
 *,
 html,
 body {
-  @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&subset=korean");
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "NanumSquare", sans-serif;
+  font-size: 16px;
   outline: none;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
 }
 
 html,
-body {
+body,
+#___gatsby {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   height: 100vh;
   width: 100vw;
 }
+
+body,
+#___gatsby,
+div[role="group"] {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#___gatsby>div[role="group"] {
+  height: 100%;
+  overflow-y: auto;
+}
+
 main {
   margin: auto !important;
   padding: 0;
   width: 100vw;
-  min-width: 360px;
-  max-width: 800px;
+  min-width: 22.5rem;
+  max-width: 48rem;
+}
+
+pre {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extra_bold {
+  font-weight: 800;
+}
+
+.light {
+  font-weight: 300;
 }

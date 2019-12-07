@@ -1,3 +1,5 @@
+declare module "@typeform/embed";
+declare module "*.gif";
 declare module "*.png";
 declare module "*.json" {
   const value: any;

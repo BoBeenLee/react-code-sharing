@@ -3,14 +3,16 @@ import { configure, addDecorator } from "@storybook/react";
 import { withKnobs } from "@storybook/addon-knobs";
 import { createGlobalStyle } from "styled-components";
 
+import 'antd/dist/antd.css';
+
 // automatically import all files ending in *.stories.js
 const req = require.context("../src", true, /.stories.tsx$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
 global.___loader = {
-  enqueue: () => {},
-  hovering: () => {}
+  enqueue: () => { },
+  hovering: () => { }
 };
 // Gatsby internal mocking to prevent unnecessary errors in storybook testing environment
 global.__PATH_PREFIX__ = "";
@@ -20,9 +22,11 @@ window.___navigate = pathname => {
 };
 
 const GlobalStyle = createGlobalStyle`
-  @import url("//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+  @import url("https://fonts.googleapis.com/css?family=Heebo:400,700|Roboto:400,700&display=swap");
+  @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+  
   * {
-    @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700');
+    font-family: 'Spoqa Han Sans', 'Roboto';
   }
 `;
 

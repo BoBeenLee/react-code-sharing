@@ -1,13 +1,5 @@
 console.log(`Using environment config: '${process.env.GATSBY_ENV}'`);
-const isProduction = process.env.GATSBY_ENV === "production";
-
-const siteMetadata = {
-  description: "",
-  og_image: "",
-  siteUrl: "http://www.naver.com",
-  title: "",
-  titleTemplate: "%s"
-};
+const siteMetadata = require("./metadata");
 
 module.exports = {
   siteMetadata,
@@ -21,35 +13,37 @@ module.exports = {
       }
     },
     `gatsby-plugin-react-helmet`,
+    // {
+    //   resolve: `gatsby-plugin-favicon`,
+    //   options: {
+    //     logo: siteMetadata.logo
+    //   }
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/images`
+    //   }
+    // },
     {
-      resolve: `gatsby-plugin-favicon`,
-      options: {
-        logo: "./src/images/logo.png"
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`
-      }
+      resolve: `gatsby-transformer-sharp`
     },
     `gatsby-plugin-styled-components`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: siteMetadata.title,
-        short_name: siteMetadata.title,
-        start_url: `/`,
-        background_color: `#eee`,
-        theme_color: `#eee`,
-        display: `standalone`,
-        icon: `src/images/logo.png`,
-        include_favicon: true
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: siteMetadata.title,
+    //     short_name: siteMetadata.title,
+    //     start_url: `/`,
+    //     background_color: siteMetadata.backgroundColor,
+    //     theme_color: siteMetadata.themeColor,
+    //     display: `standalone`,
+    //     icon: siteMetadata.logo,
+    //     include_favicon: true
+    //   }
+    // },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -65,6 +59,20 @@ module.exports = {
           }
         },
         resolveEnv: () => process.env.GATSBY_ENV
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /static/
+        }
+      }
+    },
+    {
+      resolve: "gatsby-plugin-netlify-cache",
+      options: {
+        cachePublic: true
       }
     }
   ]
