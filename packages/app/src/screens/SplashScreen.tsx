@@ -8,6 +8,7 @@ import { Bold12, Bold20 } from "src/components/text/Typographies";
 import images from "src/images";
 import TestWebview from "src/screens/webview/TestWebview";
 import { IStore } from "src/stores/Store";
+import { iosStatusBarHeight } from "src/utils/device";
 
 interface IInject {
   store?: IStore;
@@ -18,6 +19,7 @@ const Container = styled.View`
   flex: 1;
   align-items: center;
   justify-content: center;
+  padding-top: ${iosStatusBarHeight(false)}px;
 `;
 
 const Text = styled(Bold20)`
