@@ -11,11 +11,13 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "lib": ["es2017", "dom"],
-    "jsx": "react"
-  },
-  "references": [
-    {
-      "path": "../shared"
+    "jsx": "react",
+    "paths": {
+      "@shared/*": ["../shared/lib/*"]
     }
+  },
+  "include": [
+    ".",
+    "../shared"
   ]
 }

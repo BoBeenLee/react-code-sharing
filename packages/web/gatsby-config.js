@@ -1,5 +1,6 @@
 console.log(`Using environment config: '${process.env.GATSBY_ENV}'`);
 const siteMetadata = require("./metadata");
+const path = require("path");
 
 module.exports = {
   siteMetadata,
@@ -73,6 +74,13 @@ module.exports = {
       resolve: "gatsby-plugin-netlify-cache",
       options: {
         cachePublic: true
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        src: path.join(__dirname, 'src'),
+        "@shared": path.resolve(__dirname, '../shared/lib')
       }
     }
   ]

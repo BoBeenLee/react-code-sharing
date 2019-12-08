@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { test } from "../../../shared/lib/test";
+import { test } from "@shared/test";
 
 import Layout from "src/components/common/Layout";
 import SEO from "src/components/common/SEO";
