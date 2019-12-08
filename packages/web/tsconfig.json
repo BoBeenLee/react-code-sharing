@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "strict": true,
+    "jsx": "react",
+    "lib": ["es2017", "dom"],
     "moduleResolution": "node",
+    "skipLibCheck": true,
     "sourceMap": true,
+    "strict": true,
     "target": "es2015",
     "typeRoots": ["typings", "node_modules/@types"],
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "lib": ["es2017", "dom"],
-    "jsx": "react",
     "paths": {
       "@shared/*": ["../shared/lib/*"]
     }
