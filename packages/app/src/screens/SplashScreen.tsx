@@ -13,7 +13,7 @@ import { iosStatusBarHeight } from "src/utils/device";
 import { test } from "@shared/test";
 
 interface IInject {
-  store?: IStore;
+  store: IStore;
 }
 
 const Container = styled.View`
@@ -38,9 +38,10 @@ class SplashScreen extends React.Component<IInject> {
   public animation: any = null;
 
   public render() {
+    const { todoTest } = this.props.store.todoStore;
     return (
       <Container>
-        <Text>{this.props.store!.appStateStatus}123{test()}</Text>
+        <Text>{this.props.store!.appStateStatus}123{test()}{todoTest}</Text>
         <TestWebview />
         <LottieView
           style={{
