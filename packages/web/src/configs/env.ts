@@ -17,7 +17,8 @@ const env: IEnvironment = {
       projectId: "myspace-c3805",
       storageBucket: "myspace-c3805.appspot.com",
       messagingSenderId: "757274443049",
-      appId: "1:757274443049:web:a76fa9da2b161d7385cb38"
+      appId: "1:757274443049:web:ea967cb66d9dbf8f85cb38",
+      measurementId: "G-3RXWEWDG32"
     }
   },
   staging: {
@@ -28,7 +29,8 @@ const env: IEnvironment = {
       projectId: "myspace-c3805",
       storageBucket: "myspace-c3805.appspot.com",
       messagingSenderId: "757274443049",
-      appId: "1:757274443049:web:a76fa9da2b161d7385cb38"
+      appId: "1:757274443049:web:ea967cb66d9dbf8f85cb38",
+      measurementId: "G-3RXWEWDG32"
     }
   }
 };
