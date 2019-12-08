@@ -1,18 +1,15 @@
-import ReactGA from "react-ga";
-import env from "src/configs/env";
+import React from "react";
+import { initialize as firebaseInitialize } from "src/configs/firebase";
+import { setCurrentScreen } from "src/configs/analytics";
 
 import "src/styles/global.css";
 
 export const wrapPageElement = ({ element }) => {
-  if (env.GA_KEY && window) {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }
+  setCurrentScreen(window.location.pathname + window.location.search);
   return element;
 };
 
 export const wrapRootElement = ({ element }) => {
-  if (env.GA_KEY) {
-    ReactGA.initialize(env.GA_KEY);
-  }
+  firebaseInitialize();
   return element;
 };
