@@ -24,6 +24,8 @@
     "typescript": "^3.7.2"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.147"
+    "@types/lodash": "^4.14.147",
+    "@types/react-native": "^0.60.24",
+    "@types/styled-components": "^4.1.14"
   }
 }

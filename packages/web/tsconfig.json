@@ -6,11 +6,12 @@
     "experimentalDecorators": true,
     "jsx": "react",
     "lib": ["es2017", "dom"],
+    "module": "esnext",
     "moduleResolution": "node",
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es2015",
+    "target": "esnext",
     "typeRoots": ["typings", "node_modules/@types"],
     "paths": {
       "@shared/*": ["../shared/lib/*"]

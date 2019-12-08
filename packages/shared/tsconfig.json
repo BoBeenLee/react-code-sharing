@@ -1,16 +1,22 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "es2015",
-    "declaration": true,
-    "declarationMap": true,
-    // "outDir": "./",               
-    "rootDir": ".",
-    "composite": true,
-    "strict": true,
-    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "esModuleInterop": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "lib": ["es2017", "dom"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2015",
+    "typeRoots": ["typings", "node_modules/@types"],
+    "paths": {
+      "@shared/*": [
+        "./lib/*"
+      ]
+    }
   }
 }
