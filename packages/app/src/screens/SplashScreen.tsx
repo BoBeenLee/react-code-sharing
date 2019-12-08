@@ -10,6 +10,8 @@ import TestWebview from "src/screens/webview/TestWebview";
 import { IStore } from "src/stores/Store";
 import { iosStatusBarHeight } from "src/utils/device";
 
+import { test } from "../../../shared/lib/test";
+
 interface IInject {
   store?: IStore;
 }
@@ -38,7 +40,7 @@ class SplashScreen extends React.Component<IInject> {
   public render() {
     return (
       <Container>
-        <Text>{this.props.store!.appStateStatus}1</Text>
+        <Text>{this.props.store!.appStateStatus}1{test()}</Text>
         <TestWebview />
         <LottieView
           style={{
