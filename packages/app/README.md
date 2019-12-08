@@ -54,3 +54,7 @@ Catalina OS 이슈
 ## Document
 - https://github.com/microsoft/react-native-code-push/issues/1672
 - Font: https://medium.com/react-native-training/react-native-custom-fonts-ccc9aacf9e5e
+
+## Shared Folder
+- https://github.com/facebook/react-native/issues/24416
+- https://stackoverflow.com/questions/57798793/how-do-i-configure-absolute-paths-for-imports-in-typescript-based-react-native-a

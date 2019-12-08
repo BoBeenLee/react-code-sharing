@@ -14,17 +14,15 @@
     "sourceMap": true,
     "typeRoots": ["./typings", "./node_modules/@types"],
     "skipLibCheck": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["../shared/lib/*"]
+    }
   },
   "exclude": [
     "node_modules",
     "babel.config.js",
     "metro.config.js",
     "jest.config.js"
-  ],
-  "references": [
-    {
-      "path": "../shared"
-    }
   ]
 }

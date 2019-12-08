@@ -12,7 +12,10 @@ module.exports = {
       "module-resolver",
       {
         root: ["."],
-        extensions: [".js", ".ios.js", ".android.js", ".ts", ".tsx"]
+        extensions: [".js", ".ios.js", ".android.js", ".ts", ".tsx"],
+        "alias": {
+          "@shared": "../shared/lib"
+        }
       }
     ]
   ]

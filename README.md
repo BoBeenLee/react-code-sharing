@@ -91,3 +91,5 @@ npm ci
 - https://github.com/npm/npm/issues/18380
 
 # Package별 설명
+
+https://bigcheeseapp.com/2019/09/14/react-native-continuous-delivery-with-github-actions-and-fastlane/
