@@ -2,10 +2,10 @@ PODS:
   - AppsFlyerFramework (4.10.4)
   - Base64 (1.1.2)
   - boost-for-react-native (1.63.0)
-  - BugsnagReactNative (2.23.2):
-    - BugsnagReactNative/Core (= 2.23.2)
+  - BugsnagReactNative (2.23.3):
+    - BugsnagReactNative/Core (= 2.23.3)
     - React
-  - BugsnagReactNative/Core (2.23.2):
+  - BugsnagReactNative/Core (2.23.3):
     - React
   - BVLinearGradient (2.5.6):
     - React
@@ -131,24 +131,24 @@ PODS:
     - GoogleUtilities/Logger
   - JWT (3.0.0-beta.12):
     - Base64 (~> 1.1.2)
-  - kakao-login (2.1.0):
-    - KakaoOpenSDK (~> 1.16.0)
+  - kakao-login (2.1.2):
+    - KakaoOpenSDK (~> 1.18.0)
     - React
-  - KakaoOpenSDK (1.16.0):
-    - KakaoOpenSDK/KakaoCommon (= 1.16.0)
-    - KakaoOpenSDK/KakaoLink (= 1.16.0)
-    - KakaoOpenSDK/KakaoMessageTemplate (= 1.16.0)
-    - KakaoOpenSDK/KakaoNavi (= 1.16.0)
-    - KakaoOpenSDK/KakaoOpenSDK (= 1.16.0)
-  - KakaoOpenSDK/KakaoCommon (1.16.0)
-  - KakaoOpenSDK/KakaoLink (1.16.0):
+  - KakaoOpenSDK (1.18.0):
+    - KakaoOpenSDK/KakaoCommon (= 1.18.0)
+    - KakaoOpenSDK/KakaoLink (= 1.18.0)
+    - KakaoOpenSDK/KakaoMessageTemplate (= 1.18.0)
+    - KakaoOpenSDK/KakaoNavi (= 1.18.0)
+    - KakaoOpenSDK/KakaoOpenSDK (= 1.18.0)
+  - KakaoOpenSDK/KakaoCommon (1.18.0)
+  - KakaoOpenSDK/KakaoLink (1.18.0):
     - KakaoOpenSDK/KakaoCommon
-  - KakaoOpenSDK/KakaoMessageTemplate (1.16.0)
-  - KakaoOpenSDK/KakaoNavi (1.16.0):
+  - KakaoOpenSDK/KakaoMessageTemplate (1.18.0)
+  - KakaoOpenSDK/KakaoNavi (1.18.0):
     - KakaoOpenSDK/KakaoCommon
-  - KakaoOpenSDK/KakaoOpenSDK (1.16.0)
-  - lottie-ios (3.1.3)
-  - lottie-react-native (3.2.1):
+  - KakaoOpenSDK/KakaoOpenSDK (1.18.0)
+  - lottie-ios (3.1.5)
+  - lottie-react-native (3.3.2):
     - lottie-ios (~> 3.1.3)
     - React
   - nanopb (0.3.9011):
@@ -156,13 +156,13 @@ PODS:
     - nanopb/encode (= 0.3.9011)
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
-  - Permission-Notifications (2.0.3):
+  - Permission-Notifications (2.0.6):
     - RNPermissions
   - Picker (4.3.7):
     - Picker/Core (= 4.3.7)
   - Picker/Core (4.3.7):
     - React
-  - Protobuf (3.11.1)
+  - Protobuf (3.11.2)
   - QBImagePickerController (3.4.0)
   - RCTRequired (0.61.4)
   - RCTTypeSafety (0.61.4):
@@ -327,7 +327,7 @@ PODS:
     - React-cxxreact (= 0.61.4)
     - React-jsi (= 0.61.4)
   - React-jsinspector (0.61.4)
-  - react-native-appsflyer (1.4.6):
+  - react-native-appsflyer (1.4.7):
     - AppsFlyerFramework (~> 4.10.4)
     - React
   - react-native-fbsdk (1.1.1):
@@ -387,13 +387,13 @@ PODS:
     - React-cxxreact (= 0.61.4)
     - React-jsi (= 0.61.4)
     - ReactCommon/jscallinvoker (= 0.61.4)
-  - ReactNativeNavigation (3.5.1):
+  - ReactNativeNavigation (3.7.0):
     - React
   - rn-fetch-blob (0.11.2):
     - React-Core
-  - RNCAsyncStorage (1.6.2):
+  - RNCAsyncStorage (1.6.3):
     - React
-  - RNDeviceInfo (5.2.1):
+  - RNDeviceInfo (5.3.1):
     - React
   - RNFirebase (5.5.6):
     - Firebase/Core
@@ -404,18 +404,18 @@ PODS:
     - Fabric
     - Firebase/Core
     - React
-  - RNGestureHandler (1.4.1):
+  - RNGestureHandler (1.5.2):
     - React
   - RNImageCropPicker (0.26.1):
     - QBImagePickerController
     - React-Core
     - React-RCTImage
     - RSKImageCropper
-  - RNPermissions (2.0.3):
+  - RNPermissions (2.0.6):
     - React
   - RNRate (1.1.10):
     - React
-  - RNReanimated (1.3.0):
+  - RNReanimated (1.4.0):
     - React
   - RNSVG (9.13.3):
     - React
@@ -629,7 +629,7 @@ SPEC CHECKSUMS:
   AppsFlyerFramework: aeb793095c1b33170ae30bef66652c0645f409be
   Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
-  BugsnagReactNative: 0a24a1dd2cac88862d67b938f809bec8274130a9
+  BugsnagReactNative: 34f9500e304c2667ce7a3e76037d91e41eca2ffe
   BVLinearGradient: e3aad03778a456d77928f594a649e96995f1c872
   CodePush: fe25db2e24ff1a2fab8b280a9633d9ba520867be
   Crashlytics: 2dfd686bcb918dc10ee0e76f7f853fe42c7bd552
@@ -655,14 +655,14 @@ SPEC CHECKSUMS:
   GoogleIDFASupport: aaf8c10bd429abb1c15349d5252244f5eda8ead1
   GoogleUtilities: 04fce34bcd5620c1ee76fb79172105c74a4df335
   JWT: 9b5c05abbcc1a0e69c3c91e1655b3387fc7e581d
-  kakao-login: 055e7b6a8e47bbdc0661e057e619744184b3c1ed
-  KakaoOpenSDK: 453413b65b71ef3c732c070606d3a557ac4e01d1
-  lottie-ios: 496ac5cea1bbf1a7bd1f1f472f3232eb1b8d744b
-  lottie-react-native: b123a79529cc732201091f585c62c89bb4747252
+  kakao-login: 9483bc4c48c7ad26bb765dfdc34956f002349686
+  KakaoOpenSDK: 016f24ab128c4e05c76a6a0965d6c379c0fafb58
+  lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
+  lottie-react-native: 2a1a82bb326ae51331a5520de0cf706733c6db69
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
-  Permission-Notifications: 2fa276816cb192e6c0f36f258df89ab409c9c291
+  Permission-Notifications: 407fd49975376178cc3c6f85d79dfb5ccf812851
   Picker: 4f1722c94059567cabd80e53d0ef72ca290d2b93
-  Protobuf: 20d79da7f20b5928b80043b05080b816e802659e
+  Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
   QBImagePickerController: d54cf93db6decf26baf6ed3472f336ef35cae022
   RCTRequired: f3b3fb6f4723e8e52facb229d0c75fdc76773849
   RCTTypeSafety: 2ec60de6abb1db050b56ecc4b60188026078fd10
@@ -673,7 +673,7 @@ SPEC CHECKSUMS:
   React-jsi: ca921f4041505f9d5197139b2d09eeb020bb12e8
   React-jsiexecutor: 8dfb73b987afa9324e4009bdce62a18ce23d983c
   React-jsinspector: d15478d0a8ada19864aa4d1cc1c697b41b3fa92f
-  react-native-appsflyer: b6e02c430f9e3e9d057780203c7950f2cc39d447
+  react-native-appsflyer: 6837f0921f1fee84cb3fcbec437c1a607e0e37a5
   react-native-fbsdk: b94a83971c496a35803f38b921aec6d637ba07b5
   react-native-idfa: fbd14ac276f0deee5c6f6d235365bd5512732bb9
   react-native-image-resizer: 9dfb844937574db849fd18a56d8e6c607b0a31d8
@@ -689,16 +689,16 @@ SPEC CHECKSUMS:
   React-RCTText: 21934e0a51d522abcd0a275407e80af45d6fd9ec
   React-RCTVibration: 0f76400ee3cec6edb9c125da49fed279340d145a
   ReactCommon: a6a294e7028ed67b926d29551aa9394fd989c24c
-  ReactNativeNavigation: 3fad99b3843e8840affd70577aaa30bf14b272d5
+  ReactNativeNavigation: bed6f504aa1a4dadd151503bf99d0ef96d06847f
   rn-fetch-blob: f525a73a78df9ed5d35e67ea65e79d53c15255bc
-  RNCAsyncStorage: 5ae4d57458804e99f73d427214442a6b10a53856
-  RNDeviceInfo: 223aea06c561ce99ae2045b621882bd7b7db1e59
+  RNCAsyncStorage: 6b57de0f6cb0dcfd17521af1681fa39001d3efff
+  RNDeviceInfo: e5976ab5c3bed0b5c78f188e0b8abb139b33a9da
   RNFirebase: ac0de8b24c6f91ae9459575491ed6a77327619c6
-  RNGestureHandler: 4cb47a93019c1a201df2644413a0a1569a51c8aa
+  RNGestureHandler: 946a7691e41df61e2c4b1884deab41a4cdc3afff
   RNImageCropPicker: e1d8c3381e5b05a1bdcd13ea57a4f1c020a09cef
-  RNPermissions: 332fd0d0c33ba71d83a22f584fce7b2270488ae0
+  RNPermissions: 3944d2574eca469ca5dcc3fa945271468c67483d
   RNRate: d44a8bca6ee08f5d890ecccddaec2810955ffbb3
-  RNReanimated: 6abbbae2e5e72609d85aabd92a982a94566885f1
+  RNReanimated: b2ab0b693dddd2339bd2f300e770f6302d2e960c
   RNSVG: f6177f8d7c095fada7cfee2e4bb7388ba426064c
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   RSKImageCropper: a446db0e8444a036b34f3c43db01b2373baa4b2a

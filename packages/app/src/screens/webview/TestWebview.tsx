@@ -17,12 +17,10 @@ class TestWebview extends Component {
 
     public render() {
         return (
-            <ContainerWithStatusBar>
-                <Content
-                    onMessage={this.onMessage}
-                    source={{ uri: routes.test }}
-                />
-            </ContainerWithStatusBar>
+            <Content
+                onMessage={this.onMessage}
+                source={{ uri: routes.test }}
+            />
         );
     }
 
