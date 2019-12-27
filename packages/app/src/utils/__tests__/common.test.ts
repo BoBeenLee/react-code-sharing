@@ -3,3 +3,5 @@ describe("common 1test", () => {
     expect("test").toEqual("test");
   });
 });
+
+export {};
