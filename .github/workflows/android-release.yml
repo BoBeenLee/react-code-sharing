@@ -13,15 +13,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Set up JDK 1.8
+      - name: Set up JDK 1.8 And npm install
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      
-      - run: cd packages/app/android
+      - run: npm install
 
       - name: Assemble app debug APK
-        run: bash ./gradlew assembleDebug --stacktrace
+        run: cd ./packages/app/android && bash ./gradlew assembleDebug --stacktrace
 
       - name: Upload app APK
         uses: actions/upload-artifact@v1
