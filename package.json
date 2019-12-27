@@ -11,7 +11,8 @@
 		"eslint:fix": "lerna run eslint:fix --parallel",
 		"test": "lerna run test --parallel",
 		"type-check": "lerna run type-check --parallel",
-		"postinstall": "lerna bootstrap"
+		"postinstall": "lerna bootstrap",
+		"prepush": "lerna run prepush --parallel"
 	},
 	"repository": {
 		"type": "git",
