@@ -8,7 +8,7 @@ export const enhanceNoError = (func: any) => async (...args: any[]) => {
   }
 };
 
-export function delay(seconds: number = 500) {
+export function delay(seconds = 500) {
   return new Promise((resolve, __) => {
     setTimeout(() => {
       resolve();
@@ -43,9 +43,14 @@ export const filterNull = <T>(iterable: Array<T | null> | null) => {
   return _.filter(iterable, i => i !== null) as T[];
 };
 
-export const filterEmpty = <T>(iterable: Array<T | null | undefined> | null | undefined) => {
+export const filterEmpty = <T>(
+  iterable: Array<T | null | undefined> | null | undefined
+) => {
   if (!iterable) {
     return [];
   }
-  return _.filter(iterable, i => i !== null && i !== undefined && (i as any) !== "") as T[];
+  return _.filter(
+    iterable,
+    i => i !== null && i !== undefined && (i as any) !== ""
+  ) as T[];
 };

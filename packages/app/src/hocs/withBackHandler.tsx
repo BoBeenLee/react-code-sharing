@@ -24,7 +24,7 @@ const withBackHandler = <T extends IBackHandlerProps, P>(
       const { innerRef, ...props } = this.props;
       return (
         <Component
-          {...props as any}
+          {...(props as any)}
           ref={innerRef}
           addBackButtonListener={this.addBackButtonListener}
         />

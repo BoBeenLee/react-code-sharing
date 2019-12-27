@@ -14,8 +14,8 @@ import SplashScreen from "src/screens/SplashScreen";
 import { getRootStore } from "src/stores/Store";
 
 interface IScreenProps {
-    id: string;
-    Component: React.ComponentType<any>;
+  id: string;
+  Component: React.ComponentType<any>;
 }
 
 const isDevelopment = isReactotron();
@@ -23,51 +23,47 @@ const isDevelopment = isReactotron();
 const store = getRootStore();
 
 const enhanceOverlayScreen = (Component: React.ComponentType<any>) => {
-    return compose(
-        withNavigator,
-        withSplash,
-        withStore(store)
-    )(Component);
+  return compose(withNavigator, withSplash, withStore(store))(Component);
 };
 
 const enhanceScreen = (Component: React.ComponentType<any>) => {
-    const EnhancedComponent = compose(
-        withPopup,
-        withAppState,
-        withNavigator,
-        withSplash,
-        withStore(store),
-        isDevelopment ? withOverlay : _.identity
-    )(Component);
+  const EnhancedComponent = compose(
+    withPopup,
+    withAppState,
+    withNavigator,
+    withSplash,
+    withStore(store),
+    isDevelopment ? withOverlay : _.identity
+  )(Component);
 
-    hoistNonReactStatic(EnhancedComponent, Component);
+  hoistNonReactStatic(EnhancedComponent, Component);
 
-    return EnhancedComponent;
+  return EnhancedComponent;
 };
 
 const overlaies: IScreenProps[] = [];
 
 const screens: IScreenProps[] = [
-    {
-        Component: SplashScreen,
-        id: SCREEN_IDS.SplashScreen
-    }
+  {
+    Component: SplashScreen,
+    id: SCREEN_IDS.SplashScreen
+  }
 ];
 
 if (isDevelopment) {
-    setupReactotron(store);
+  setupReactotron(store);
 }
 
 export function registerScreens() {
-    _.forEach(overlaies, overlay => {
-        const { id, Component } = overlay;
-        Navigation.registerComponent(id, () => enhanceOverlayScreen(Component));
-    });
+  _.forEach(overlaies, overlay => {
+    const { id, Component } = overlay;
+    Navigation.registerComponent(id, () => enhanceOverlayScreen(Component));
+  });
 
-    _.forEach(screens, screen => {
-        const { id, Component } = screen;
-        Navigation.registerComponent(id, () => enhanceScreen(Component));
-    });
+  _.forEach(screens, screen => {
+    const { id, Component } = screen;
+    Navigation.registerComponent(id, () => enhanceScreen(Component));
+  });
 }
 
 export { SCREEN_IDS };

@@ -1,4 +1,4 @@
-import React, { SFC } from "react";
+import React from "react";
 import { RegisteredStyle, ViewStyle } from "react-native";
 import styled from "styled-components/native";
 
@@ -22,16 +22,16 @@ const OutterContainer = styled.View<{ backgroundColor: string }>`
   background-color: ${({ backgroundColor }) => backgroundColor};
 `;
 
-const ContainerWithStatusBar: SFC<IProps> = ({
+function ContainerWithStatusBar({
   children,
   statusBarColor = "white",
   style
-}) => {
+}: IProps) {
   return (
     <OutterContainer backgroundColor={statusBarColor}>
       <Container style={style}>{children}</Container>
     </OutterContainer>
   );
-};
+}
 
 export default ContainerWithStatusBar;

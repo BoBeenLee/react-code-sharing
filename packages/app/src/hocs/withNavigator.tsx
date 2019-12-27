@@ -11,7 +11,9 @@ interface IProps {
 const withNavigator = <P extends object>(
   TargetComponent: React.ComponentType<P>
 ): any => {
-  const WithNavigator = class extends Component<P & IProps> {
+  const WithNavigator = class WithNavigatorAnonymous extends Component<
+    P & IProps
+  > {
     constructor(props: P & IProps) {
       super(props);
       Navigation.events().bindComponent(this);

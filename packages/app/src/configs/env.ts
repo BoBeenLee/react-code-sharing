@@ -13,7 +13,10 @@ interface IEnvironmentEntry {
   WEBVIEW_URL: string;
 }
 
-const REACT_ENV = _.defaultTo((config as any).REACT_ENV, "staging") as keyof IEnvironment;
+const REACT_ENV = _.defaultTo(
+  (config as any).REACT_ENV,
+  "staging"
+) as keyof IEnvironment;
 
 // tslint:disable:object-literal-sort-keys
 const env: IEnvironment = {
@@ -37,4 +40,4 @@ const env: IEnvironment = {
 
 export const isStorybook = () => REACT_ENV === "storybook";
 
-export default env[REACT_ENV] || {} as IEnvironmentEntry; 
+export default env[REACT_ENV] || ({} as IEnvironmentEntry);

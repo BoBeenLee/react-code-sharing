@@ -23,8 +23,8 @@ const Text = styled.Text<{ fontType: FontType }>`
   include-font-padding: false;
 `;
 
-const FMText: React.FC<ITextProps> = ({ fontType = "REGULAR", ...props }) => {
+function FMText({ fontType = "REGULAR", ...props }: ITextProps) {
   return <Text fontType={fontType} {...props} />;
-};
+}
 
 export default FMText;

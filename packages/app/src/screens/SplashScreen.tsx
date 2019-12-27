@@ -1,4 +1,4 @@
-import LottieView from 'lottie-react-native';
+import LottieView from "lottie-react-native";
 import { inject, observer } from "mobx-react";
 import React from "react";
 import styled from "styled-components/native";
@@ -41,7 +41,10 @@ class SplashScreen extends React.Component<IInject> {
     const { todoTest } = this.props.store.todoStore;
     return (
       <Container>
-        <Text>{this.props.store!.appStateStatus}123{test()}{todoTest}</Text>
+        <Text>
+          {this.props.store!.appStateStatus}123{test()}
+          {todoTest}
+        </Text>
         <TestWebview />
         <LottieView
           style={{

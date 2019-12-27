@@ -45,7 +45,9 @@ const getCurrentComponent = () => {
   return currentComponentId;
 };
 
-export const protectedMultiClick = (func: any, milliseconds: number = 500) => async (...args: any[]) => {
+export const protectedMultiClick = (func: any, milliseconds = 500) => async (
+  ...args: any[]
+) => {
   if (isLoading) {
     return;
   }

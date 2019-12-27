@@ -45,7 +45,10 @@ const PopupTouchableOverlay = styled.TouchableOpacity.attrs({
 const withPopup = <P extends IPopupProps>(
   TargetComponent: React.ComponentType<P>
 ): any => {
-  const WithPopup = class extends Component<Subtract<P, IPopupProps>, IStates> {
+  const WithPopup = class WithPopupAnonymous extends Component<
+    Subtract<P, IPopupProps>,
+    IStates
+  > {
     constructor(props: Subtract<P, IPopupProps>) {
       super(props);
 
@@ -61,7 +64,7 @@ const withPopup = <P extends IPopupProps>(
       return (
         <Container>
           <TargetComponent
-            {...this.props as P}
+            {...(this.props as P)}
             showPopup={this.showPopup}
             setClosePopupCallback={this.setCloseCallback}
           />
@@ -72,7 +75,7 @@ const withPopup = <P extends IPopupProps>(
 
     private showPopup = (
       PopupComponent: JSX.Element | null,
-      closeOverlay: boolean = true
+      closeOverlay = true
     ) => {
       this.setState({
         PopupComponent,

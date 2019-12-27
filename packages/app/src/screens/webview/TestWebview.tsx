@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { WebView } from "react-native-webview";
 import { WebViewMessageEvent } from "react-native-webview/lib/WebViewTypes";
 import styled from "styled-components/native";
@@ -8,26 +8,21 @@ import RNWebview from "src/components/RNWebview";
 import { routes } from "src/configs/webview";
 
 const Content = styled(RNWebview)`
-    width: 300px;
-    height: 300px;
+  width: 300px;
+  height: 300px;
 `;
 
 class TestWebview extends Component {
-    public webview = React.createRef<WebView>();
+  public webview = React.createRef<WebView>();
 
-    public render() {
-        return (
-            <Content
-                onMessage={this.onMessage}
-                source={{ uri: routes.test }}
-            />
-        );
-    }
+  public render() {
+    return <Content onMessage={this.onMessage} source={{ uri: routes.test }} />;
+  }
 
-    private onMessage = (event: WebViewMessageEvent) => {
-        const { data } = event.nativeEvent;
-        // console.tron.log(data);
-    };
+  private onMessage = (event: WebViewMessageEvent) => {
+    const { data } = event.nativeEvent;
+    // console.tron.log(data);
+  };
 }
 
 export default TestWebview;
