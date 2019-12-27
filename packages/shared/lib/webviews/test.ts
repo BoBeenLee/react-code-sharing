@@ -1,8 +1,7 @@
-
 export interface IPayload {
-    test: string;
+  test: string;
 }
 
 export interface IMessagePayload {
-    message: string;
+  message: string;
 }

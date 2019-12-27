@@ -16,7 +16,7 @@ const TodoStore = types
       get todoTest() {
         return "todoTest123";
       }
-    }
+    };
   })
   .actions(self => {
     const reset = () => {
