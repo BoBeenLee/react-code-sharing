@@ -8,6 +8,7 @@ type FontType = "BOLD" | "MEDIUM" | "REGULAR";
 
 export interface ITextProps extends TextProps {
   fontType?: FontType;
+  children: React.ReactNode;
 }
 
 const fontTypeToFont: { [key in FontType]: string } = {

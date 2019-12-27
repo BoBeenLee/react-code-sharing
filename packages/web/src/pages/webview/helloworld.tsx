@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import { IMessagePayload, IPayload } from "@shared/webviews/test";
+import { IMessagePayload, IPayload } from "@shared/webviews/helloworld";
 import { getReactNativeWebView } from "src/utils/webview";
 
-class Test extends Component {
+class HelloWorld extends Component {
   constructor(props: any) {
     super(props);
 
@@ -22,4 +22,4 @@ class Test extends Component {
   };
 }
 
-export default Test;
+export default HelloWorld;

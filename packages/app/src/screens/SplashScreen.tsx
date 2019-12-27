@@ -10,7 +10,7 @@ import TestWebview from "src/screens/webview/TestWebview";
 import { IStore } from "src/stores/Store";
 import { iosStatusBarHeight } from "src/utils/device";
 
-import { test } from "@shared/test";
+import { test } from "@shared/sharedTest";
 
 interface IInject {
   store: IStore;
@@ -24,7 +24,7 @@ const Container = styled.View`
   padding-top: ${iosStatusBarHeight(false)}px;
 `;
 
-const Text = styled(Bold20)`
+const Name = styled(Bold20)`
   color: #000;
 `;
 
@@ -41,10 +41,9 @@ class SplashScreen extends React.Component<IInject> {
     const { todoTest } = this.props.store.todoStore;
     return (
       <Container>
-        <Text>
+        <Name>
           {this.props.store!.appStateStatus}123{test()}
-          {todoTest}
-        </Text>
+        </Name>
         <TestWebview />
         <LottieView
           style={{

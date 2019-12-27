@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 import FMText from "@shared/components/text/FMText/FMText.web";
-import { test } from "@shared/test";
+import { test } from "@shared/sharedTest";
 
 import Layout from "src/components/common/Layout";
 import SEO from "src/components/common/SEO";
