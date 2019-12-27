@@ -1,33 +1,33 @@
 {
-	"name": "react-webview-share",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
-	"scripts": {
-		"build": "lerna run build --parallel",
-		"deploy:staging": "lerna run deploy:staging",
-		"deploy:production": "lerna run deploy:production",
-		"eslint": "lerna run eslint --parallel",
-		"eslint:fix": "lerna run eslint:fix --parallel",
-		"test": "lerna run test --parallel",
-		"type-check": "lerna run type-check --parallel",
-		"postinstall": "lerna bootstrap",
-		"prepush": "lerna run prepush --parallel"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git@gitlab.com:rnapp/rnapp/rnapp.git"
-	},
-	"author": "",
-	"license": "ISC",
-	"devDependencies": {
-		"lerna": "3.16.4",
-		"prettier": "^1.18.2",
-		"husky": "^2.3.0"
-	},
-	"husky": {
-		"hooks": {
-			"pre-push": "lerna run prepush --parallel"
-		}
-	}
+  "name": "react-webview-share",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "lerna run build --parallel",
+    "deploy:staging": "lerna run deploy:staging",
+    "deploy:production": "lerna run deploy:production",
+    "eslint": "lerna run eslint --parallel",
+    "eslint:fix": "lerna run eslint:fix --parallel",
+    "test": "lerna run test --parallel",
+    "type-check": "lerna run type-check --parallel",
+    "postinstall": "lerna bootstrap",
+    "prepush": "lerna run prepush --parallel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:rnapp/rnapp/rnapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "3.16.4",
+    "prettier": "^1.18.2",
+    "husky": "3.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run prepush"
+    }
+  }
 }
