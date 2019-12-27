@@ -40,7 +40,10 @@ export function firebaseLogEvent(eventData: IEventResult) {
     return;
   }
 
-  const parameters = traverseObjectSliceStr(_.omit(eventData, ["eventType"]), 100);
+  const parameters = traverseObjectSliceStr(
+    _.omit(eventData, ["eventType"]),
+    100
+  );
   firebase.analytics().logEvent(eventData.eventType, parameters);
 }
 

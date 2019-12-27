@@ -25,7 +25,9 @@ class IndexPage extends React.Component<IInject> {
     return (
       <Layout>
         <FMText>FMText Shared</FMText>
-        Hello WOrld{test()}{todoTest}</Layout>
+        Hello WOrld{test()}
+        {todoTest}
+      </Layout>
     );
   }
 }

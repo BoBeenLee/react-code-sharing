@@ -19,7 +19,7 @@ const Content = styled.div`
   display: flex;
   flex: 1;
   flex-direction: column;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 `;
 
 const Body = styled.div`
@@ -36,9 +36,7 @@ class Layout extends Component<IProps> {
       <Container className={className}>
         <Content>
           <Header />
-          <Body>
-            {this.props.children}
-          </Body>
+          <Body>{this.props.children}</Body>
           <Footer />
         </Content>
       </Container>
@@ -46,4 +44,4 @@ class Layout extends Component<IProps> {
   }
 }
 
-export default (Layout);
+export default Layout;

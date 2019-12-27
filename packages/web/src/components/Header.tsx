@@ -3,7 +3,7 @@ import colors from "src/styles/colors";
 import { media } from "src/utils/media";
 import styled from "styled-components";
 
-const Header = styled.header`
+const Container = styled.header`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -23,12 +23,8 @@ const Header = styled.header`
   `};
 `;
 
-export default class extends Component {
+export default class Header extends Component {
   public render() {
-    return (
-      <Header>
-        Hello World
-      </Header>
-    );
+    return <Container>Hello World</Container>;
   }
 }
