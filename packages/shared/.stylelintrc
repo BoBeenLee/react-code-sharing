@@ -5,7 +5,24 @@
     "stylelint-config-styled-components"
   ],
   "rules": {
-    "no-descending-specificity": null,
-    "block-no-empty": null
+    "block-no-empty": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "block-closing-brace-newline-before": null,
+    "indentation": null,
+    "property-no-unknown": [true, {
+      "ignoreProperties": [
+        "padding-vertical",
+        "padding-horizontal",
+        "margin-vertical",
+        "margin-horizontal",
+        "shadow-color",
+        "shadow-offset",
+        "shadow-radius",
+        "shadow-opacity",
+        "include-font-padding",
+        "text-align-vertical",
+        "resize-mode"
+      ]
+    }]
   }
 }
