@@ -7,8 +7,8 @@
 		"build": "lerna run build --parallel",
 		"deploy:staging": "lerna run deploy:staging",
 		"deploy:production": "lerna run deploy:production",
-		"lint": "lerna run lint --parallel",
-		"lint:fix": "lerna run lint --fix",
+		"eslint": "lerna run eslint --parallel",
+		"eslint:fix": "lerna run eslint:fix --parallel",
 		"test": "lerna run test --parallel",
 		"type-check": "lerna run type-check --parallel",
 		"postinstall": "lerna bootstrap"
@@ -21,6 +21,12 @@
 	"license": "ISC",
 	"devDependencies": {
 		"lerna": "3.16.4",
-		"prettier": "^1.18.2"
+		"prettier": "^1.18.2",
+		"husky": "^2.3.0"
+	},
+	"husky": {
+		"hooks": {
+			"pre-push": "lerna run prepush --parallel"
+		}
 	}
 }

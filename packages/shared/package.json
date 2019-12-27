@@ -11,7 +11,8 @@
     "prettier": "prettier './lib/**/*.{js,ts,tsx}'",
     "lint:css": "stylelint './lib/**/*.tsx'",
     "eslint": "./node_modules/.bin/eslint './lib/**/*.{js,ts,tsx}'",
-    "eslint:fix": "./node_modules/.bin/eslint './lib/**/*.{js,ts,tsx}' --fix"
+    "eslint:fix": "./node_modules/.bin/eslint './lib/**/*.{js,ts,tsx}' --fix",
+    "prepush": "npm run lint:css && npm run eslint"
   },
   "keywords": [],
   "author": "",
