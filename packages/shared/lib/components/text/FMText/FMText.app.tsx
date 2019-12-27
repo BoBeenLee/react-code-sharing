@@ -24,6 +24,6 @@ const Text = styled.Text<{ fontType: FontType }>`
 
 function FMText({ fontType = "REGULAR", ...props }: ITextProps) {
   return <Text fontType={fontType} {...props} />;
-};
+}
 
 export default FMText;
