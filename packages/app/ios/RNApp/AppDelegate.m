@@ -29,7 +29,13 @@
     [RNFirebaseNotifications configure];
     [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
   
-    NSURL *jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+    NSURL *jsCodeLocation;
+    #if DEBUG
+      jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+    #else
+      jsCodeLocation = [CodePush bundleURL];
+    #endif
+
     [ReactNativeNavigation bootstrap:jsCodeLocation launchOptions:launchOptions];
     [RNSplashScreen show];
     return YES;
