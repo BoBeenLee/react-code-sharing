@@ -27,7 +27,6 @@ class HelloWorldWebview extends Component {
 
   private onMessage = (event: WebViewMessageEvent) => {
     const { data } = event.nativeEvent;
-    console.tron.log(data);
   };
 }
 

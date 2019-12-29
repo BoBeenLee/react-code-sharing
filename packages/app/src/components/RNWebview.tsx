@@ -33,7 +33,7 @@ class RNWebview extends PureComponent<IProps> {
     );
   }
 
-  private sendPostMessage = (data: object) => {
+  public sendPostMessage = (data: object) => {
     this.webview.current!.injectJavaScript(`
             (function(){
             window.postMessage('${data}','*');
