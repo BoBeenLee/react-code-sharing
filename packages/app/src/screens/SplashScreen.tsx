@@ -6,7 +6,7 @@ import styled from "styled-components/native";
 import XEIcon from "src/components/icon/XEIcon";
 import { Bold12, Bold20 } from "src/components/text/Typographies";
 import images from "src/images";
-import TestWebview from "src/screens/webview/TestWebview";
+import HelloWorldWebview from "src/screens/webview/HelloWorldWebview";
 import { IStore } from "src/stores/Store";
 import { iosStatusBarHeight } from "src/utils/device";
 
@@ -44,7 +44,7 @@ class SplashScreen extends React.Component<IInject> {
         <Name>
           {this.props.store!.appStateStatus}123{test()}
         </Name>
-        <TestWebview />
+        <HelloWorldWebview />
         <LottieView
           style={{
             backgroundColor: "#eee",

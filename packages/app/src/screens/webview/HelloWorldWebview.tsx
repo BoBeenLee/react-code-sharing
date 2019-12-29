@@ -12,17 +12,23 @@ const Content = styled(RNWebview)`
   height: 300px;
 `;
 
-class TestWebview extends Component {
-  public webview = React.createRef<WebView>();
+class HelloWorldWebview extends Component {
+  public webview = React.createRef<RNWebview>();
+
+  public componentDidMount() {
+    if (this.webview.current) {
+      this.webview.current.sendPostMessage({ message: "helloworld" });
+    }
+  }
 
   public render() {
-    return <Content onMessage={this.onMessage} source={{ uri: routes.test }} />;
+    return <Content ref={this.webview} onMessage={this.onMessage} source={{ uri: routes.helloworld }} />;
   }
 
   private onMessage = (event: WebViewMessageEvent) => {
     const { data } = event.nativeEvent;
-    // console.tron.log(data);
+    console.tron.log(data);
   };
 }
 
-export default TestWebview;
+export default HelloWorldWebview;

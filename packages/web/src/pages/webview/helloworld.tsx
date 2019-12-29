@@ -6,7 +6,6 @@ import { getReactNativeWebView } from "src/utils/webview";
 class HelloWorld extends Component {
   constructor(props: any) {
     super(props);
-
     window.addEventListener("message", this.onMessage);
   }
   public componentDidMount() {
@@ -18,7 +17,7 @@ class HelloWorld extends Component {
   }
 
   private onMessage = (message: MessageEvent) => {
-    console.log(message.data as IMessagePayload);
+    console.tron.log(message);
   };
 }
 
