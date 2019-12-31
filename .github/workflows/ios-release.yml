@@ -10,8 +10,8 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Install dependencies
       - uses: actions/checkout@v1
+      - name: Install dependencies
       - run: echo fs.inotify.max_user_watches=524288 | npm install
 
       - name: Fastlane ci
