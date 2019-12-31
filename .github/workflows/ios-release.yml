@@ -1,9 +1,9 @@
+name: IOS Release
+
 on:
   push:
     branches:
       - "master*"
-
-name: IOS Release
 
 jobs:
   ipa:

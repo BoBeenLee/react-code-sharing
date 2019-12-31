@@ -1,9 +1,9 @@
+name: Android Release
+
 on:
   push:
     branches:
       - "release*"
-
-name: Android Release
 
 jobs:
   apk:

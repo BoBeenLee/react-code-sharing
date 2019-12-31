@@ -1,9 +1,9 @@
+name: "build"
+
 on:
   push:
     branches:
       - "release*"
-
-name: "build"
 
 jobs:
   build: # make sure build/ci work properly
