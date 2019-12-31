@@ -1,9 +1,9 @@
 name: "build"
-
-on:
+on: # rebuild any PRs and main branch changes
+  pull_request:
   push:
     branches:
-      - "release*"
+      - "releases/*"
 
 jobs:
   build: # make sure build/ci work properly

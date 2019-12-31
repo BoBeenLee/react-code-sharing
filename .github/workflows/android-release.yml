@@ -1,5 +1,4 @@
 name: Android Release
-
 on:
   push:
     branches:
