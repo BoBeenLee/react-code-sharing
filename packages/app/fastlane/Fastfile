@@ -77,6 +77,7 @@ platform :ios do
       output_name: "#{ENV['OUTPUT_NAME']}_iOS-#{VERSION_NUMBER}#{OUTPUT_SUFFIX}.ipa",
       include_symbols: true,
       include_bitcode: true,
+      export_xcargs: "-allowProvisioningUpdates",
       export_options: {
         method: "app-store"
       }
@@ -102,18 +103,10 @@ platform :ios do
       lock_when_sleeps: true
     )
     import_certificate(
-      certificate_path: "certs/distribution.cer",
+      certificate_path: "codesigndoc_exports/Identities.p12",
       keychain_name: "BoBeenLee",
       keychain_path: "#{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}",
       keychain_password: "1234"
-    )
-    install_provisioning_profile(path: "certs/krrnappapptest.mobileprovision")
-    update_project_provisioning(
-      xcodeproj: "ios/#{ENV['XCODE_PROJECT_NAME']}.xcodeproj",
-      profile: "certs/krrnappapptest.mobileprovision",
-      target_filter: "^RNApp$", # matches name or type of a target
-      build_configuration: "Release",
-      code_signing_identity: ENV['XCODE_CODE_SIGN_ID']
     )
     disable_automatic_code_signing(
       path: XCODE_PROJECT_PATH,
@@ -122,6 +115,13 @@ platform :ios do
       code_sign_identity: ENV['XCODE_CODE_SIGN_ID'],
       profile_uuid: ENV['XCODE_PROVISIONING_PROFILE_UUID'],
       targets: ["RNApp"]
+    )
+    update_project_provisioning(
+      xcodeproj: "ios/#{ENV['XCODE_PROJECT_NAME']}.xcodeproj",
+      profile: "codesigndoc_exports/191f3fe5-d9ee-4e6b-bc6e-e7fe2bfe5b42.kr.rnapp.apptest.mobileprovision",
+      target_filter: "RNApp",
+      build_configuration: "Release",
+      code_signing_identity: ENV['XCODE_CODE_SIGN_ID']
     )
     puts "=======SUFFIX: #{OUTPUT_SUFFIX}======="
     update_project_info
