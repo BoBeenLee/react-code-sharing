@@ -1,6 +1,6 @@
 {
   "name": "kr.rnapp.app",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -38,7 +38,8 @@
     "storybook": "storybook start -p 7007",
     "codegen": "apollo client:codegen --target typescript",
     "prepush": "npm run lint:css && npm run eslint",
-    "postversion": "react-native-version"
+    "postbuildnumber:ios": "RNV=ios react-native-version",
+    "postversion": "react-native-version --reset-build"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.4.2",
