@@ -72,8 +72,8 @@ platform :ios do
       configuration: 'Release',
       output_directory: './build',
       output_name: "#{ENV['OUTPUT_NAME']}_iOS-#{VERSION_NUMBER}#{OUTPUT_SUFFIX}.ipa",
-      include_symbols: false,
-      include_bitcode: false,
+      include_symbols: true,
+      include_bitcode: true,
       export_options: {
         method: "app-store",
         teamID: ENV['XCODE_TEAM_ID']
@@ -91,6 +91,27 @@ platform :ios do
 
   desc "CI fastlane command with build env"
   lane :ci do |options|
+    create_keychain(
+      name: "BoBeenLee",
+      password: "1234",
+      default_keychain: true,
+      unlock: true,
+      timeout: 3600,
+      lock_when_sleeps: true
+    )
+    import_certificate(
+      certificate_path: "certs/distribution.cer",
+      keychain_name: "BoBeenLee",
+      keychain_path: "#{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}",
+      keychain_password: "1234"
+    )
+    update_project_provisioning(
+      xcodeproj: "ios/#{ENV['XCODE_PROJECT_NAME']}.xcodeproj",
+      profile: "certs/krrnappapptest.mobileprovision",
+      target_filter: ".*WatchKit Extension.*", # matches name or type of a target
+      build_configuration: "Release",
+      code_signing_identity: ENV['XCODE_CODE_SIGN_ID']
+    )
     automatic_code_signing(
       path: XCODE_PROJECT_PATH,
       use_automatic_signing: XCODE_AUTO_CODE_SIGN,
