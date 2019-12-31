@@ -1,18 +1,37 @@
-name: IOS Release
-on:
-  push:
-    branches:
-      - "master*"
+name: 'Fastlane action test'
+on: [push, repository_dispatch]
 
 jobs:
-  ipa:
-    name: Generate IPA
-    runs-on: macos-latest
-
+  test_job:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-16.04, ubuntu-18.04, macOS-latest]
+    name: A job to test the GitHub fastlane action
     steps:
-      - uses: actions/checkout@v1
-      - name: Fastlane ci
-      - uses: maierj/fastlane-action@development
-        with:
-          subdirectory: 'packages/app'
-          lane: 'ios ci'
+    - uses: actions/checkout@v1
+    - name: Fastlane step (root directory)
+      uses: maierj/fastlane-action@development
+      with:
+        lane: 'beta'
+        options: '{ "option1": "value1", "option2": "value2" }'
+      env:
+        ENV_VARIABLE_1: VALUE_1
+        ENV_VARIABLE_2: VALUE_2
+    - name: Fastlane step (subdirectory)
+      uses: maierj/fastlane-action@development
+      with:
+        lane: 'beta'
+        subdirectory: 'ios'
+      env:
+        ENV_VARIABLE_1: VALUE_1
+        ENV_VARIABLE_2: VALUE_2
+    - name: Fastlane step (subdirectory + bundle-install-path)
+      uses: maierj/fastlane-action@development
+      with:
+        lane: 'beta'
+        subdirectory: 'ios'
+        bundle-install-path: 'vendor/bundle'
+      env:
+        ENV_VARIABLE_1: VALUE_1
+        ENV_VARIABLE_2: VALUE_2
