@@ -17,7 +17,7 @@ class HelloWorld extends Component {
   }
 
   private onMessage = (message: MessageEvent) => {
-    console.tron.log(message);
+    // console.tron.log(message);
   };
 }
 
