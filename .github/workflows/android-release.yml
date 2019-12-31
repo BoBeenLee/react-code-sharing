@@ -22,7 +22,7 @@ jobs:
         run: chmod 755 ./packages/app/android/gradlew
 
       - name: Assemble app debug APK
-        run: cd ./packages/app && npm run android:release
+        run: cd ./packages/app/android && ./gradlew installRelease
 
       - name: Upload app APK
         uses: actions/upload-artifact@v1
