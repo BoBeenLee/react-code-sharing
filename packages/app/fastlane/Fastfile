@@ -65,6 +65,9 @@ platform :ios do
 
   desc "Private lane: Build a release ipa based on build env"
   private_lane :ios_build do
+    cocoapods(
+      podfile: "ios/Podfile"
+    )
     build_ios_app(
       clean: true,
       workspace: XCODE_WORKSPACE_PATH,

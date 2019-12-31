@@ -11,6 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
+      - run: npm install
       - name: Fastlane step
         uses: maierj/fastlane-action@v1.2.0
         with:
