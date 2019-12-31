@@ -1,29 +1,49 @@
 ![Logo of the project](./images/logo.sample.png)
 
 # Name of the project &middot; [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
+
 > Additional information or tag line
 
 A brief description of your project, what it is used for.
 
 ## Installing / Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
+A quick introduction of the minimal setup you need to get a RNApp up &
 running.
 
 ```shell
-commands here
+npm install
+
+# ios
+cd ios
+pod install
 ```
 
-Here you should say what actually happens when you execute the code above.
+### IOS Running
+
+```shell
+npm run ios
+```
+
+### Android Running
+
+```shell
+npm run android
+```
 
 ## Developing
 
 ### Built With
-List main libraries, frameworks used including versions (React, Angular etc...)
+
+React, React Native Mobx-State-Tree ...
 
 ### Prerequisites
-What is needed to set up the dev environment. For instance, global dependencies or any other tools. include download links.
 
+Xcode 최신버젼, node 10이상
+
+### Prerequisites
+
+What is needed to set up the dev environment. For instance, global dependencies or any other tools. include download links.
 
 ### Setting up Dev
 
@@ -53,6 +73,7 @@ Here again you should state what actually happens when the code above gets
 executed.
 
 ### Deploying / Publishing
+
 give instructions on how to build and release a new version
 In case there's some step you have to take that publishes this project to a
 server, this is the right time to state it.
@@ -66,7 +87,6 @@ And again you'd need to tell what the previous code actually does.
 ## Versioning
 
 We can maybe use [SemVer](http://semver.org/) for versioning. For the versions available, see the [link to tags on this repository](/tags).
-
 
 ## Configuration
 
@@ -90,11 +110,10 @@ Explain your code style and show how to check it.
 
 If the api is external, link to api documentation. If not describe your api including authentication methods as well as explaining all the endpoints with their required parameters.
 
-
 ## Database
 
 Explaining what database (and version) has been used. Provide download links.
-Documents your database design and schemas, relations etc... 
+Documents your database design and schemas, relations etc...
 
 ## Licensing
 
