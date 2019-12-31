@@ -100,10 +100,6 @@ platform :ios do
       code_sign_identity: ENV['XCODE_CODE_SIGN_ID'],
       profile_uuid: ENV['XCODE_PROVISIONING_PROFILE_UUID']
     )
-    increment_build_number(
-      xcodeproj: XCODE_PROJECT_PATH,
-      build_number: number_of_commits
-    )
     puts "=======SUFFIX: #{OUTPUT_SUFFIX}======="
     update_project_info
     ios_build
