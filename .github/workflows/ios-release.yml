@@ -11,10 +11,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - run: |
-          echo fs.inotify.max_user_watches=524288
-          npm install
-
       - name: Fastlane ci
       - uses: maierj/fastlane-action@development
         with:
