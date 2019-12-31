@@ -1,10 +1,5 @@
 name: IOS Release
 
-on:
-  push:
-    branches:
-      - "master*"
-
 jobs:
   ipa:
     name: Generate IPA
@@ -17,5 +12,5 @@ jobs:
 
       - uses: maierj/fastlane-action@v1.2.0
         with:
-          platform: 'ios'
-          lane: 'ci'
+          platform: "ios"
+          lane: "ci"
