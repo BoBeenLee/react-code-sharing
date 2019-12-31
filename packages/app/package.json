@@ -1,12 +1,12 @@
 {
   "name": "kr.rnapp.app",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "android": "npm run android:remove && node node_modules/react-native/local-cli/cli.js run-android",
-    "android:release": "npm run android:remove && node node_modules/react-native/local-cli/cli.js run-android --variant=release",
+    "android": "npm run android:remove || node node_modules/react-native/local-cli/cli.js run-android",
+    "android:release": "npm run android:remove || node node_modules/react-native/local-cli/cli.js run-android --variant=release",
     "android:release:open": "open ./android/app/build/outputs/apk",
     "android:aab": "cd ./android && ./gradlew bundleRelease",
     "android:aab:open": "open ./android/app/build/outputs/bundle/release",
@@ -37,7 +37,8 @@
     "playground": "graphql playground",
     "storybook": "storybook start -p 7007",
     "codegen": "apollo client:codegen --target typescript",
-    "prepush": "npm run lint:css && npm run eslint"
+    "prepush": "npm run lint:css && npm run eslint",
+    "postversion": "react-native-version"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.4.2",
@@ -153,6 +154,7 @@
     "prettier": "^1.19.1",
     "react-dom": "^16.11.0",
     "react-native-svg-transformer": "^0.13.0",
+    "react-native-version": "^3.2.0",
     "react-test-renderer": "16.8.3",
     "stylelint": "^9.10.1",
     "stylelint-config-recommended": "^2.1.0",
