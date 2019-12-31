@@ -78,8 +78,7 @@ platform :ios do
       include_symbols: true,
       include_bitcode: true,
       export_options: {
-        method: "app-store",
-        teamID: ENV['XCODE_TEAM_ID']
+        method: "app-store"
       }
     )
 
@@ -116,18 +115,13 @@ platform :ios do
       build_configuration: "Release",
       code_signing_identity: ENV['XCODE_CODE_SIGN_ID']
     )
-    gym(
-      scheme: ENV['XCODE_SCHEME'],
-      export_method: "app-store",
-      export_xcargs: "-allowProvisioningUpdates"
-    )
-    automatic_code_signing(
+    disable_automatic_code_signing(
       path: XCODE_PROJECT_PATH,
-      use_automatic_signing: XCODE_AUTO_CODE_SIGN,
       team_id: ENV['XCODE_TEAM_ID'],
       bundle_identifier: XCODE_BUNDLE_ID,
       code_sign_identity: ENV['XCODE_CODE_SIGN_ID'],
-      profile_uuid: ENV['XCODE_PROVISIONING_PROFILE_UUID']
+      profile_uuid: ENV['XCODE_PROVISIONING_PROFILE_UUID'],
+      targets: ["RNApp"]
     )
     puts "=======SUFFIX: #{OUTPUT_SUFFIX}======="
     update_project_info
