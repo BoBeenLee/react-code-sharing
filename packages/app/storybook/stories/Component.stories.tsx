@@ -6,7 +6,7 @@ import styled from "styled-components/native";
 import { Regular12 } from "src/components/text/Typographies";
 import colors from "src/styles/colors";
 import ErrorBoundary from "src/components/ErrorBoundary";
-import ThrowErrorText from "./fixtures/ThrowErrorText";
+import BuggyCounter from "./fixtures/BuggyCounter";
 
 const BodyText = styled(Regular12)`
   color: ${colors.gray700};
@@ -20,7 +20,7 @@ storiesOf("Component", module)
     .add("ErrorBoundary", () => {
         return (
             <ErrorBoundary renderFallback={renderFallback}>
-                <ThrowErrorText />
+                <BuggyCounter />
             </ErrorBoundary>
         )
     });
