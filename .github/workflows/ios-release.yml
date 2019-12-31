@@ -18,6 +18,5 @@ jobs:
       - name: Fastlane ci
       - uses: maierj/fastlane-action@v1.2.0
         with:
-          subdirectory: 'packages/app'
-          platform: "ios"
-          lane: "ci"
+          subdirectory: "packages/app"
+          lane: "ios ci"
