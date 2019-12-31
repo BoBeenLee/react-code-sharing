@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Fastlane step
-        uses: maierj/fastlane-action@development
+        uses: maierj/fastlane-action@v1.2.0
         with:
           subdirectory: "packages/app"
           lane: "ios ci"
