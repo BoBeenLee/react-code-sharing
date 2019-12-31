@@ -1,9 +1,7 @@
 {
-  "name": "rnweb",
+  "name": "kr.rnapp.web",
+  "version": "1.0.0",
   "private": true,
-  "description": "rnweb",
-  "version": "0.1.0",
-  "author": "rnweb",
   "scripts": {
     "develop": "GATSBY_ENV=staging gatsby develop",
     "start": "run-p develop type-check:watch",
@@ -106,6 +104,7 @@
     "ts-jest": "^24.1.0",
     "typescript": "^3.7.2"
   },
+  "description": "rnweb",
   "keywords": [
     "gatsby"
   ],
