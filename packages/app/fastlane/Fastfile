@@ -118,9 +118,8 @@ platform :android do
   lane :ci do |options|
     gradle(task: 'clean', project_dir: "./android/")
     gradle(
-      task: "installRelease",
-      project_dir: "./android/",
-      build_type: "Release"
+      task: "app:assembleRelease",
+      project_dir: "./android/"
     )
     move_apk(output_apk: "#{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}")
   end
