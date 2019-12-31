@@ -81,7 +81,7 @@ platform :ios do
     )
 
     firebase_app_distribution(
-          app: "1:757274443049:ios:231a1b6f6362f01285cb38",
+          app: "1:757274443049:ios:c2fd23a6e3bbec1b85cb38",
           groups: "qateam",
           firebase_cli_token: ENV['FIREBASE_TOKEN'],
           release_notes: "Lots of amazing new features to test out!"
@@ -123,6 +123,12 @@ platform :android do
     gradle(
       task: "app:assembleRelease",
       project_dir: "./android/"
+    )
+    firebase_app_distribution(
+          app: "1:757274443049:android:5c127cdb4d9ce7ad85cb38",
+          groups: "qateam",
+          firebase_cli_token: ENV['FIREBASE_TOKEN'],
+          release_notes: "Lots of amazing new features to test out!"
     )
     move_apk(output_apk: "#{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}")
   end
