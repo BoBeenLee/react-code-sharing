@@ -46,6 +46,6 @@ This README.md is auto-generated and will be re-generated every time [fastlane](
 More information about fastlane can be found on [fastlane.tools](https://fastlane.tools).
 The documentation of fastlane can be found on [docs.fastlane.tools](https://docs.fastlane.tools).
 
-## Reference
+### Reference
 
 - https://github.com/charkcl/react-native-config-fastlane
