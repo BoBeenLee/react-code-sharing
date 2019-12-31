@@ -27,8 +27,7 @@ fastlane_require 'dotenv'
 import 'Commonfile'
 
 # iOS Setup #
-# XCODE_AUTO_CODE_SIGN = false.freeze
-XCODE_AUTO_CODE_SIGN = true.freeze
+XCODE_AUTO_CODE_SIGN = false.freeze
 
 default_platform(:ios)
 
