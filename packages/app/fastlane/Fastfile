@@ -112,9 +112,14 @@ platform :ios do
     update_project_provisioning(
       xcodeproj: "ios/#{ENV['XCODE_PROJECT_NAME']}.xcodeproj",
       profile: "certs/krrnappapptest.mobileprovision",
-      target_filter: ".*WatchKit Extension.*", # matches name or type of a target
+      target_filter: "^RNApp$", # matches name or type of a target
       build_configuration: "Release",
       code_signing_identity: ENV['XCODE_CODE_SIGN_ID']
+    )
+    gym(
+      scheme: ENV['XCODE_SCHEME'],
+      export_method: "app-store",
+      export_xcargs: "-allowProvisioningUpdates"
     )
     automatic_code_signing(
       path: XCODE_PROJECT_PATH,
