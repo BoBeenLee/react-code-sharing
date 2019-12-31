@@ -103,11 +103,13 @@ platform :ios do
       lock_when_sleeps: true
     )
     import_certificate(
-      certificate_path: "certs/distribution.cer",
+      certificate_path: "certs/Identities.p12",
+      certificate_password: ENV["CERTIFICATE_PASSWORD"] || "default",
       keychain_name: "BoBeenLee",
       keychain_path: "#{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}",
       keychain_password: "1234"
     )
+    install_provisioning_profile(path: "certs/krrnappapptest.mobileprovision")
     update_project_provisioning(
       xcodeproj: "ios/#{ENV['XCODE_PROJECT_NAME']}.xcodeproj",
       profile: "certs/krrnappapptest.mobileprovision",
