@@ -1,0 +1,21 @@
+name: IOS Release
+
+on:
+  push:
+    branches:
+      - "master*"
+
+jobs:
+  ipa:
+    name: Generate IPA
+    runs-on: macos-latest
+
+    steps:
+      - name: Install dependencies
+      - uses: actions/checkout@v1
+      - run: echo fs.inotify.max_user_watches=524288 | npm install
+
+      - uses: maierj/fastlane-action@v1.2.0
+        with:
+          platform: 'ios'
+          lane: 'ci'
