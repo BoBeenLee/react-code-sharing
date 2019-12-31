@@ -660,7 +660,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Junhui Kim (787Q6972XA)";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 787Q6972XA;
@@ -673,7 +673,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.rnapp.apptest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = kr.rnapp.apptest;
+				PROVISIONING_PROFILE = "191f3fe5-d9ee-4e6b-bc6e-e7fe2bfe5b42";
+				PROVISIONING_PROFILE_SPECIFIER = kr.rnapp.apptest;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNApp.app/RNApp";
 			};
 			name = Release;
@@ -685,7 +686,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RNApp/RNApp.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Junhui Kim (787Q6972XA)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.0.0.1;
 				DEAD_CODE_STRIPPING = NO;
@@ -809,7 +810,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.rnapp.apptest;
 				PRODUCT_NAME = RNApp;
-				PROVISIONING_PROFILE = kr.rnapp.apptest;
+				PROVISIONING_PROFILE = "191f3fe5-d9ee-4e6b-bc6e-e7fe2bfe5b42";
 				PROVISIONING_PROFILE_SPECIFIER = kr.rnapp.apptest;
 				SWIFT_OBJC_BRIDGING_HEADER = "RNApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -825,7 +826,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RNApp/RNApp.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Junhui Kim (787Q6972XA)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1.0.0.1;
 				DEVELOPMENT_TEAM = 787Q6972XA;
@@ -948,7 +949,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.rnapp.apptest;
 				PRODUCT_NAME = RNApp;
-				PROVISIONING_PROFILE = kr.rnapp.apptest;
+				PROVISIONING_PROFILE = "191f3fe5-d9ee-4e6b-bc6e-e7fe2bfe5b42";
 				PROVISIONING_PROFILE_SPECIFIER = kr.rnapp.apptest;
 				SWIFT_OBJC_BRIDGING_HEADER = "RNApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -995,7 +996,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Junhui Kim (787Q6972XA)";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1009,7 +1010,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.rnapp.apptest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = kr.rnapp.apptest;
+				PROVISIONING_PROFILE = "191f3fe5-d9ee-4e6b-bc6e-e7fe2bfe5b42";
+				PROVISIONING_PROFILE_SPECIFIER = kr.rnapp.apptest;
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
@@ -1055,7 +1057,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Junhui Kim (787Q6972XA)";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1069,7 +1071,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.rnapp.apptest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = kr.rnapp.apptest;
+				PROVISIONING_PROFILE = "191f3fe5-d9ee-4e6b-bc6e-e7fe2bfe5b42";
+				PROVISIONING_PROFILE_SPECIFIER = kr.rnapp.apptest;
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RNApp-tvOS.app/RNApp-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
