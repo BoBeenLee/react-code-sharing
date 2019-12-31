@@ -116,9 +116,9 @@ platform :android do
 
   desc "CI fastlane command with build env"
   lane :ci do |options|
-    KEYSTORE_PWD = ENV["MYAPP_KEYSTORE_PASSWORD"]
+    KEYSTORE_PWD = ENV["MYAPP_RELEASE_STORE_PASSWORD"]
     if KEYSTORE_PWD == nil
-      UI.user_error!("Please provide MYAPP_KEYSTORE_PASSWORD=xxx when running this command.")
+      UI.user_error!("Please provide MYAPP_RELEASE_STORE_PASSWORD=xxx when running this command.")
     end
     gradle(task: 'clean', project_dir: "./android/")
     gradle(

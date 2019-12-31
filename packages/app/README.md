@@ -114,7 +114,7 @@ Fastlane will load config from `/config.*` file into `.env`
 Secrets are to be provided in command line
 
 + `MYAPP_CONFIG=prod yarn fastlane:ios-ci`
-+ `MYAPP_KEYSTORE_PASSWORD=xxxxx MYAPP_CONFIG=prod yarn fastlane:android-ci`
++ `MYAPP_RELEASE_STORE_PASSWORD=xxxxx  yarn fastlane:android-ci`
 
 #### Android
 
