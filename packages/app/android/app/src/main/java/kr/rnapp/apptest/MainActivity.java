@@ -1,9 +1,9 @@
-package kr.rnapp.app;
+package kr.rnapp.apptest;
 
 import android.os.Build;
 import android.os.Bundle;
 
-import kr.rnapp.app.MainApplication;
+import kr.rnapp.apptest.MainApplication;
 
 import com.reactnativenavigation.NavigationActivity;
 import com.reactnativenavigation.utils.CommandListenerAdapter;

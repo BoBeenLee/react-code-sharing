@@ -1,4 +1,4 @@
-package kr.rnapp.app;
+package kr.rnapp.apptest;
 
 import android.app.Application;
 import android.content.Context;
@@ -13,7 +13,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Arrays;
 
-import kr.rnapp.app.BuildConfig;
+import kr.rnapp.apptest.BuildConfig;
 
 import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;

@@ -795,7 +795,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.RNApp.app;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.rnapp.apptest;
 				PRODUCT_NAME = RNApp;
 				SWIFT_OBJC_BRIDGING_HEADER = "RNApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -930,7 +930,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.RNApp.app;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.rnapp.apptest;
 				PRODUCT_NAME = RNApp;
 				SWIFT_OBJC_BRIDGING_HEADER = "RNApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
