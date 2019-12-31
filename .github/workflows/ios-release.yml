@@ -16,3 +16,14 @@ jobs:
         with:
           subdirectory: "packages/app"
           lane: "ios ci"
+        env:
+          APP_DISPLAY_NAME: "RNApp"
+          OUTPUT_NAME: "RNApp"
+          OUTPUT_SUFFIX: ""
+          PRODUCT_BUNDLE_IDENTIFIER: "kr.rnapp.apptest"
+          XCODE_TEAM_ID: "787Q6972XA"
+          XCODE_SCHEME: "RNApp"
+          XCODE_PROJECT_NAME: "RNApp"
+          XCODE_CODE_SIGN_ID: "iPhone Distribution"
+          XCODE_PROVISIONING_PROFILE_UUID: "kr.rnapp.apptest"
+          FIREBASE_TOKEN: "1//0eoKcGGVW69GBCgYIARAAGA4SNwF-L9IrtDU_S9ZQrWvYKLjQwcjzaYUVxLNtaPOOCbW0gAkKxINs6nEjAOpOSAWnAVAF297ntCo"
