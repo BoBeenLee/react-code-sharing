@@ -75,10 +75,7 @@ platform :ios do
       include_symbols: false,
       include_bitcode: false,
       export_options: {
-        method: "development",
-        provisioningProfiles: {
-          XCODE_BUNDLE_ID => ENV['XCODE_PROVISIONING_PROFILE_UUID']
-        },
+        method: "app-store",
         teamID: ENV['XCODE_TEAM_ID']
       }
     )
