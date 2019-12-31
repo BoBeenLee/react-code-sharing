@@ -83,6 +83,13 @@ platform :ios do
         teamID: ENV['XCODE_TEAM_ID']
       }
     )
+
+    firebase_app_distribution(
+          app: "1:757274443049:ios:231a1b6f6362f01285cb38",
+          groups: "qateam",
+          firebase_cli_token: ENV['FIREBASE_TOKEN'],
+          release_notes: "Lots of amazing new features to test out!"
+    )
     puts "=======IPA OUTPUT IS HERE: #{lane_context[SharedValues::IPA_OUTPUT_PATH]}======="
   end
 

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: Verifying fastlane version" time="0.012885">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.001484">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: get_version_number" time="0.124508">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: gradle" time="24.511554">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: gradle" time="142.088522">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="5: Switch to android move_apk lane" time="0.002125">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="6: cp /Users/bobinlee/Documents/dev/git/react-webview-share/packages/app/android/app/build/outputs/apk/release/app-release.apk /Users/bobinlee/Documents/dev/git/react-webview-share/packages/app/android/app/RNApp_Android-1.1.2.apk" time="0.040959">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>
