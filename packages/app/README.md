@@ -105,6 +105,17 @@ server, this is the right time to state it.
 packagemanager deploy your-project -s server.com -u username -p password
 ```
 
+## Fastlane
+Please make sure you update `fastlane/Fastfile` with the correct config and syntax according to [Fastlane docs](https://docs.fastlane.tools/)
+
++ for iOS, please note if `XCODE_AUTO_CODE_SIGN` should be true or false (manually manage code-signing)
+
+Fastlane will load config from `/config.*` file into `.env`
+Secrets are to be provided in command line
+
++ `MYAPP_CONFIG=prod yarn fastlane:ios-ci`
++ `MYAPP_KEYSTORE_PASSWORD=xxxxx MYAPP_CONFIG=prod yarn fastlane:android-ci`
+
 #### Android
 
 ##### aab 테스트 진행

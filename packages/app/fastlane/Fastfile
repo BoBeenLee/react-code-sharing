@@ -34,11 +34,7 @@ default_platform(:ios)
 
 before_all do |lane, options|
   debug_options(options, true)
-  MYAPP_ENV = ENV["MYAPP_CONFIG"]
-  if MYAPP_ENV == nil
-    UI.user_error!("Please provide MYAPP_CONFIG=xxx when running this command.")
-  end
-  copy_env_for_build_type(MYAPP_ENV)
+  
   Dotenv.overload("../.env")
   XCODE_BUNDLE_ID = ENV['PRODUCT_BUNDLE_IDENTIFIER']
   XCODE_PROJECT_NAME = ENV['XCODE_PROJECT_NAME']
