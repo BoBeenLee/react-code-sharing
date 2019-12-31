@@ -116,19 +116,11 @@ platform :android do
 
   desc "CI fastlane command with build env"
   lane :ci do |options|
-    KEYSTORE_PWD = ENV["MYAPP_RELEASE_STORE_PASSWORD"]
-    if KEYSTORE_PWD == nil
-      UI.user_error!("Please provide MYAPP_RELEASE_STORE_PASSWORD=xxx when running this command.")
-    end
     gradle(task: 'clean', project_dir: "./android/")
     gradle(
-      task: "assemble",
+      task: "installRelease",
       project_dir: "./android/",
-      build_type: "Release",
-      properties: {
-        "android.injected.signing.key.alias" => ENV['MYAPP_RELEASE_KEY_ALIAS'],
-        "versionCode" => number_of_commits,
-      }
+      build_type: "Release"
     )
     move_apk(output_apk: "#{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}")
   end
