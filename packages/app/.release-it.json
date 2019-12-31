@@ -2,5 +2,9 @@
   "git": {
     "commitMessage": "chore: release %s",
     "tagName": "v%s"
-  }
+  },
+  "hooks": {
+   "after:bump": "npm run postversion",
+   "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}.\n"
+ }
 }
