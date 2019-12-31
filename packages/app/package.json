@@ -38,6 +38,7 @@
     "androidrectotronconnect": "adb reverse tcp:9090 tcp:9090",
     "storybook": "storybook start -p 7007",
     "prepush": "npm run lint:css && npm run eslint",
+    "postinstall": "npx jetify",
     "postbuildnumber:ios": "RNV=ios react-native-version",
     "postversion": "react-native-version --reset-build",
     "release": "release-it"
