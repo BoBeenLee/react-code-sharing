@@ -70,11 +70,7 @@ platform :ios do
       output_name: "#{ENV['OUTPUT_NAME']}_iOS-#{VERSION_NUMBER}#{OUTPUT_SUFFIX}.ipa",
       include_symbols: true,
       include_bitcode: true,
-      skip_profile_detection: true,
-      export_method: "app-store",
-      export_options: {
-        provisioningProfiles: { "kr.rnapp.apptest": ENV['XCODE_PROVISIONING_PROFILE_NAME'] }
-      }
+      export_method: "app-store"
     )
 
     firebase_app_distribution(
