@@ -101,12 +101,11 @@ platform :ios do
       default_keychain: true,
       unlock: true,
       timeout: 3600,
-      lock_when_sleeps: true
+      add_to_search_list: true
     )
     import_certificate(
       certificate_path: "codesigndoc_exports/Identities.p12",
       keychain_name: "BoBeenLee",
-      keychain_path: "#{lane_context[SharedValues::GRADLE_APK_OUTPUT_PATH]}",
       keychain_password: "1234"
     )
     update_project_provisioning(
