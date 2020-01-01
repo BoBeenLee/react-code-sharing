@@ -1,10 +1,15 @@
 {
   "git": {
+    "commit": true,
     "commitMessage": "chore(Release): v${version}",
     "requireUpstream": false,
     "requireCleanWorkingDir": true,
+    "tag": true,
     "tagName": "v%s",
     "push": false
+  },
+  "npm": {
+    "publish": false
   },
   "github": {
     "release": true,
