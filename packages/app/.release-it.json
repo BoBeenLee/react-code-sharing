@@ -12,7 +12,7 @@
     "publish": false
   },
   "github": {
-    "release": true,
+    "release": false,
     "releaseName": "RNApp %s Released!",
     "draft": true
   },
