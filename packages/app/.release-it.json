@@ -12,7 +12,7 @@
     "draft": true
   },
   "hooks": {
-    "after:beforeRelease": "npm run postversion",
+    "after:beforeRelease": "npm run version",
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}.\n"
   }
 }
