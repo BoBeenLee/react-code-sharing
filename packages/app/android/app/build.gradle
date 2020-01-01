@@ -147,8 +147,8 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         missingDimensionStrategy "RNN.reactNativeVersion", "reactNative60" // See note below!
-        versionCode 17
-        versionName "1.1.8"
+        versionCode 19
+        versionName "1.1.9"
         multiDexEnabled true
     }
     signingConfigs {
