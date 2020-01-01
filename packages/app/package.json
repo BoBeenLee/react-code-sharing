@@ -41,7 +41,7 @@
     "postinstall": "npx jetify",
     "postbuildnumber:ios": "RNV=ios react-native-version",
     "version": "react-native-version --reset-build",
-    "release": "release-it --dry-run"
+    "release": "release-it --ci"
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.4.2",
