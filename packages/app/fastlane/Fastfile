@@ -70,7 +70,8 @@ platform :ios do
       output_name: "#{ENV['OUTPUT_NAME']}_iOS-#{VERSION_NUMBER}#{OUTPUT_SUFFIX}.ipa",
       include_symbols: true,
       include_bitcode: true,
-      export_method: "app-store"
+      export_method: "app-store",
+      export_xcargs: "-allowProvisioningUpdates"
     )
 
     firebase_app_distribution(
@@ -109,7 +110,8 @@ platform :ios do
       profile: "codesigndoc_exports/191f3fe5-d9ee-4e6b-bc6e-e7fe2bfe5b42.kr.rnapp.apptest.mobileprovision",
       target_filter: "RNApp",
       build_configuration: "Release",
-      code_signing_identity: ENV['XCODE_CODE_SIGN_ID']
+      code_signing_identity: ENV['XCODE_CODE_SIGN_ID'],
+      certificate: "codesigndoc_exports/distribution.cer"
     )
     puts "=======SUFFIX: #{OUTPUT_SUFFIX}======="
     update_project_info
