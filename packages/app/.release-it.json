@@ -1,10 +1,17 @@
 {
   "git": {
-    "commitMessage": "chore: release %s",
-    "tagName": "v%s"
+    "commitMessage": "release: v${version}",
+    "requireCleanWorkingDir": true,
+    "tagName": "v%s",
+    "push": false
+  },
+  "github": {
+    "release": true,
+    "releaseName": "RNApp %s Released!",
+    "draft": true
   },
   "hooks": {
-   "after:bump": "npm run postversion",
-   "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}.\n"
- }
+    "after:bump": "npm run postversion",
+    "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}.\n"
+  }
 }
