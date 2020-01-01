@@ -12,7 +12,6 @@
     "draft": true
   },
   "hooks": {
-    "after:bump": "npm run postversion",
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}.\n"
   }
 }
