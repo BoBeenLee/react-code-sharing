@@ -40,7 +40,6 @@
     "prepush": "npm run lint:css && npm run eslint",
     "postinstall": "npx jetify",
     "postbuildnumber:ios": "RNV=ios react-native-version",
-    "postversion": "react-native-version --reset-build",
     "release": "release-it"
   },
   "dependencies": {
