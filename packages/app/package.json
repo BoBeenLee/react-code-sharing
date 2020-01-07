@@ -40,7 +40,7 @@
     "prepush": "npm run lint:css && npm run eslint",
     "postinstall": "npx jetify",
     "postbuildnumber:ios": "RNV=ios react-native-version",
-    "changelog": "auto-changelog -p --ignore-commit-pattern \"^\\[web\\]*\" && git add CHANGELOG.md",
+    "changelog": "auto-changelog -p && git add CHANGELOG.md",
     "version": "npm run changelog && react-native-version --reset-build",
     "release": "release-it --ci"
   },
@@ -189,11 +189,5 @@
     "modulePaths": [
       "<rootDir>"
     ]
-  },
-  "auto-changelog": {
-    "output": "CHANGELOG.md",
-    "template": "keepachangelog",
-    "unreleased": true,
-    "commitLimit": false
   }
 }
