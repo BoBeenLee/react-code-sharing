@@ -188,12 +188,12 @@
     },
     "modulePaths": [
       "<rootDir>"
-    ],
-    "auto-changelog": {
-      "output": "CHANGELOG.md",
-      "template": "keepachangelog",
-      "unreleased": true,
-      "commitLimit": false
-    }
+    ]
+  },
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
   }
 }
