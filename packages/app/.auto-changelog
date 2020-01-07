@@ -3,5 +3,5 @@
   "template": "keepachangelog",
   "unreleased": true,
   "commitLimit": false,
-  "ignoreCommitPattern": "^\\[web\\][\s\S]*"
+  "ignoreCommitPattern": "^\\[web\\][\\s\\S]*"
 }
