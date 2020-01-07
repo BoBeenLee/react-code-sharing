@@ -17,7 +17,10 @@
     "lint:css": "stylelint './src/**/*.tsx'",
     "eslint": "./node_modules/.bin/eslint './src/**/*.{js,ts,tsx}'",
     "eslint:fix": "./node_modules/.bin/eslint './src/**/*.{js,ts,tsx}' --fix",
-    "prepush": "npm run lint:css && npm run eslint"
+    "prepush": "npm run lint:css && npm run eslint",
+    "changelog": "auto-changelog -p && git add CHANGELOG.md",
+    "version": "npm run changelog",
+    "release": "release-it --ci"
   },
   "dependencies": {
     "@loadable/component": "^5.11.0",
@@ -84,6 +87,7 @@
     "@types/uuid": "^3.4.6",
     "@typescript-eslint/eslint-plugin": "^2.13.0",
     "@typescript-eslint/parser": "^2.13.0",
+    "auto-changelog": "^1.16.2",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "babel-preset-gatsby": "^0.2.21",
@@ -97,6 +101,7 @@
     "prettier": "^1.19.1",
     "reactotron-mst": "^3.1.3",
     "reactotron-react-js": "^3.3.7",
+    "release-it": "^12.4.3",
     "stylelint": "12.0.1",
     "stylelint-config-recommended": "3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
@@ -108,5 +113,11 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "auto-changelog": {
+    "output": "CHANGELOG.md",
+    "template": "keepachangelog",
+    "unreleased": true,
+    "commitLimit": false
+  }
 }

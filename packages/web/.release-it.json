@@ -5,7 +5,7 @@
     "requireUpstream": false,
     "requireCleanWorkingDir": true,
     "tag": true,
-    "tagName": "v%s-app",
+    "tagName": "v%s-web",
     "push": false
   },
   "npm": {
@@ -13,7 +13,7 @@
   },
   "github": {
     "release": false,
-    "releaseName": "RNApp %s Released!",
+    "releaseName": "RNWeb %s Released!",
     "draft": true
   },
   "hooks": {
