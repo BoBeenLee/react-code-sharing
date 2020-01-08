@@ -1,4 +1,6 @@
 import React from "react";
+import { compose } from "recompose";
+
 import { initialize as firebaseInitialize } from "src/configs/firebase";
 import { setCurrentScreen } from "src/configs/analytics";
 import { getRootStore } from "src/stores/Store";
@@ -21,6 +23,9 @@ export const wrapPageElement = ({ element }) => {
 
 export const wrapRootElement = ({ element }) => {
   firebaseInitialize();
-  const enhanceElement = withStore(store)(element);
+
+  const enhanceElement = compose(
+    withStore(store)
+  )(element);
   return enhanceElement;
 };
