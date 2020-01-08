@@ -25,7 +25,9 @@ export const wrapRootElement = ({ element }) => {
   firebaseInitialize();
 
   const enhanceElement = compose(
+    withToast,
     withStore(store)
   )(element);
+  
   return enhanceElement;
 };
