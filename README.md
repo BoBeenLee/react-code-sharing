@@ -85,9 +85,14 @@ npm ci
    npx lerna exec --scope="@rnapp/app" -- rm -rf ./node_modules
 ```
 
+## Commit
+
+- https://gist.github.com/stephenparish/9941e89d80e2bc58a153
 
 ### ISSUE
+
 #### Error: EPERM: operation not permitted
+
 - https://github.com/npm/npm/issues/18380
 
 # Package별 설명
