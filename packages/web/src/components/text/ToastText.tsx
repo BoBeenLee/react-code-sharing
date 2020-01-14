@@ -48,7 +48,7 @@ function ToastText(props: IProps) {
 
   useEffect(() => {
     show();
-  }, []);
+  }, [show]);
 
   return (
     <Container
