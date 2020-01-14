@@ -5,6 +5,7 @@ import { initialize as firebaseInitialize } from "src/configs/firebase";
 import { setCurrentScreen } from "src/configs/analytics";
 import { getRootStore } from "src/stores/Store";
 import withStore from "src/hocs/withStore";
+import withToast from "src/hocs/withToast";
 import { isProduction } from "src/configs/env";
 import { setupReactotron } from "ReactotronConfig";
 

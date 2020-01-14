@@ -6,7 +6,7 @@ import styled from "styled-components/native";
 import XEIcon from "src/components/icon/XEIcon";
 import { Bold12, Bold20 } from "src/components/text/Typographies";
 import images from "src/images";
-import HelloWorldWebview from "src/screens/webview/HelloWorldWebview";
+import HelloWorldWebview from "src/components/webview/HelloWorldWebview";
 import { IStore } from "src/stores/Store";
 import { iosStatusBarHeight } from "src/utils/device";
 

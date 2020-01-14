@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { IMessagePayload, IPayload } from "@shared/webviews/helloworld";
+import { IWebPayload, IAppPayload } from "@shared/webviews/helloworld";
 import { getReactNativeWebView } from "src/utils/webview";
 
 class HelloWorld extends Component {
@@ -9,7 +9,7 @@ class HelloWorld extends Component {
     window.addEventListener("message", this.onMessage);
   }
   public componentDidMount() {
-    getReactNativeWebView<IPayload>({ test: "hello world" });
+    getReactNativeWebView<IAppPayload>({ test: "hello world" });
   }
 
   public render() {
@@ -17,7 +17,15 @@ class HelloWorld extends Component {
   }
 
   private onMessage = (message: MessageEvent) => {
-    // console.tron.log(message);
+    if (!message.data) {
+      return;
+    }
+    try {
+      const payload = JSON.parse(message.data) as IWebPayload;
+      console.log(payload.test);
+    } catch (error) {
+      // NOTHING
+    }
   };
 }
 

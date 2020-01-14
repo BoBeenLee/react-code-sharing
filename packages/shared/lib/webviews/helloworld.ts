@@ -1,7 +1,7 @@
-export interface IPayload {
+export interface IAppPayload {
   test: string;
 }
 
-export interface IMessagePayload {
-  message: string;
+export interface IWebPayload {
+  test: string;
 }

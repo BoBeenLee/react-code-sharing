@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "develop": "GATSBY_ENV=staging gatsby develop",
+    "start:staging": "GATSBY_ENV=staging gatsby develop",
+    "start:production": "GATSBY_ENV=production gatsby develop",
     "start": "run-p develop type-check:watch",
     "serve": "gatsby serve",
     "test": "jest",
