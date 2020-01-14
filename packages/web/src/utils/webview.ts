@@ -1,7 +1,8 @@
 import _ from "lodash";
+import { isBrowser } from "src/utils/navigator";
 
 export const getReactNativeWebView = <T>(data: T) => {
-  if (typeof window === "undefined") {
+  if (!isBrowser) {
     return;
   }
   if (_.isEmpty((window as any).ReactNativeWebView)) {
