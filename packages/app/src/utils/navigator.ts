@@ -4,7 +4,7 @@ import { SCREEN_IDS } from "src/screens/constant";
 import { pushTransition } from "src/screens/styles/animations";
 import topbars from "src/screens/styles/topbars";
 import colors from "src/styles/colors";
-import { delay } from "src/utils/common";
+import { delay } from "@shared/utils/common";
 
 let isLoading = false;
 let currentComponentId: string | null = null;
