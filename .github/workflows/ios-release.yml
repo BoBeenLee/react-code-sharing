@@ -2,7 +2,7 @@ name: IOS Release
 on:
   push:
     branches:
-      - "master*"
+      - "production*"
 
 jobs:
   ipa:
