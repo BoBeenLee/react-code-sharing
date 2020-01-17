@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Layout, Navigation } from "react-native-navigation";
 
 import { SCREEN_IDS } from "src/screens/constant";
@@ -26,30 +27,29 @@ const start = () => {
   setRoot({ nextComponentId: SCREEN_IDS.SplashScreen });
 };
 
-const setRoot = async ({ nextComponentId }: { nextComponentId: string }) =>
-  await protectedMultiClick(() => {
-    Navigation.setRoot({
-      root: {
-        stack: {
-          children: [
-            {
-              component: {
-                name: nextComponentId
-              }
+const setRoot = async ({ nextComponentId }: { nextComponentId: string }) => {
+  Navigation.setRoot({
+    root: {
+      stack: {
+        children: [
+          {
+            component: {
+              name: nextComponentId
             }
-          ]
-        }
+          }
+        ]
       }
-    });
-  })();
+    }
+  });
+};
 
 const setCurrentComponent = (componentId: string, componentName: string) => {
   currentComponentId = componentId;
   currentComponentName = componentName;
 };
 
-const getCurrentComponent = () => {
-  return currentComponentId;
+const getCurrentComponentId = () => {
+  return currentComponentId!;
 };
 
 export const protectedMultiClick = (func: any, milliseconds = 500) => async (
@@ -122,12 +122,17 @@ const setModalStackRoot = async ({
     });
   })(nextComponentId, params);
 
-const push = async (
-  componentId: string,
-  nextComponentId: string,
-  params?: object,
-  animtaions: any = pushTransition
-) =>
+const push = async ({
+  componentId,
+  nextComponentId,
+  params,
+  animtaions = pushTransition
+}: {
+  componentId: string;
+  nextComponentId: string;
+  params?: object;
+  animtaions?: any;
+}) =>
   await protectedMultiClick(async () => {
     await Navigation.push(componentId, {
       component: {
@@ -208,7 +213,7 @@ const showOverlay = async (params: Layout) =>
     await Navigation.showOverlay(params);
   })(params);
 
-const showOverlayTransparent = async (componentId: string) => {
+const showOverlayTransparent = async (componentId: string, params?: object) => {
   await showOverlay({
     component: {
       name: componentId,
@@ -222,7 +227,8 @@ const showOverlayTransparent = async (componentId: string) => {
         statusBar: {
           backgroundColor: "#00000039"
         }
-      }
+      },
+      passProps: params
     }
   });
 };
@@ -245,7 +251,7 @@ export {
   showStackModal,
   showOverlay,
   showOverlayTransparent,
-  getCurrentComponent,
+  getCurrentComponentId,
   push,
   pushOptions,
   pop,
