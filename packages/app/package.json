@@ -23,7 +23,7 @@
     "ios-bundle-release": "REACT_ENV=production react-native bundle --platform ios --dev false --entry-file index.ios.js --bundle-output ios-release.bundle --sourcemap-output ios-release.bundle.map",
     "ios-bugsnag-upload": "bugsnag-sourcemaps upload --api-key 0bda7c3b99b638a82d9a74c9872e0b79 --minified-file ios-release.bundle --overwrite true --source-map ios-release.bundle.map --minified-url main.jsbundle --upload-sources",
     "build:ios": "node node_modules/react-native/local-cli/cli.js bundle --entry-file='index.ios.js' --bundle-output='./ios/RNApp/main.jsbundle' --dev=false --platform='ios'",
-    "build:android": "./android && ./gradlew clean && ./gradlew assembleRelease",
+    "build:android": "cd ./android && ./gradlew clean && ./gradlew assembleRelease",
     "appdistribution:android": "npm run build:android && firebase appdistribution:distribute ./android/app/build/outputs/apk/release/app-release.apk --app 1:729865146079:android:1ec7739544849fc8 --token 1/Imdv27tKHLaob8Y1o4h6CA6-kn_zbXZXQi6e_-Xfuus",
     "appdistribution:ios": "firebase appdistribution:distribute $BITRISE_IPA_PATH --app 1:833905792974:ios:1ec7739544849fc8 --token 1/Imdv27tKHLaob8Y1o4h6CA6-kn_zbXZXQi6e_-Xfuus",
     "fastlane:ios-ci": "fastlane ios ci",
