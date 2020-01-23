@@ -15,7 +15,5 @@ const CenterView = styled.View`
 storiesOf("Input", module)
   .addDecorator((getStory: any) => <CenterView>{getStory()}</CenterView>)
   .add("RNTextInput", () => {
-    return (
-      <RNTextInput />
-    );
+    return <RNTextInput />;
   });
