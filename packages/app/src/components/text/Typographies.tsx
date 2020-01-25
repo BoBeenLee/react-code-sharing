@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-import FMText from "src/components/text/FMText";
+import FMText from "src/components/text/RNText";
 
 const Bold = styled(FMText).attrs({ fontType: "BOLD" })``;
 const Medium = styled(FMText).attrs({ fontType: "MEDIUM" })``;

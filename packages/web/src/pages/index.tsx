@@ -2,7 +2,7 @@ import { inject, observer } from "mobx-react";
 import React from "react";
 import styled from "styled-components";
 
-import FMText from "@shared/components/text/FMText/FMText.web";
+import RNText from "@shared/components/text/RNText/RNText.web";
 import { test } from "@shared/sharedTest";
 
 import Layout from "src/components/common/Layout";
@@ -24,7 +24,7 @@ class IndexPage extends React.Component<IInject> {
     const { todoTest } = this.props.store.todoStore;
     return (
       <Layout>
-        <FMText>FMText Shared</FMText>
+        <RNText>RNText Shared</RNText>
         Hello WOrld{test()}
         {todoTest}
       </Layout>
