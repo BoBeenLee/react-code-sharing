@@ -106,3 +106,7 @@ npm ci
 # Package별 설명
 
 https://bigcheeseapp.com/2019/09/14/react-native-continuous-delivery-with-github-actions-and-fastlane/
+
+### Reference
+
+- https://www.slideshare.net/2j2e/monorepo-react-web-react-native
