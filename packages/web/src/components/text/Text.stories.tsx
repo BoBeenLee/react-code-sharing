@@ -3,7 +3,13 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import React from "react";
 
-import { Bold8, Bold10, Bold12, Bold13, Bold14 } from "@shared/components/text/Typographies/Typographies.web";
+import {
+  Bold8,
+  Bold10,
+  Bold12,
+  Bold13,
+  Bold14
+} from "@shared/components/text/Typographies/Typographies.web";
 
 const Container = styled.div`
   display: flex;
@@ -18,6 +24,5 @@ storiesOf("Text", module).add("Typographies", () => (
     <Bold12>Bold12</Bold12>
     <Bold13>Bold13</Bold13>
     <Bold14>Bold14</Bold14>
-    
   </Container>
 ));
