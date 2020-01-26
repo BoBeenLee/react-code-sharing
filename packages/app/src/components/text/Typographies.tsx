@@ -1,10 +1,10 @@
 import styled from "styled-components/native";
 
-import FMText from "src/components/text/RNText";
+import RNText from "src/components/text/RNText";
 
-const Bold = styled(FMText).attrs({ fontType: "BOLD" })``;
-const Medium = styled(FMText).attrs({ fontType: "MEDIUM" })``;
-const Regular = styled(FMText).attrs({ fontType: "REGULAR" })``;
+const Bold = styled(RNText).attrs({ fontType: "BOLD" })``;
+const Medium = styled(RNText).attrs({ fontType: "MEDIUM" })``;
+const Regular = styled(RNText).attrs({ fontType: "REGULAR" })``;
 
 export const Bold8 = styled(Bold)`
   font-size: 8px;
