@@ -7,7 +7,6 @@ import ScaleableButton from "src/components/button/ScaleableButton";
 import { Bold12 } from "@shared/components/text/Typographies/Typographies.app";
 
 const CenterView = styled.View`
-  flex: 1;
   justify-content: center;
   align-items: center;
 `;

@@ -5,7 +5,7 @@ import { VariableSizeList as List, ListChildComponentProps } from "react-window"
 import InfiniteLoader from "react-window-infinite-loader";
 import styled from "styled-components";
 
-import ListLoading from "src/components/loading/ListLoading";
+import ListLoading from "@shared/components/loading/ListLoading/ListLoading.web";
 
 const Container = styled.div`
   position: absolute;
@@ -23,7 +23,7 @@ export interface IProps<T> {
   getItemSize: (index: number) => number;
   renderItem: (style: CSSProperties, item: T, index: number) => JSX.Element;
   onMore: (startIndex: number, stopIndex: number) => Promise<any> | null;
-  LoadingComponent?: JSX.Element;
+  LoadingComponent?: React.ReactNode;
 }
 
 class InfiniteList<T> extends Component<IProps<T>> {

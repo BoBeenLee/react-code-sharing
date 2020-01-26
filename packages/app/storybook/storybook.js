@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import {
   getStorybookUI,
-  configure,
-  addDecorator
+  configure
 } from "@storybook/react-native";
 import { Navigation } from "react-native-navigation";
 import SplashScreen from "react-native-splash-screen";
@@ -14,10 +13,6 @@ import ContainerWithStatusBar from "src/components/ContainerWithStatusBar";
 configure(() => {
   require("../src/components/index.stories.tsx");
 }, module);
-
-addDecorator(story => (
-  <ContainerWithStatusBar>{story()}</ContainerWithStatusBar>
-));
 
 const StorybookUIRoot = getStorybookUI({
   port: 7007,
@@ -32,7 +27,11 @@ class StorybookUIHMRRoot extends Component {
   }
 
   render() {
-    return <StorybookUIRoot />;
+    return (
+      <ContainerWithStatusBar>
+        <StorybookUIRoot />
+      </ContainerWithStatusBar>
+    );
   }
 }
 
