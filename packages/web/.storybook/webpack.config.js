@@ -28,9 +28,14 @@ module.exports = ({ config }) => {
     },
   });
   config.resolve.modules = [
-    ...(config.resolve.modules || []),
-    path.resolve("./"),
+    ...(config.resolve.modules || [])
   ];
+  config.resolve.alias = {
+    ...(config.resolve.alias || {}),
+    src: path.resolve(__dirname, "../src"),
+    "@shared": path.resolve(__dirname, "../../shared/lib"),
+    'styled-components': require.resolve('styled-components'),
+  };
   config.resolve.extensions.push(".ts", ".tsx");
 
   return config;
