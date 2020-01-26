@@ -16,9 +16,9 @@ configure(() => {
 
 const StorybookUIRoot = getStorybookUI({
   port: 7007,
-  onDeviceUI: true,
+  onDeviceUI: false,
   resetStorybook: true,
-  shouldPersistSelection: true
+  disableWebsockets: true
 });
 
 class StorybookUIHMRRoot extends Component {
