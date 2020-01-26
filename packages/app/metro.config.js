@@ -6,7 +6,15 @@
  */
 
 const { getDefaultConfig } = require("metro-config");
+const blacklist = require('metro-config/src/defaults/blacklist');
 const path = require("path");
+
+const installedDependencies = require("./package.json").dependencies;
+
+const extraNodeModules = {};
+Object.keys(installedDependencies).forEach(dep => {
+  extraNodeModules[dep] = path.resolve(__dirname, "node_modules", dep);
+});
 
 module.exports = (async () => {
   const {
@@ -24,11 +32,10 @@ module.exports = (async () => {
     },
     resolver: {
       assetExts: assetExts.filter(ext => ext !== "svg"),
-      sourceExts: [...sourceExts, "svg"]
+      sourceExts: [...sourceExts, "svg"],
+      extraNodeModules
     },
-    watchFolders: [
-      path.resolve(__dirname, '../shared')
-    ],
+    watchFolders: [path.resolve(__dirname, "../shared")],
     projectRoot: path.resolve(__dirname)
   };
 })();
