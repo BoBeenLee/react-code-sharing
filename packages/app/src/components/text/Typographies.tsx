@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-import RNText from "src/components/text/RNText";
+import RNText from "@shared/components/text/RNText/RNText.app";
 
 const Bold = styled(RNText).attrs({ fontType: "BOLD" })``;
 const Medium = styled(RNText).attrs({ fontType: "MEDIUM" })``;
