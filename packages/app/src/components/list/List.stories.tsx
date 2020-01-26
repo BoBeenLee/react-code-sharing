@@ -2,7 +2,7 @@ import _ from "lodash";
 import { action } from "@storybook/addon-actions";
 import { storiesOf } from "@storybook/react-native";
 import React, { useState } from "react";
-import { ListRenderItem } from "react-native";
+import { ListRenderItemInfo } from "react-native";
 import styled from "styled-components/native";
 
 import InfiniteList from "src/components/list/InfiniteList";
@@ -19,7 +19,7 @@ const InfiniteItem = styled.Text`
   margin-bottom: 5px;
 `;
 
-const renderInfiniteItem: ListRenderItem<any> = ({ item, index }) => {
+const renderInfiniteItem = ({ item, index }: ListRenderItemInfo<any>) => {
   return <InfiniteItem>{`${item}`}</InfiniteItem>;
 };
 
