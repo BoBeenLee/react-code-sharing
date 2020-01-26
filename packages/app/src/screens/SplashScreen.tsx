@@ -9,7 +9,7 @@ import {
   Bold20
 } from "@shared/components/text/Typographies/Typographies.app";
 import ScaleableButton from "src/components/button/ScaleableButton";
-import images from "src/images";
+import images from "@shared/images";
 import HelloWorldWebview from "src/components/webview/HelloWorldWebview";
 import { IStore } from "src/stores/Store";
 import { iosStatusBarHeight } from "src/utils/device";
