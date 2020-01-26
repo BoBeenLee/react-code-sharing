@@ -1,6 +1,8 @@
+import loadingSVG from './loading.svg';
+
 const images = {
   animation: require("./animation.json"),
-  listLoading: require("./loading.svg")
+  listLoading: loadingSVG
 };
 
 export default images;

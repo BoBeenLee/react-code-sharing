@@ -12,15 +12,11 @@ const Container = styled.View`
   align-content: center;
 `;
 
-const LoadingView = styled.Image`
-  height: 20px;
-  width: 20px;
-`;
-
 function ListLoading() {
+  const Loading = images.listLoading;
   return (
     <Container>
-      <LoadingView source={images.listLoading} />
+      <Loading width={40} height={40} />
     </Container>
   );
 }
