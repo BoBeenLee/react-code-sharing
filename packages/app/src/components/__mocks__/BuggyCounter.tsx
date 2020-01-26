@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { Regular12 } from "src/components/text/Typographies";
+import { Regular12 } from "@shared/components/text/Typographies/Typographies.app";
 
 const TouchabledView = styled.TouchableOpacity`
   padding: 40px;

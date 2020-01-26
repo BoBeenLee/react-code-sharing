@@ -4,7 +4,10 @@ import React from "react";
 import styled from "styled-components/native";
 
 import XEIcon from "src/components/icon/XEIcon";
-import { Bold12, Bold20 } from "src/components/text/Typographies";
+import {
+  Bold12,
+  Bold20
+} from "@shared/components/text/Typographies/Typographies.app";
 import ScaleableButton from "src/components/button/ScaleableButton";
 import images from "src/images";
 import HelloWorldWebview from "src/components/webview/HelloWorldWebview";
