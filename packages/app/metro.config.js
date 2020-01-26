@@ -33,7 +33,8 @@ module.exports = (async () => {
     resolver: {
       assetExts: assetExts.filter(ext => ext !== "svg"),
       sourceExts: [...sourceExts, "svg"],
-      extraNodeModules
+      extraNodeModules,
+      blacklistRE: blacklist([/..\/shared\/node_modules\/react\/.*/, /..\/shared\/node_modules\/react-dom\/.*/])
     },
     watchFolders: [path.resolve(__dirname, "../shared")],
     projectRoot: path.resolve(__dirname)
