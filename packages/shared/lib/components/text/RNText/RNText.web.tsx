@@ -10,7 +10,7 @@ const Container = styled.span`
 `;
 
 function RNText(props: any) {
-  return <Container {...props} />
-};
+  return <Container {...props} />;
+}
 
 export default RNText;
