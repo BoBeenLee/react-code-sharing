@@ -5,6 +5,7 @@ import styled from "styled-components/native";
 
 import XEIcon from "src/components/icon/XEIcon";
 import { Bold12, Bold20 } from "src/components/text/Typographies";
+import ScaleableButton from "src/components/button/ScaleableButton";
 import images from "src/images";
 import HelloWorldWebview from "src/components/webview/HelloWorldWebview";
 import { IStore } from "src/stores/Store";
@@ -19,8 +20,8 @@ interface IInject {
 const Container = styled.View`
   width: 100%;
   flex: 1;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding-top: ${iosStatusBarHeight(false)}px;
 `;
 
@@ -41,12 +42,17 @@ class SplashScreen extends React.Component<IInject> {
     const { todoTest } = this.props.store.todoStore;
     return (
       <Container>
+        <ScaleableButton>
+          <Name>Hello</Name>
+        </ScaleableButton>
         <Name>
           {this.props.store!.appStateStatus}123{test()}
         </Name>
         <HelloWorldWebview />
         <LottieView
           style={{
+            width: 100,
+            height: 100,
             backgroundColor: "#eee",
             opacity: 0.5
           }}
