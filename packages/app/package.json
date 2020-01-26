@@ -51,7 +51,6 @@
   "dependencies": {
     "@react-native-community/async-storage": "^1.4.2",
     "@react-native-seoul/kakao-login": "^2.1.0",
-    "@types/lodash": "^4.14.147",
     "axios": "^0.19.0",
     "bugsnag-react-native": "^2.23.3",
     "highlight-words-core": "^1.2.2",
@@ -123,6 +122,7 @@
     "@storybook/react-native-server": "^5.2.8",
     "@types/hoist-non-react-statics": "^3.3.1",
     "@types/jest": "^24.0.12",
+    "@types/lodash": "^4.14.147",
     "@types/jwt-decode": "^2.2.1",
     "@types/numeral": "0.0.26",
     "@types/qs": "^6.5.3",
