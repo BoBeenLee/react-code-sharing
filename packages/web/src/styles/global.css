@@ -50,19 +50,3 @@ ul {
   padding: 0px;
   margin: 0px;
 }
-
-.regular {
-  font-weight: 400;
-}
-
-.bold {
-  font-weight: 700;
-}
-
-.extra_bold {
-  font-weight: 800;
-}
-
-.light {
-  font-weight: 300;
-}

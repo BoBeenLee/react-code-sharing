@@ -24,7 +24,6 @@
     "release": "release-it --ci"
   },
   "dependencies": {
-    "@loadable/component": "^5.11.0",
     "babel-plugin-styled-components": "^1.10.6",
     "firebase": "^7.5.2",
     "framer-motion": "^1.7.0",
@@ -53,16 +52,15 @@
     "react-burger-menu": "^2.6.12",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.0",
-    "react-pose": "^4.0.9",
-    "react-responsive": "^7.0.0",
-    "react-scroll": "^1.7.14",
+    "react-responsive": "^8.0.3",
+    "react-sizeme": "^2.6.12",
     "react-slick": "^0.25.2",
-    "react-swipe": "^6.0.4",
+    "react-window": "^1.8.5",
+    "react-window-infinite-loader": "^1.0.5",
     "recompose": "^0.30.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.2.0",
     "styled-theming": "^2.2.0",
-    "swipe-js-iso": "^2.1.5",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
@@ -85,6 +83,8 @@
     "@types/react-responsive": "^3.0.3",
     "@types/react-scroll": "^1.5.4",
     "@types/react-slick": "^0.23.4",
+    "@types/react-window": "^1.8.1",
+    "@types/react-window-infinite-loader": "^1.0.2",
     "@types/recompose": "^0.30.7",
     "@types/styled-components": "^4.1.14",
     "@types/styled-theming": "^2.2.2",
