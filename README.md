@@ -27,12 +27,6 @@ TBD
 npm install
 ```
 
-if you have over npm version 5.7.0 [link](https://medium.com/@trustyoo86/ci-%ED%99%98%EA%B2%BD%EC%9D%84-%EC%9C%84%ED%95%9C-npm-ci-npm-ci-for-continous-integration-850fc48dd4cc)
-
-```sh
-npm ci
-```
-
 ### **Create new package**
 
 ```sh
@@ -103,9 +97,17 @@ npm ci
 
 - https://github.com/npm/npm/issues/18380
 
-# Package별 설명
+### Fastlane을 이용한 배포전략
 
 https://bigcheeseapp.com/2019/09/14/react-native-continuous-delivery-with-github-actions-and-fastlane/
+
+### Components 스타일 분리 전략
+
+- App, Web 둘다 존재하는 컴포넌트일 경우
+  - Shared 패키지에 컴포넌트 폴더를 생성 후, example.app.tsx, example.web.tsx 파일을 각각 생성하여 구현합니다.
+  - 공통된 스타일은 style.ts 를 만들어 스타일을 추출합니다.
+- App, Web 중 하나만 존재하는 컴포넌트일 경우
+  - App, Web 패키지에 컴포넌트를 생성하여 구현합니다.
 
 ### Reference
 
