@@ -417,7 +417,7 @@ PODS:
     - React
   - RNReanimated (1.4.0):
     - React
-  - RNSVG (9.13.3):
+  - RNSVG (11.0.1):
     - React
   - RNVectorIcons (6.6.0):
     - React
@@ -699,7 +699,7 @@ SPEC CHECKSUMS:
   RNPermissions: 3944d2574eca469ca5dcc3fa945271468c67483d
   RNRate: d44a8bca6ee08f5d890ecccddaec2810955ffbb3
   RNReanimated: b2ab0b693dddd2339bd2f300e770f6302d2e960c
-  RNSVG: f6177f8d7c095fada7cfee2e4bb7388ba426064c
+  RNSVG: 67f1f12dae2cef6ed59a42cae74a6b8f5a9e7b46
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   RSKImageCropper: a446db0e8444a036b34f3c43db01b2373baa4b2a
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
