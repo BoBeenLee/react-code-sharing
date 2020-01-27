@@ -1,5 +1,5 @@
 import _ from "lodash";
-import { flow, getRoot, Instance, types } from "mobx-state-tree";
+import { types } from "mobx-state-tree";
 import Todo, { ITodo } from "./Todo";
 
 const PREFIX_TODO_ID = "todo";

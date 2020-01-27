@@ -1,4 +1,3 @@
-import firebase from "firebase/app";
 import _ from "lodash";
 
 import { firebaseInstance } from "src/configs/firebase";
