@@ -17,7 +17,7 @@ export const storage = _.once(() => {
       });
     });
   };
-  
+
   const getItem = (key: string): Promise<string> => {
     return new Promise((resolve, reject) => {
       AsyncStorage.multiGet([key], (errors, result) => {

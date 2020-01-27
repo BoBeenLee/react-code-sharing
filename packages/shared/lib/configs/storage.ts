@@ -73,7 +73,7 @@ export function storageFactory(
 
   const getStorages = {
     test: () => {
-      return getStringWithDefault("test", "")
+      return getStringWithDefault("test", "");
     }
   };
 

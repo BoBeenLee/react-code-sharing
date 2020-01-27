@@ -7,13 +7,19 @@ import { createInjectDecorator } from "@shared/decorators/createInjectDecorator"
 
 export const firebaseAnalytics = _.once(() => {
   const logEvent = (eventName: string, params: object) => {
-    firebaseInstance().analytics().logEvent(eventName, params);
+    firebaseInstance()
+      .analytics()
+      .logEvent(eventName, params);
   };
   const setUserId = (userId: string) => {
-    firebaseInstance().analytics().setUserId(userId);
+    firebaseInstance()
+      .analytics()
+      .setUserId(userId);
   };
   const setCurrentScreen = (screenName: string) => {
-    firebaseInstance().analytics().setCurrentScreen(screenName);
+    firebaseInstance()
+      .analytics()
+      .setCurrentScreen(screenName);
   };
   return firebaseAnalyticsFactory(logEvent, setUserId, setCurrentScreen);
 });

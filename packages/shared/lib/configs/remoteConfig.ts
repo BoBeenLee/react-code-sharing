@@ -57,6 +57,6 @@ export function remoteConfigFactory(
     ...getRemoteConfigs,
     getStringWithDefault,
     getBooleanWithDefault,
-    getJSONWithDefault,
+    getJSONWithDefault
   };
 }
