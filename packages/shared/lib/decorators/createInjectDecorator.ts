@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type MakeData<IProps, IStates, T> = (
   props: IProps,
   state: IStates,

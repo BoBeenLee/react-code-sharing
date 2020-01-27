@@ -1,8 +1,6 @@
 import AsyncStorage from "@react-native-community/async-storage";
 import _ from "lodash";
 
-import { isJSON } from "@shared/utils/common";
-import { getOS, getVersion } from "src/utils/device";
 import { storageFactory } from "@shared/configs/storage";
 
 export const storage = _.once(() => {
