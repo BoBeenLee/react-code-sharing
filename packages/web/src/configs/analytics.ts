@@ -5,10 +5,19 @@ import { firebaseAnalyticsFactory } from "@shared/configs/analytics";
 import { createInjectDecorator } from "@shared/decorators/createInjectDecorator";
 
 export const firebaseAnalytics = _.once(() => {
+  const logEvent = (eventName: string, params: object) => {
+    firebase.analytics().logEvent(eventName, params);
+  };
+  const setUserId = (userId: string) => {
+    firebase.analytics().setUserId(userId);
+  };
+  const setCurrentScreen = (screenName: string) => {
+    firebase.analytics().setCurrentScreen(screenName);
+  };
   return firebaseAnalyticsFactory(
-    firebase.analytics().logEvent,
-    firebase.analytics().setUserId,
-    firebase.analytics().setCurrentScreen
+    logEvent,
+    setUserId,
+    setCurrentScreen
   );
 });
 
