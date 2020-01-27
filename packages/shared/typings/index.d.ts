@@ -16,8 +16,7 @@ type RequireProperty<T, P extends keyof T> = T & { [K in P]-?: T[P] };
 type NoUndefinedField<T> = { [P in keyof T]-?: NoUndefinedField<NonNullable<T[P]>> };
 
 declare module "*.svg" {
-  import { SvgProps } from "react-native-svg";
-  const content: React.ComponentClass<SvgProps, any>;
+  const content: any;
   export default content;
 }
 

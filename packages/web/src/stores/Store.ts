@@ -2,10 +2,6 @@ import { flow, types } from "mobx-state-tree";
 
 import TodoStore from "@shared/stores/TodoStore";
 import ToastStore from "@shared/stores/ToastStore";
-import {
-  initialize as initializeRemoteConfig,
-  firebaseRemoteConfig
-} from "src/configs/remoteConfig";
 
 const Store = types
   .model({
