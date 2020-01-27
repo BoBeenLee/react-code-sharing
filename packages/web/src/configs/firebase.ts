@@ -5,10 +5,10 @@ import _ from "lodash";
 
 import env from "./env";
 
-export const initialize = _.once(() => {
+export const firebaseInstance = _.once(() => {
   if (!env.FIREBASE_CONFIG) {
-    return;
+    throw new Error("not exists firebase configs");
   }
   const firebaseConfig = env.FIREBASE_CONFIG;
-  firebase.initializeApp(firebaseConfig);
+  return firebase.initializeApp(firebaseConfig);
 });

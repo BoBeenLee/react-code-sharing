@@ -38,6 +38,8 @@ const env: IEnvironment = {
   }
 };
 
+export const isProduction = () => REACT_ENV === "production";
+
 export const isStorybook = () => REACT_ENV === "storybook";
 
 export default env[REACT_ENV] || ({} as IEnvironmentEntry);

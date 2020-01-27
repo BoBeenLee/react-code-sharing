@@ -3,6 +3,7 @@ import { AppState, AppStateStatus } from "react-native";
 
 import TodoStore from "@shared/stores/TodoStore";
 import { initialize as initializeAnalytics } from "src/configs/analytics";
+import { initialize as initializeRemoteConfig, firebaseRemoteConfig } from "src/configs/remoteConfig";
 
 const Store = types
   .model({
@@ -15,6 +16,7 @@ const Store = types
     };
 
     const initializeApp = flow(function*() {
+      yield initializeRemoteConfig();
       initializeAnalytics();
     });
 
