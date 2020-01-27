@@ -41,6 +41,10 @@ const Name = styled(Bold20)`
 class SplashScreen extends React.Component<IInject> {
   public animation: any = null;
 
+  public componentDidMount() {
+    this.props.store.initializeApp();
+  }
+
   public render() {
     const { todoTest } = this.props.store.todoStore;
     return (

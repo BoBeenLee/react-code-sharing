@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Navigation } from "react-native-navigation";
 
 import { setCurrentComponent } from "src/utils/navigator";
+import { firebaseAnalytics } from "src/configs/analytics";
 
 interface IProps {
   componentId: string;
@@ -22,6 +23,7 @@ const withNavigator = <P extends object>(
     public componentDidAppear({ componentName }: { componentName: string }) {
       const { componentId } = this.props;
       setCurrentComponent(componentId, componentName);
+      firebaseAnalytics().setCurrentScreen(componentName);
     }
 
     public render() {

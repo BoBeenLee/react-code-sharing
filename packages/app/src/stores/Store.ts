@@ -1,7 +1,8 @@
-import { types } from "mobx-state-tree";
+import { flow, types } from "mobx-state-tree";
 import { AppState, AppStateStatus } from "react-native";
 
 import TodoStore from "@shared/stores/TodoStore";
+import { initialize as initializeAnalytics } from "src/configs/analytics";
 
 const Store = types
   .model({
@@ -13,8 +14,13 @@ const Store = types
       self.appStateStatus = appState;
     };
 
+    const initializeApp = flow(function*() {
+      initializeAnalytics();
+    });
+
     return {
-      setAppStateStatus
+      setAppStateStatus,
+      initializeApp
     };
   });
 
