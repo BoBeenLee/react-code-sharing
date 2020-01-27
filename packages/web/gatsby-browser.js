@@ -1,7 +1,6 @@
 import React from "react";
 import { compose } from "recompose";
 
-import { initialize as firebaseInitialize } from "src/configs/firebase";
 import { firebaseAnalytics } from "src/configs/analytics";
 import { getRootStore } from "src/stores/Store";
 import withStore from "src/hocs/withStore";
@@ -23,7 +22,7 @@ export const wrapPageElement = ({ element }) => {
 };
 
 export const wrapRootElement = ({ element }) => {
-  firebaseInitialize();
+  store.initializeApp();
 
   const enhanceElement = compose(
     withToast,

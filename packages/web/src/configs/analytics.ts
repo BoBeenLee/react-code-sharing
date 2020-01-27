@@ -1,18 +1,19 @@
 import firebase from "firebase/app";
 import _ from "lodash";
 
+import { firebaseInstance } from "src/configs/firebase";
 import { firebaseAnalyticsFactory } from "@shared/configs/analytics";
 import { createInjectDecorator } from "@shared/decorators/createInjectDecorator";
 
 export const firebaseAnalytics = _.once(() => {
   const logEvent = (eventName: string, params: object) => {
-    firebase.analytics().logEvent(eventName, params);
+    firebaseInstance().analytics().logEvent(eventName, params);
   };
   const setUserId = (userId: string) => {
-    firebase.analytics().setUserId(userId);
+    firebaseInstance().analytics().setUserId(userId);
   };
   const setCurrentScreen = (screenName: string) => {
-    firebase.analytics().setCurrentScreen(screenName);
+    firebaseInstance().analytics().setCurrentScreen(screenName);
   };
   return firebaseAnalyticsFactory(logEvent, setUserId, setCurrentScreen);
 });
