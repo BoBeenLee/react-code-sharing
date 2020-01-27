@@ -11,7 +11,6 @@
     "build:staging": "GATSBY_ENV=staging gatsby build",
     "build:production": "GATSBY_ENV=production gatsby build",
     "type-check": "tsc --noEmit",
-    "type-check:watch": "npm run type-check -- --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prettier": "prettier './src/**/*.{js,ts,tsx}'",
