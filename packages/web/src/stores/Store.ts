@@ -14,7 +14,7 @@ const Store = types
   })
   .actions(self => {
     const initializeApp = flow(function*() {
-      yield initializeRemoteConfig();
+      // TODO
     });
     return { initializeApp };
   });

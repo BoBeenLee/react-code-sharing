@@ -18,7 +18,7 @@ export const storage = _.once(() => {
   const getItem = (key: string): Promise<string> => {
     return new Promise((resolve, reject) => {
       try {
-        resolve(localStorage.get(key));
+        resolve(localStorage.getItem(key) ?? "");
         return;
       } catch (error) {
         reject(error);

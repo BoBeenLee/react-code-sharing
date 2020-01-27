@@ -1,6 +1,6 @@
 import firebase from "firebase/app";
-
 import "firebase/analytics";
+import "firebase/remote-config";
 import _ from "lodash";
 
 import env from "./env";
