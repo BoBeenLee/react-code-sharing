@@ -18,11 +18,7 @@ export const firebaseAnalytics = _.once(() => {
   const setCurrentScreen = (screenName: string) => {
     firebase.analytics().setCurrentScreen(screenName);
   };
-  return firebaseAnalyticsFactory(
-    logEvent,
-    setUserId,
-    setCurrentScreen
-  );
+  return firebaseAnalyticsFactory(logEvent, setUserId, setCurrentScreen);
 });
 
 export function firebaseTracking<IProps, IStates>(

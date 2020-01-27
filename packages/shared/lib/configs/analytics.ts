@@ -55,9 +55,9 @@ export function firebaseAnalyticsFactory(
       setCurrentScreen(screenName);
     },
     test: () => {
-        firebaseLogEvent({
-            eventType: "test"
-        });
+      firebaseLogEvent({
+        eventType: "test"
+      });
     }
   };
 }
