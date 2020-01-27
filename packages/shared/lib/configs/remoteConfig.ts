@@ -8,7 +8,7 @@ export function remoteConfigFactory(
   getStringValue: (key: string) => Promise<string>,
   getBooleanValue: (key: string) => Promise<boolean>
 ) {
-  const getStringValueWithDefault = async (
+  const getStringWithDefault = async (
     key: RemoteConfigType,
     defaultValue: string
   ) => {
@@ -20,7 +20,7 @@ export function remoteConfigFactory(
     }
   };
 
-  const getBooleanValueWithDefault = async (
+  const getBooleanWithDefault = async (
     key: RemoteConfigType,
     defaultValue: boolean
   ) => {
@@ -31,12 +31,11 @@ export function remoteConfigFactory(
     }
   };
 
-  const getJSONValueWithDefault = async <T>(
+  const getJSONWithDefault = async <T>(
     key: RemoteConfigType,
     defaultValue: T
   ) => {
     const val = await getStringValue(key);
-
     if (!isJSON(val)) {
       return defaultValue;
     }
@@ -48,10 +47,16 @@ export function remoteConfigFactory(
     return defaultValue;
   };
 
+  const getRemoteConfigs = {
+    test: () => {
+      return getStringWithDefault("test", "");
+    }
+  };
+
   return {
-    getStringValue: getStringValueWithDefault,
-    getBooleanValue: getBooleanValueWithDefault,
-    getJSONValue: getJSONValueWithDefault,
-    test: () => getStringValueWithDefault("test", "")
+    ...getRemoteConfigs,
+    getStringWithDefault,
+    getBooleanWithDefault,
+    getJSONWithDefault,
   };
 }
