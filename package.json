@@ -7,6 +7,7 @@
     "build": "lerna run build --parallel",
     "deploy:staging": "lerna run deploy:staging",
     "deploy:production": "lerna run deploy:production",
+    "prettier": "lerna run prettier --parallel",
     "eslint": "lerna run eslint --parallel",
     "eslint:fix": "lerna run eslint:fix --parallel",
     "test": "lerna run test --parallel",
@@ -21,13 +22,21 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "husky": "3.1.0",
     "lerna": "3.16.4",
-    "prettier": "^1.19.1",
-    "husky": "3.1.0"
+    "lint-staged": "^10.0.3",
+    "prettier": "^1.19.1"
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run prepush"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "npm run prettier",
+      "npm run eslint:fix",
+      "git add"
+    ]
   }
 }
