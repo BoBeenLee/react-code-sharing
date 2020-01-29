@@ -1,6 +1,8 @@
 {
   "name": "kr.rnapp.web",
   "version": "1.0.1",
+  "description": "rnweb",
+  "main": "n/a",
   "private": true,
   "scripts": {
     "start:staging": "GATSBY_ENV=staging gatsby develop",
@@ -116,7 +118,6 @@
     "ts-jest": "^24.1.0",
     "typescript": "^3.7.4"
   },
-  "description": "rnweb",
   "keywords": [
     "gatsby"
   ],
@@ -126,5 +127,10 @@
     "template": "keepachangelog",
     "unreleased": true,
     "commitLimit": false
+  },
+  "storybook-deployer": {
+    "gitUsername": "GH Pages Bot",
+    "gitEmail": "globaldev@naver.com",
+    "commitMessage": "Deploy Storybook to GitHub Pages"
   }
 }
