@@ -1,9 +1,10 @@
+import { PageRendererProps } from "gatsby";
 import React, { Component } from "react";
 
 import { IWebPayload, IAppPayload } from "@shared/webviews/helloworld";
 import { getReactNativeWebView } from "src/utils/webview";
 
-class HelloWorld extends Component {
+class HelloWorld extends Component<PageRendererProps> {
   constructor(props: any) {
     super(props);
     window.addEventListener("message", this.onMessage);

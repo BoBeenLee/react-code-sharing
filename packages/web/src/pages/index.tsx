@@ -1,3 +1,4 @@
+import { PageRendererProps } from "gatsby";
 import { inject, observer } from "mobx-react";
 import React from "react";
 import styled from "styled-components";
@@ -13,13 +14,17 @@ interface IInject {
   store: IStore;
 }
 
+interface IProps extends PageRendererProps, IInject {
+  // TODO
+}
+
 @inject(
   ({ store }: { store: IStore }): IInject => ({
     store
   })
 )
 @observer
-class IndexPage extends React.Component<IInject> {
+class IndexPage extends React.Component<IProps> {
   public render() {
     const { todoTest } = this.props.store.todoStore;
     return (
