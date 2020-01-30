@@ -32,6 +32,8 @@
     "build:android": "cd ./android && ./gradlew clean && ./gradlew assembleRelease",
     "appdistribution:android": "npm run build:android && firebase appdistribution:distribute ./android/app/build/outputs/apk/release/app-release.apk --app 1:729865146079:android:1ec7739544849fc8 --token 1/Imdv27tKHLaob8Y1o4h6CA6-kn_zbXZXQi6e_-Xfuus",
     "appdistribution:ios": "firebase appdistribution:distribute $BITRISE_IPA_PATH --app 1:833905792974:ios:1ec7739544849fc8 --token 1/Imdv27tKHLaob8Y1o4h6CA6-kn_zbXZXQi6e_-Xfuus",
+    "codepush:android:production": "code-push release-react onesecondmusicgame/onesecondmusicgame-android android -d Production -m true --privateKeyPath ~/private.pem",
+    "codepush:ios:production": "code-push release-react onesecondmusicgame/onesecondmusicgame-ios ios -d Production -m true --privateKeyPath ~/private.pem --plistFile ios/RNApp/Info.plist",
     "fastlane:ios-ci": "fastlane ios ci",
     "fastlane:android-ci": "fastlane android ci",
     "prettier": "prettier './src/**/*.{js,ts,tsx}'",
