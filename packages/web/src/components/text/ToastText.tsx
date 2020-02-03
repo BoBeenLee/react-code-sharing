@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 
 import colors from "@shared/styles/colors";
-import { media } from "src/utils/media";
+import { media } from "@shared/utils/media";
 
 interface IProps {
   className?: string;
@@ -22,7 +22,7 @@ const Container = styled(motion.div)`
   background-color: rgba(107, 107, 107, 0.7);
   padding: 18px 0px 15px 0px;
 
-  ${media.mobile`
+  ${media.mobile()`
     width: 328px;
   `}
 `;
