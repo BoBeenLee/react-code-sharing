@@ -7,6 +7,7 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   word-break: keep-all;
+  flex-direction: column;
 }
 
 html,
@@ -27,9 +28,18 @@ div[role="group"] {
   box-sizing: border-box;
 }
 
-#___gatsby>div[role="group"] {
+#___gatsby > div[role="group"] {
   height: 100%;
   overflow-y: auto;
+}
+
+#___gatsby > div[role="group"] * {
+  display: flex;
+}
+
+input {
+  border-width: 0px;
+  background-color: transparent;
 }
 
 main {

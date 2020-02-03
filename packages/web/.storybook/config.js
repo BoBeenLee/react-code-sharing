@@ -30,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   word-break: keep-all;
+  flex-direction: column;
 }
 
 html, body, #root {
@@ -38,6 +39,15 @@ html, body, #root {
   box-sizing: border-box;
   height: 100vh;
   width: 100vw;
+}
+
+#root * {
+  display: flex;
+}
+
+input {
+  border-width: 0px;
+  background-color: transparent;
 }
 `;
 
