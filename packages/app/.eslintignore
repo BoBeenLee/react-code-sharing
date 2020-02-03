@@ -1,7 +1,8 @@
 __generate__/
-ios/
+ios/*
 android/
 fastlane/
 assets/
 scripts/
 webview/
+ios/Pods/*
