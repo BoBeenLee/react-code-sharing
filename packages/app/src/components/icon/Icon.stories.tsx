@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react-native";
 import React from "react";
 import styled from "styled-components/native";
 
-import colors from "src/styles/colors";
+import colors from "@shared/styles/colors";
 import XEIcon from "src/components/icon/XEIcon";
 
 const CenterView = styled.View`

@@ -4,7 +4,7 @@ import React from "react";
 import styled from "styled-components/native";
 
 import { Regular12 } from "@shared/components/text/Typographies/Typographies.app";
-import colors from "src/styles/colors";
+import colors from "@shared/styles/colors";
 import ErrorBoundary from "src/components/ErrorBoundary";
 import BuggyCounter from "src/components/__mocks__/BuggyCounter";
 

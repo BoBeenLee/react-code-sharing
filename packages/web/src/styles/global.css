@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap");
+
 *,
 html,
 body {
-  font-family: "NanumSquare", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   outline: none;
   box-sizing: border-box;

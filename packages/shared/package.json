@@ -13,6 +13,7 @@
     "prepush": "npm run lint:css && npm run eslint"
   },
   "dependencies": {
+    "hoist-non-react-statics": "^3.3.2",
     "lodash": "^4.17.15",
     "mobx": "^4.9.4",
     "mobx-react": "^5.4.3",
@@ -26,6 +27,7 @@
     "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-decorators": "^7.6.0",
     "@babel/runtime": "^7.6.3",
+    "@types/hoist-non-react-statics": "^3.3.1",
     "@types/jest": "^24.0.25",
     "@types/lodash": "^4.14.147",
     "@types/qs": "^6.9.0",

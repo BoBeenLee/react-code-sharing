@@ -20,11 +20,10 @@ window.___navigate = pathname => {
 };
 
 const GlobalStyle = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css?family=Heebo:400,700|Roboto:400,700&display=swap");
-  @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+  @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
   
   *, html, body {
-  font-family: "NanumSquare", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   font-size: 16px;
   outline: none;
   box-sizing: border-box;

@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import styled from "styled-components/native";
 
-import colors from "src/styles/colors";
+import colors from "@shared/styles/colors";
 
 type FontType = "BOLD" | "MEDIUM" | "REGULAR";
 

@@ -11,7 +11,7 @@ import {
   Bold14,
   Regular12
 } from "@shared/components/text/Typographies/Typographies.app";
-import colors from "src/styles/colors";
+import colors from "@shared/styles/colors";
 
 const Container = styled.View`
   flex-direction: column;

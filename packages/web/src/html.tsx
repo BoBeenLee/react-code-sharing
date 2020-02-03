@@ -11,11 +11,6 @@ export default function HTML(props: any) {
           content="width=device-width, 
           initial-scale=1, shrink-to-fit=no"
         />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css"
-        />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

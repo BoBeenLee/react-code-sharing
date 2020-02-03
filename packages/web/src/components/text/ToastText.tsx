@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 
-import colors from "src/styles/colors";
+import colors from "@shared/styles/colors";
 import { media } from "src/utils/media";
 
 interface IProps {
