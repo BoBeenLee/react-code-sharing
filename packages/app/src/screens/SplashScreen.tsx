@@ -3,7 +3,7 @@ import { inject, observer } from "mobx-react";
 import React from "react";
 import styled from "styled-components/native";
 
-import XEIcon from "src/components/icon/XEIcon";
+import XEIcon from "@shared/components/icon/XEIcon/XEIcon.app";
 import {
   Bold12,
   Bold20

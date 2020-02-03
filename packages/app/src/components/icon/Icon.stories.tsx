@@ -4,7 +4,7 @@ import React from "react";
 import styled from "styled-components/native";
 
 import colors from "@shared/styles/colors";
-import XEIcon from "src/components/icon/XEIcon";
+import XEIcon from "@shared/components/icon/XEIcon/XEIcon.app";
 
 const CenterView = styled.View`
   flex: 1;

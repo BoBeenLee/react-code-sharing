@@ -1,12 +1,8 @@
-import { createIconSetFromIcoMoon } from "react-native-vector-icons";
-import xeiconSelection from "./selection.json";
-
-// http://xpressengine.github.io/XEIcon/library-2.3.3.html
-const XEIcon = createIconSetFromIcoMoon(
-  xeiconSelection,
-  "xeicon",
-  "xeicon.ttf"
-);
+export interface IProps {
+  name: XEIconType;
+  color: string;
+  size: number;
+}
 
 export type XEIconType =
   | "close"
@@ -50,5 +46,3 @@ export type XEIconType =
   | "emoticon-smiley"
   | "emoticon-sad"
   | "emoticon-neutral";
-
-export default XEIcon;

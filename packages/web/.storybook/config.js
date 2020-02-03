@@ -21,6 +21,7 @@ window.___navigate = pathname => {
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+  @import url("https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
   
   *, html, body {
   font-family: 'Noto Sans KR', sans-serif;
