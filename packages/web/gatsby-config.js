@@ -13,6 +13,7 @@ module.exports = {
         allExtensions: true // defaults to false
       }
     },
+    `gatsby-plugin-react-native-web`,
     `gatsby-plugin-react-helmet`,
     // {
     //   resolve: `gatsby-plugin-favicon`,
@@ -80,6 +81,7 @@ module.exports = {
       resolve: 'gatsby-plugin-root-import',
       options: {
         src: path.join(__dirname, 'src'),
+        "react-native": path.resolve(__dirname, "modules/react-native"),
         "@shared": path.resolve(__dirname, '../shared/lib')
       }
     }

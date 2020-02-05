@@ -24,31 +24,31 @@ const GlobalStyle = createGlobalStyle`
   @import url("https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
   
   *, html, body {
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 16px;
-  outline: none;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  word-break: keep-all;
-  flex-direction: column;
-}
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    word-break: keep-all;
+    flex-direction: column;
+  }
 
-html, body, #root {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  height: 100vh;
-  width: 100vw;
-}
+  html, body, #root {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+  }
 
-#root * {
-  display: flex;
-}
+  #root * {
+    display: flex;
+  }
 
-input {
-  border-width: 0px;
-  background-color: transparent;
-}
+  input {
+    border-width: 0px;
+    background-color: transparent;
+  }
 `;
 
 addDecorator(story => (

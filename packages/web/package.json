@@ -63,11 +63,16 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.2.0",
     "styled-theming": "^2.2.0",
-    "uuid": "^3.3.3"
+    "uuid": "^3.3.3",
+    "react-native": "0.61.5",
+    "react-native-vector-icons": "^6.6.0",
+    "react-native-web": "^0.11.7",
+    "gatsby-plugin-react-native-web": "^2.0.0-beta.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/plugin-proposal-decorators": "^7.7.0",
+    "@babel/preset-flow": "^7.0.0",
     "@storybook/addon-actions": "^5.3.9",
     "@storybook/addon-knobs": "^5.3.9",
     "@storybook/addon-links": "^5.3.9",
@@ -97,6 +102,7 @@
     "auto-changelog": "^1.16.2",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-react-native-web": "^0.11.7",
     "babel-preset-gatsby": "^0.2.21",
     "babel-preset-react-app": "^9.1.0",
     "eslint": "^6.8.0",
