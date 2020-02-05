@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 
 import RNText from "@shared/components/text/RNText";
+import ListLoading from "@shared/components/loading/ListLoading";
 import { test } from "@shared/sharedTest";
 
 import Layout from "src/components/common/Layout";
@@ -29,6 +30,7 @@ class IndexPage extends React.Component<IProps> {
     const { todoTest } = this.props.store.todoStore;
     return (
       <Layout>
+        <ListLoading />
         <RNText>RNText Shared</RNText>
         Hello WOrld{test()}
         {todoTest}
