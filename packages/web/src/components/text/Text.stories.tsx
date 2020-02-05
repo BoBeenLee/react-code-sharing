@@ -9,7 +9,7 @@ import {
   Bold12,
   Bold13,
   Bold14
-} from "@shared/components/text/Typographies/Typographies.web";
+} from "@shared/components/text/Typographies";
 
 const Container = styled.div`
   display: flex;

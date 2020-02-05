@@ -1,16 +1,10 @@
-import styled from "styled-components";
+import styled from "styled-components/native";
 
-import RNText from "@shared/components/text/RNText/RNText.web";
+import RNText from "@shared/components/text/RNText";
 
-const Bold = styled(RNText)`
-  font-weight: bold;
-`;
-const Medium = styled(RNText)`
-  font-weight: 400;
-`;
-const Regular = styled(RNText)`
-  font-weight: 200;
-`;
+const Bold = styled(RNText).attrs({ fontType: "BOLD" })``;
+const Medium = styled(RNText).attrs({ fontType: "MEDIUM" })``;
+const Regular = styled(RNText).attrs({ fontType: "REGULAR" })``;
 
 export const Bold8 = styled(Bold)`
   font-size: 8px;

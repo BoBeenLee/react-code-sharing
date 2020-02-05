@@ -3,7 +3,7 @@ import { inject, observer } from "mobx-react";
 import React from "react";
 import styled from "styled-components";
 
-import RNText from "@shared/components/text/RNText/RNText.web";
+import RNText from "@shared/components/text/RNText";
 import { test } from "@shared/sharedTest";
 
 import Layout from "src/components/common/Layout";

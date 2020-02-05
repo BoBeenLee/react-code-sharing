@@ -8,7 +8,7 @@ import {
 import InfiniteLoader from "react-window-infinite-loader";
 import styled from "styled-components";
 
-import ListLoading from "@shared/components/loading/ListLoading/ListLoading.web";
+import ListLoading from "@shared/components/loading/ListLoading";
 
 const Container = styled.div`
   position: absolute;

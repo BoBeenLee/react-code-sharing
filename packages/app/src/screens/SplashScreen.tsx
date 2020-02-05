@@ -3,11 +3,8 @@ import { inject, observer } from "mobx-react";
 import React from "react";
 import styled from "styled-components/native";
 
-import XEIcon from "@shared/components/icon/XEIcon/XEIcon.app";
-import {
-  Bold12,
-  Bold20
-} from "@shared/components/text/Typographies/Typographies.app";
+import XEIcon from "@shared/components/icon/XEIcon";
+import { Bold12, Bold20 } from "@shared/components/text/Typographies";
 import ScaleableButton from "src/components/button/ScaleableButton";
 import images from "@shared/images";
 import HelloWorldWebview from "src/components/webview/HelloWorldWebview";

@@ -3,7 +3,7 @@ import { Dimensions } from "react-native";
 import styled from "styled-components/native";
 
 import images from "@shared/images";
-import { containerStyle } from "@shared/components/loading/ListLoading/style";
+import { media } from "@shared/utils/media";
 
 const Container = styled.View`
   flex-direction: row;
@@ -12,7 +12,9 @@ const Container = styled.View`
   padding-top: 12px;
   justify-content: center;
   align-content: center;
-  ${containerStyle(Dimensions.get("window").width)};
+  ${media.mobile(Dimensions.get("window").width)`
+    background-color: red;
+  `}
 `;
 
 function ListLoading() {
