@@ -1,20 +1,21 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "module": "commonjs",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "noImplicitAny": true,
-    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
-    "outDir": "dist",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "lib": ["es2017", "dom"],
+    "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "esnext",
+    "typeRoots": ["typings", "node_modules/@types"],
     "paths": {
-      "*": ["node_modules/*"]
+      "@shared/*": ["../shared/lib/*"]
     }
   },
-  "include": [
-    "src/**/*"
-  ]
+  "include": [".", "../shared"]
 }
