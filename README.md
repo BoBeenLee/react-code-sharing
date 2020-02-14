@@ -16,6 +16,16 @@
 
 ## 📂 Directory structure
 
+
+    packages
+    ├── app                   # Compiled files (alternatively `dist`)
+    ├────── test
+    ├── shared                    # Documentation files (alternatively `doc`)
+    ├── web                     # Source files (alternatively `lib` or `app`)
+    ├── LICENSE
+    └── README.md
+
+
 - packages
     - app
     - shared
