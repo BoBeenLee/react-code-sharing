@@ -10,10 +10,7 @@
 
 ## 📖 Introduction
 
-- React기반으로 앱, 웹 공통 부분을 공유할 수 있습니다.
-- Lerna를 이용하여 packages를 관리하고 Shared 패키지를 통해 App과 Web을 공유합니다.
-- 기존 react-native-web, react-primitives 과 다른점은 App, Web 각각 독립적인 부분은 각 패키지에서 구현하고 공통적인 모듈은 Shared에 구현함으로 앱과 웹이 분리된 상태에서 코드를 쉐어링할 수 있다는 점
-- Shared패키지도 실시간 코드 변경을 감지하여 앱, 웹에 반영해줍니다. ( webpack, metro에서 Watching이 가능함 )
+- React기반으로 앱, 웹 sharing boilerplate
 
 ## 📂 Directory structure
 
@@ -107,10 +104,10 @@ npm install
 ### Components 스타일 분리 전략
 
 - App, Web 둘다 존재하는 컴포넌트일 경우
-  - Shared 패키지에 컴포넌트 폴더를 생성 후, example.app.tsx, example.web.tsx 파일을 각각 생성하여 구현합니다.
+  - Shared 패키지에 react-native 기준 컴포넌트를 작성합니다.
   - 공통된 스타일은 style.ts 를 만들어 스타일을 추출합니다.
 - App, Web 중 하나만 존재하는 컴포넌트일 경우
-  - App, Web 패키지에 컴포넌트를 생성하여 구현합니다.
+  - App, Web 패키지에 컴포넌트에 작성합니다.
 
 ### Reference
 
