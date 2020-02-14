@@ -16,20 +16,57 @@
 
 ## 📂 Directory structure
 
-
     packages
-    ├── app                   # Compiled files (alternatively `dist`)
-    ├────── test
-    ├── shared                    # Documentation files (alternatively `doc`)
-    ├── web                     # Source files (alternatively `lib` or `app`)
-    ├── LICENSE
+    ├── app
+    ├──── android
+    ├──── assets              # fonts, icons
+    ├──── fastlane            # Deployment
+    ├──── ios    
+    ├──── src
+    ├─────── components       # 컴포넌트 단위
+    ├─────── configs          # 외부 네이티브 모듈 설정
+    ├─────── hocs
+    ├─────── hooks
+    ├─────── images           # svg, png 이미지들
+    ├─────── screens          # 화면 단위
+    ├─────── stores           # mobx, mobx state tree : Global Store, Local Store
+    ├────────── model         # 모델 정의 ( ex) User, Comment ... )
+    ├─────── styles           # 테마, 컬러셋, zIndex, dimension 
+    ├─────── utils            # 라이브러리 커스텀화 (ex) uri, string ... )
+    ├──── storybook
+    ├──── typings             # global 타입 정의
+    ├── shared                
+    ├──── components       # 컴포넌트 단위
+    ├──── configs          # 외부 모듈 팩토리 패턴으로 기능 추상화
+    ├──── hocs
+    ├──── hooks
+    ├──── images           # svg, png 이미지들
+    ├──── screens          # 화면 단위
+    ├──── stores           # mobx, mobx state tree : Global Store, Local Store
+    ├─────── model         # 모델 정의 ( ex) User, Comment ... )
+    ├──── styles           # 테마, 컬러셋, zIndex, dimension 
+    ├──── utils            # 라이브러리 커스텀화 (ex) uri, string ... )
+    ├── web
+    ├──── .storybook    
+    ├──── modules    
+    ├──── src
+    ├─────── components       # 컴포넌트 단위
+    ├─────── configs          # 외부 네이티브 모듈 설정
+    ├─────── hocs
+    ├─────── hooks
+    ├─────── images           # svg, png 이미지들
+    ├─────── pages          # 화면 단위
+    ├─────── stores           # mobx, mobx state tree : Global Store, Local Store
+    ├────────── model         # 모델 정의 ( ex) User, Comment ... )
+    ├─────── styles           # 테마, 컬러셋, zIndex, dimension 
+    ├─────── utils            # 라이브러리 커스텀화 (ex) uri, string ... )
+    ├─────── html.tsx         # generate html
+    ├──── static
+    ├──── typings             # global 타입 정의 
+    ├──── gatsby-browser      
+    ├──── gatsby-config          
+    ├──── metadata            # 메타데이터 정의
     └── README.md
-
-
-- packages
-    - app
-    - shared
-    - web
 
 ## 🌇 Getting Started
 
