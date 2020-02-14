@@ -25,5 +25,7 @@
       - [ ] Release
         - IOS Fastlane
         - Android Fastlane
-- [ ] Eletron Setting        
+- [ ] Eletron Setting
+  - [ ] Webpack
+  - [ ] React Router
 - [ ] Force git commit to follow a certain schema
