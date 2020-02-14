@@ -63,7 +63,7 @@
     ├─────── styles
     ├─────── utils
     ├─────── html.tsx      # generate html
-    ├──── static
+    ├──── static           # static 파일들
     ├──── typings          # global 타입 정의 
     ├──── gatsby-browser      
     ├──── gatsby-config      
@@ -76,6 +76,31 @@
 
 ```sh
 npm install
+```
+
+### App
+
+#### IOS
+```sh
+cd packages/app
+cd ios
+pod install
+npm start
+npm run ios
+```
+
+#### Android
+
+```sh
+cd packages/app
+npm start
+npm run android
+```
+
+### Web
+```sh
+cd packages/web
+npm run start:staging
 ```
 
 ### **Create new package**
