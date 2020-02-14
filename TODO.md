@@ -6,7 +6,7 @@
 
 - [ ] Tests:
   - [partial] unit tests
-  - [ ] e2e tests (puppetteer? / cypress?)
+  - [ ] e2e tests (puppetteer? / cypress? / Detox? )
 - [ ] Documentation
   - [x] Directory structure
   - [x] Getting Started
