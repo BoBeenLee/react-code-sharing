@@ -25,4 +25,5 @@
       - [ ] Release
         - IOS Fastlane
         - Android Fastlane
-  - [ ] Force git commit to follow a certain schema
+- [ ] Eletron Setting        
+- [ ] Force git commit to follow a certain schema
