@@ -163,15 +163,9 @@ npm run start:staging
    npx lerna exec --scope="@rnapp/app" -- rm -rf ./node_modules
 ```
 
-## Commit
+## Commit Convention
 
 - https://gist.github.com/stephenparish/9941e89d80e2bc58a153
-
-### ISSUE
-
-#### Error: EPERM: operation not permitted
-
-- https://github.com/npm/npm/issues/18380
 
 ### Fastlane을 이용한 배포전략
 
@@ -188,6 +182,12 @@ npm run start:staging
 ## WIP
 
 - https://github.com/BoBeenLee/react-code-sharing/blob/master/TODO.md
+
+### ISSUE
+
+#### Error: EPERM: operation not permitted
+
+- https://github.com/npm/npm/issues/18380
 
 ### Reference
 
