@@ -33,7 +33,7 @@
     ├────────── model      # 모델 정의 ( ex) User, Comment ... )
     ├─────── styles        # 테마, 컬러셋, zIndex, dimension 
     ├─────── utils         # 라이브러리 커스텀화 (ex) uri, string ... )
-    ├──── storybook
+    ├──── storybook        # storybook 환경설정
     ├──── typings          # global 타입 정의
     ├── shared    
     ├──── lib
@@ -49,8 +49,8 @@
     ├──── storybook
     ├──── typings
     ├── web
-    ├──── .storybook    
-    ├──── modules    
+    ├──── .storybook       # storybook 환경설정
+    ├──── modules          # react-native-web 설정 (styled-components를 사용하기 위함)
     ├──── src
     ├─────── components
     ├─────── configs
@@ -66,7 +66,7 @@
     ├──── static
     ├──── typings          # global 타입 정의 
     ├──── gatsby-browser      
-    ├──── gatsby-config          
+    ├──── gatsby-config      
     ├──── metadata         # 메타데이터 정의
     └── README.md
 
