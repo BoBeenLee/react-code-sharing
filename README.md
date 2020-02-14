@@ -163,9 +163,7 @@ npm run start:staging
    npx lerna exec --scope="@rnapp/app" -- rm -rf ./node_modules
 ```
 
-## Commit Convention
-
-- https://gist.github.com/stephenparish/9941e89d80e2bc58a153
+## [Commit Convention](https://gist.github.com/stephenparish/9941e89d80e2bc58a153)
 
 ### Fastlane을 이용한 배포전략
 
@@ -179,9 +177,7 @@ npm run start:staging
 - App, Web 중 하나만 존재하는 컴포넌트일 경우
   - App, Web 패키지에 컴포넌트에 작성합니다.
 
-## WIP
-
-- https://github.com/BoBeenLee/react-code-sharing/blob/master/TODO.md
+## [TODO](https://github.com/BoBeenLee/react-code-sharing/blob/master/TODO.md)
 
 ### ISSUE
 
