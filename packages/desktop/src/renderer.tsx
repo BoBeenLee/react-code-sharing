@@ -25,7 +25,7 @@
  *  });
  * ```
  */
+import React from "react";
+import ReactDOM from "react-dom";
 
-import './index.css';
-
-console.log('👋 This message is being logged by "renderer.js", included via webpack');
+ReactDOM.render(<h1>Hello, world!1232131321</h1>, document.getElementById("root"));
