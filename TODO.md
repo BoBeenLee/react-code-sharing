@@ -8,9 +8,13 @@
   - [ ] unit tests
   - [ ] e2e tests (puppetteer? / cypress?)
 - [ ] Documentation
-  - [ ] Manual (instructions, examples, …)
+  - [x] Directory structure
+  - [x] Getting Started
+  - [ ] Deployment
 - [ ] Builds / releases
   - [x] auto-update version(s)
   - [partial] auto-update changelogs
-  - [ ] Fastlane CI (tests, coverage on push, PR, …)
+  - [ ] Fastlane CI 
+    - [ ] IOS Firebase AppDistrubution
+    - [ ] Android Firebase AppDistrubution
   - [ ] Force git commit to follow a certain schema
