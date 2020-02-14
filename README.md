@@ -10,7 +10,7 @@
 
 ## 📖 Introduction
 
-- React기반으로 앱, 웹 sharing boilerplate
+- React, React Native기반으로 code sharing boilerplate
 
 ## 📂 Directory structure
 
