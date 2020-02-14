@@ -185,6 +185,10 @@ npm run start:staging
 - App, Web 중 하나만 존재하는 컴포넌트일 경우
   - App, Web 패키지에 컴포넌트에 작성합니다.
 
+## WIP
+
+- https://github.com/BoBeenLee/react-code-sharing/blob/master/TODO.md
+
 ### Reference
 
 - https://www.slideshare.net/2j2e/monorepo-react-web-react-native
