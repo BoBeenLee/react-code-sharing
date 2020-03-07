@@ -21,7 +21,7 @@
     ├──── android
     ├──── assets           # fonts, icons
     ├──── fastlane         # APP STORE DEPLOYMENTS
-    ├──── ios    
+    ├──── ios
     ├──── src
     ├─────── components
     ├─────── configs       # 외부 네이티브 모듈 설정
@@ -31,11 +31,11 @@
     ├─────── screens       # screen 단위
     ├─────── stores        # mobx, mobx state tree : Global Store, Local Store
     ├────────── model      # 모델 정의 ( ex) User, Comment ... )
-    ├─────── styles        # 테마, 컬러셋, zIndex, dimension 
+    ├─────── styles        # 테마, 컬러셋, zIndex, dimension
     ├─────── utils         # 라이브러리 커스텀화 (ex) uri, string ... )
     ├──── storybook        # storybook 환경설정
     ├──── typings          # global 타입 정의
-    ├── shared    
+    ├── shared
     ├──── lib
     ├─────── components
     ├─────── configs       # 외부 모듈 팩토리 패턴으로 기능 추상화
@@ -64,9 +64,9 @@
     ├─────── utils
     ├─────── html.tsx      # generate html
     ├──── static           # static 파일들
-    ├──── typings          # global 타입 정의 
-    ├──── gatsby-browser      
-    ├──── gatsby-config      
+    ├──── typings          # global 타입 정의
+    ├──── gatsby-browser
+    ├──── gatsby-config
     ├──── metadata         # 메타데이터 정의
     └── README.md
 
@@ -81,6 +81,7 @@ npm install
 ### App
 
 #### IOS
+
 ```sh
 cd packages/app
 cd ios
@@ -98,6 +99,7 @@ npm run android
 ```
 
 ### Web
+
 ```sh
 cd packages/web
 npm run start:staging
@@ -188,3 +190,4 @@ npm run start:staging
 ### Reference
 
 - https://www.slideshare.net/2j2e/monorepo-react-web-react-native
+- https://engineering.brigad.co/react-native-monorepos-code-sharing-f6c08172b417
