@@ -1,33 +1,39 @@
+import _ from "lodash";
 import { PageRendererProps } from "gatsby";
 import React, { Component } from "react";
 
-import { IWebPayload, IAppPayload } from "@shared/webviews/helloworld";
-import { getReactNativeWebView } from "src/utils/webview";
+import {
+  IWebviewProps,
+  actionFactory,
+  ActionType
+} from "@shared/webviews/helloworld";
+import withWebview, { IWithWebviewProps } from "src/hocs/withWebview";
 
-class HelloWorld extends Component<PageRendererProps> {
-  constructor(props: any) {
-    super(props);
-    window.addEventListener("message", this.onMessage);
-  }
+interface IProps
+  extends IWithWebviewProps<IWebviewProps, ActionType>,
+    PageRendererProps {
+  // NOTHING
+}
+
+class HelloWorld extends Component<IProps> {
   public componentDidMount() {
-    getReactNativeWebView<IAppPayload>({ test: "hello world" });
+    this.props.webviewProps.onWebviewProps.onHelloWorld("test");
   }
 
   public render() {
-    return <div>Hello World Hello World</div>;
+    return (
+      <button onClick={_.partial(this.onHelloWorld, "hello2")}>
+        {this.props.webviewProps.webviewProps.name}
+      </button>
+    );
   }
 
-  private onMessage = (message: MessageEvent) => {
-    if (!message.data) {
-      return;
-    }
-    try {
-      const payload = JSON.parse(message.data) as IWebPayload;
-      console.log(payload.test);
-    } catch (error) {
-      // NOTHING
-    }
+  private onHelloWorld = (name: string) => {
+    this.props.webviewProps.onWebviewProps.onHelloWorld(name);
   };
 }
 
-export default HelloWorld;
+export default withWebview<IWebviewProps, ActionType>(
+  { name: "test" },
+  actionFactory
+)(HelloWorld);

@@ -7,14 +7,18 @@ import XEIcon from "@shared/components/icon/XEIcon";
 import { Bold12, Bold20 } from "@shared/components/text/Typographies";
 import ScaleableButton from "src/components/button/ScaleableButton";
 import images from "@shared/images";
-import HelloWorldWebview from "src/components/webview/HelloWorldWebview";
 import { IStore } from "src/stores/Store";
 import { iosStatusBarHeight } from "src/utils/device";
 
 import { test } from "@shared/sharedTest";
+import HelloworldButton from "src/components/button/HelloworldButton";
 
 interface IInject {
   store: IStore;
+}
+
+interface IStates {
+  name: string;
 }
 
 const Container = styled.View`
@@ -35,15 +39,21 @@ const Name = styled(Bold20)`
   })
 )
 @observer
-class SplashScreen extends React.Component<IInject> {
+class SplashScreen extends React.Component<IInject, IStates> {
   public animation: any = null;
+
+  constructor(props: IInject) {
+    super(props);
+    this.state = {
+      name: "hello1"
+    };
+  }
 
   public componentDidMount() {
     this.props.store.initializeApp();
   }
 
   public render() {
-    const { todoTest } = this.props.store.todoStore;
     return (
       <Container>
         <ScaleableButton>
@@ -52,7 +62,10 @@ class SplashScreen extends React.Component<IInject> {
         <Name>
           {this.props.store!.appStateStatus}123{test()}
         </Name>
-        <HelloWorldWebview />
+        <HelloworldButton
+          name={this.state.name}
+          onHelloWorld={this.onHelloWorld}
+        />
         <LottieView
           style={{
             width: 100,
@@ -69,6 +82,10 @@ class SplashScreen extends React.Component<IInject> {
       </Container>
     );
   }
+
+  private onHelloWorld = (name: string) => {
+    this.setState({ name });
+  };
 }
 
 export default SplashScreen;
