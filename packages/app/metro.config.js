@@ -15,6 +15,7 @@ const extraNodeModules = {};
 Object.keys(installedDependencies).forEach(dep => {
   extraNodeModules[dep] = path.resolve(__dirname, "node_modules", dep);
 });
+extraNodeModules['@babel/runtime'] = path.resolve(__dirname, "node_modules", '@babel/runtime');
 
 module.exports = (async () => {
   const {
@@ -36,7 +37,7 @@ module.exports = (async () => {
       extraNodeModules,
       blacklistRE: blacklist([/..\/shared\/node_modules\/react\/.*/, /..\/shared\/node_modules\/react-dom\/.*/])
     },
-    watchFolders: [path.resolve(__dirname, "../shared")],
+    watchFolders: [path.resolve(__dirname, "../shared/lib")],
     projectRoot: path.resolve(__dirname)
   };
 })();
