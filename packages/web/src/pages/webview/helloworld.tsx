@@ -17,7 +17,7 @@ interface IProps
 
 class HelloWorld extends Component<IProps> {
   public componentDidMount() {
-    this.props.webviewProps.onWebviewProps.onHelloWorld("test");
+    this.props.webviewProps.onWebviewProps.onHelloWorld("test123");
   }
 
   public render() {

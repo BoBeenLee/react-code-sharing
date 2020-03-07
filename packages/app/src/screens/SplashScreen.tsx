@@ -83,7 +83,7 @@ class SplashScreen extends React.Component<IInject, IStates> {
     );
   }
 
-  private onHelloWorld = (name: string) => {
+  private onHelloWorld = ({ name }: { name: string }) => {
     this.setState({ name });
   };
 }

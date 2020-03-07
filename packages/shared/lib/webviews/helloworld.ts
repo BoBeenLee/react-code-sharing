@@ -5,7 +5,7 @@ export interface IWebviewProps {
 }
 
 export interface IOnWebviewProps {
-  onHelloWorld: (name: string) => void;
+  onHelloWorld: ({ name }: { name: string }) => void;
 }
 
 type ActionFactoryType = (

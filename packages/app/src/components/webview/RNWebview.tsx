@@ -9,7 +9,7 @@ import {
 import styled from "styled-components/native";
 import isEqual from "react-fast-compare";
 
-interface IProps<WP, WR> extends WebViewProps {
+export interface IProps<WP, WR> extends WebViewProps {
   style?: ViewProps["style"];
   webviewProps: WP;
   onWebviewProps: WR;
@@ -24,7 +24,7 @@ class RNWebview<WP, WR> extends PureComponent<IProps<WP, WR>> {
     this.sendPostMessage(this.props.webviewProps);
   }
 
-  public componentdidUpdate(prevProps: IProps<WP, WR>) {
+  public componentDidUpdate(prevProps: IProps<WP, WR>) {
     if (!isEqual(prevProps.webviewProps, this.props.webviewProps)) {
       this.sendPostMessage(this.props.webviewProps);
     }
