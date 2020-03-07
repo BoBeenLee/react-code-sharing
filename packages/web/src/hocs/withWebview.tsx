@@ -16,9 +16,10 @@ interface IStates<WP> {
   webviewProps: WP;
 }
 
-const withWebview = <WP, WR>(defaultWebviewProps: WP, actionFactory: (sendPostMessage: (data: any) => void) => WR) => <P extends object>(
-  TargetComponent: React.ComponentType<P>
-) => {
+const withWebview = <WP, WR>(
+  defaultWebviewProps: WP,
+  actionFactory: (sendPostMessage: (data: any) => void) => WR
+) => <P extends object>(TargetComponent: React.ComponentType<P>) => {
   class WithWebview extends Component<P, IStates<WP>> {
     constructor(props: any) {
       super(props);
