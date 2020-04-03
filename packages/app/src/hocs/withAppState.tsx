@@ -7,7 +7,9 @@ import { getRootStore } from "src/stores/Store";
 const withAppState = <P extends object>(
   TargetComponent: React.ComponentType<P>
 ): any => {
-  const WithAppState = class WithAppStateAnonymous extends React.PureComponent<P> {
+  const WithAppState = class WithAppStateAnonymous extends React.PureComponent<
+    P
+  > {
     public componentDidMount() {
       AppState.addEventListener("change", this.handleAppStateChange);
     }

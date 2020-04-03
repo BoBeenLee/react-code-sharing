@@ -1,5 +1,5 @@
 import hoistNonReactStatic from "hoist-non-react-statics";
-import React, { Component } from "react";
+import React from "react";
 
 import { getReactNativeWebView } from "src/utils/webview";
 
@@ -20,7 +20,7 @@ const withWebview = <WP, WR>(
   defaultWebviewProps: WP,
   actionFactory: (sendPostMessage: (data: any) => void) => WR
 ) => <P extends object>(TargetComponent: React.ComponentType<P>) => {
-  class WithWebview extends Component<P, IStates<WP>> {
+  class WithWebview extends React.PureComponent<P, IStates<WP>> {
     constructor(props: any) {
       super(props);
       this.state = { webviewProps: defaultWebviewProps };
