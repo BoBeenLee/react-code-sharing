@@ -43,12 +43,13 @@ class InfiniteList<T> extends React.Component<IFooterSpinnerList<T>, IState> {
       return;
     }
 
-    try {
-      this.setState({ refreshing: true });
-      await onRefresh();
-    } finally {
-      this.setState({ refreshing: false });
-    }
+    this.setState({ refreshing: true }, async () => {
+      try {
+        await onRefresh();
+      } finally {
+        this.setState({ refreshing: false });
+      }
+    });
   };
 
   private hookEndReached = async (info: { distanceFromEnd: number }) => {
@@ -61,12 +62,13 @@ class InfiniteList<T> extends React.Component<IFooterSpinnerList<T>, IState> {
       return;
     }
 
-    try {
-      this.setState({ showFooterSpinner: true });
-      await onEndReached(info);
-    } finally {
-      this.setState({ showFooterSpinner: false });
-    }
+    this.setState({ showFooterSpinner: true }, async () => {
+      try {
+        await onEndReached(info);
+      } finally {
+        this.setState({ showFooterSpinner: false });
+      }
+    });
   };
 
   private get renderLoading() {

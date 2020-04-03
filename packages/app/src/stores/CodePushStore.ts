@@ -4,7 +4,7 @@ import codePush from "react-native-code-push";
 
 import { firebaseRemoteConfig } from "src/configs/remoteConfig";
 import { storage } from "src/configs/storage";
-import { getUniqueID, getOS, getVersion } from "src/utils/device";
+import { uniqueID, os, version } from "src/utils/device";
 
 interface ICodePushData {
   codePushBuild: number;
@@ -22,9 +22,7 @@ const CodePushStore = types
   .model("CodePushStore", {
     codePushKey: types.optional(
       types.string,
-      `CODE_PUSH_${_.upperCase(getOS())}_${getVersion()
-        .split(".")
-        .join("")}`
+      `CODE_PUSH_${_.upperCase(os)}_${version.split(".").join("")}`
     ),
     currentCodePushData: types.optional(
       types.frozen<ICodePushData>(),
@@ -46,7 +44,7 @@ const CodePushStore = types
   .actions(self => {
     const initialize = flow(function*() {
       try {
-        const targetDeviceID = getUniqueID();
+        const targetDeviceID = uniqueID;
         self.currentCodePushData = yield storage().getJSONWithDefault<
           ICodePushData
         >(self.codePushKey as any, INITIAL_CODE_PUSH_DATA);
