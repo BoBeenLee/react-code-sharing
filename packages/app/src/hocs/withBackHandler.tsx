@@ -9,7 +9,7 @@ export interface IBackHandlerProps {
 const withBackHandler = <T extends IBackHandlerProps, P>(
   Component: React.ComponentType<T> & P
 ) => {
-  class WithBackHandler extends React.Component<
+  class WithBackHandler extends React.PureComponent<
     Subtract<T, IBackHandlerProps> & { innerRef: any }
   > {
     public backHandler: NativeEventSubscription | null = null;

@@ -4,7 +4,7 @@ import React from "react";
 import Layout from "src/components/common/Layout";
 import SEO from "src/components/common/SEO";
 
-class NotFoundPage extends React.Component<PageRendererProps> {
+class NotFoundPage extends React.PureComponent<PageRendererProps> {
   public render() {
     return (
       <Layout>

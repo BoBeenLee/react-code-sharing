@@ -1,5 +1,5 @@
 import hoistNonReactStatic from "hoist-non-react-statics";
-import React, { Component } from "react";
+import React from "react";
 import { Navigation } from "react-native-navigation";
 
 import { setCurrentComponent } from "src/utils/navigator";
@@ -12,7 +12,7 @@ interface IProps {
 const withNavigator = <P extends object>(
   TargetComponent: React.ComponentType<P>
 ): any => {
-  const WithNavigator = class WithNavigatorAnonymous extends Component<
+  const WithNavigator = class WithNavigatorAnonymous extends React.PureComponent<
     P & IProps
   > {
     constructor(props: P & IProps) {

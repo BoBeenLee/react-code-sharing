@@ -7,7 +7,7 @@ const TouchabledView = styled.TouchableOpacity`
   padding: 40px;
 `;
 
-class BuggyCounter extends React.Component<any, any> {
+class BuggyCounter extends React.PureComponent<any, any> {
   constructor(props: any) {
     super(props);
     this.state = { counter: 0 };

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import colors from "@shared/styles/colors";
 import { media } from "@shared/utils/media";
 import styled from "styled-components";
@@ -23,7 +23,7 @@ const Container = styled.header`
   `};
 `;
 
-export default class Header extends Component {
+export default class Header extends React.PureComponent {
   public render() {
     return <Container>Hello World</Container>;
   }

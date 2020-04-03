@@ -1,5 +1,5 @@
 import _ from "lodash";
-import React, { Component, CSSProperties } from "react";
+import React, { CSSProperties } from "react";
 import { SizeMe, SizeMeProps } from "react-sizeme";
 import {
   VariableSizeList as List,
@@ -29,7 +29,7 @@ export interface IProps<T> {
   LoadingComponent?: React.ReactNode;
 }
 
-class InfiniteList<T> extends Component<IProps<T>> {
+class InfiniteList<T> extends React.PureComponent<IProps<T>> {
   public render() {
     return (
       <SizeMe monitorHeight={true} refreshRate={32}>

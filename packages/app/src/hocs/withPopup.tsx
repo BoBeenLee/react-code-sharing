@@ -1,6 +1,6 @@
 import hoistNonReactStatic from "hoist-non-react-statics";
 import _ from "lodash";
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components/native";
 
 import withBackHandler, { IBackHandlerProps } from "src/hocs/withBackHandler";
@@ -45,7 +45,7 @@ const PopupTouchableOverlay = styled.TouchableOpacity.attrs({
 const withPopup = <P extends IPopupProps>(
   TargetComponent: React.ComponentType<P>
 ): any => {
-  const WithPopup = class WithPopupAnonymous extends Component<
+  const WithPopup = class WithPopupAnonymous extends React.PureComponent<
     Subtract<P, IPopupProps>,
     IStates
   > {

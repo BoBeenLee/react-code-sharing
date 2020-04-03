@@ -14,7 +14,7 @@ interface IState {
   showFooterSpinner: boolean;
 }
 
-class InfiniteList<T> extends React.Component<IFooterSpinnerList<T>, IState> {
+class InfiniteList<T> extends React.PureComponent<IFooterSpinnerList<T>, IState> {
   constructor(props: IFooterSpinnerList<T>) {
     super(props);
 

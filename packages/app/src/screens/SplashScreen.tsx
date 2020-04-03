@@ -39,7 +39,7 @@ const Name = styled(Bold20)`
   })
 )
 @observer
-class SplashScreen extends React.Component<IInject, IStates> {
+class SplashScreen extends React.PureComponent<IInject, IStates> {
   public animation: any = null;
 
   constructor(props: IInject) {

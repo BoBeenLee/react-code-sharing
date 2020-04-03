@@ -25,7 +25,7 @@ interface IProps extends PageRendererProps, IInject {
   })
 )
 @observer
-class IndexPage extends React.Component<IProps> {
+class IndexPage extends React.PureComponent<IProps> {
   public render() {
     const { todoTest } = this.props.store.todoStore;
     return (

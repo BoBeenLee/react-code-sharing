@@ -9,7 +9,7 @@ interface IStates {
   error: Error | null;
 }
 
-class ErrorBoundary extends React.Component<IProps, IStates> {
+class ErrorBoundary extends React.PureComponent<IProps, IStates> {
   constructor(props: IProps) {
     super(props);
     this.state = {

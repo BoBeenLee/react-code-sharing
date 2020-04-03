@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 
 import Footer from "src/components/Footer";
@@ -29,7 +29,7 @@ const Body = styled.div`
   padding: 16px 20px;
 `;
 
-class Layout extends Component<IProps> {
+class Layout extends React.PureComponent<IProps> {
   public render() {
     const { className } = this.props;
     return (

@@ -1,6 +1,6 @@
 import _ from "lodash";
 import { Observer } from "mobx-react";
-import React, { Component } from "react";
+import React from "react";
 import { AnimatePresence } from "framer-motion";
 import styled from "styled-components";
 

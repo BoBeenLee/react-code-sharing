@@ -1,6 +1,6 @@
 import _ from "lodash";
 import { PageRendererProps } from "gatsby";
-import React, { Component } from "react";
+import React from "react";
 
 import {
   IWebviewProps,
@@ -15,7 +15,7 @@ interface IProps
   // NOTHING
 }
 
-class HelloWorld extends Component<IProps> {
+class HelloWorld extends React.PureComponent<IProps> {
   public componentDidMount() {
     this.props.webviewProps.onWebviewProps.onHelloWorld("test123");
   }

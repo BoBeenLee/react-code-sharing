@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -39,7 +39,7 @@ const Resources = styled(MenuStyled)`
 
 const Contact = styled(MenuStyled)``;
 
-class Footer extends Component {
+class Footer extends React.PureComponent {
   public render() {
     return <Container>Hello World</Container>;
   }

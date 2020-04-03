@@ -1,6 +1,6 @@
 import hoistNonReactStatic from "hoist-non-react-statics";
 import _ from "lodash";
-import React, { Component } from "react";
+import React from "react";
 
 interface IProps {
   componentId: string;
@@ -14,7 +14,7 @@ export interface IDisabledProps {
 const withDisabled = <T extends IDisabledProps, P>(
   TargetComponent: React.ComponentType<T> & P
 ) => {
-  class WithDisabled extends Component<T & IProps> {
+  class WithDisabled extends React.PureComponent<T & IProps> {
     public disabledUniqueIds: { [key in string]: boolean };
 
     constructor(props: T & IProps) {

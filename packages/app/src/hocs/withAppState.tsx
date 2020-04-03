@@ -1,5 +1,5 @@
 import hoistNonReactStatic from "hoist-non-react-statics";
-import React, { Component } from "react";
+import React from "react";
 import { AppState, AppStateStatus } from "react-native";
 
 import { getRootStore } from "src/stores/Store";
@@ -7,7 +7,7 @@ import { getRootStore } from "src/stores/Store";
 const withAppState = <P extends object>(
   TargetComponent: React.ComponentType<P>
 ): any => {
-  const WithAppState = class WithAppStateAnonymous extends Component<P> {
+  const WithAppState = class WithAppStateAnonymous extends React.PureComponent<P> {
     public componentDidMount() {
       AppState.addEventListener("change", this.handleAppStateChange);
     }

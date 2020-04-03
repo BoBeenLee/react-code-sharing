@@ -1,5 +1,5 @@
 import { Provider } from "mobx-react";
-import React, { Component } from "react";
+import React from "react";
 
 import { IStore } from "src/stores/Store";
 
