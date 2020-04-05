@@ -76,6 +76,7 @@ module.exports = {
         "react-native": path.resolve(__dirname, "modules/react-native"),
         "@shared": path.resolve(__dirname, '../shared/lib')
       }
-    }
+    },
+    'gatsby-plugin-webpack-bundle-analyzer'
   ]
 };

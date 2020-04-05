@@ -1,13 +1,15 @@
 {
-    "presets": [
-        "babel-preset-gatsby"
+  "presets": [
+    "babel-preset-gatsby",
+    ["@babel/env", { "targets": { "node": 6 } }]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
     ],
-    "plugins": [
-        [
-            "@babel/plugin-proposal-decorators",
-            {
-                "legacy": true
-            }
-        ]
-    ]
+    "lodash"
+  ]
 }

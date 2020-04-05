@@ -24,7 +24,9 @@ const withWebview = <WP, WR>(
     constructor(props: any) {
       super(props);
       this.state = { webviewProps: defaultWebviewProps };
-      window.addEventListener("message", this.onMessage);
+      if (typeof window !== `undefined`) {
+        window.addEventListener("message", this.onMessage);
+      }
     }
 
     public render() {
