@@ -14,10 +14,10 @@ function useTimer({
       onTimeEnd && onTimeEnd();
       return;
     }
-    const intervalId = setInterval(() => {
+    const timeoutId = setTimeout(() => {
       setTimeLeft(timeLeft - 1);
     }, 1000);
-    return () => clearInterval(intervalId);
+    return () => clearTimeout(timeoutId);
   }, [onTimeEnd, timeLeft]);
 
   return { timeLeft };
