@@ -12,6 +12,7 @@ import {
 import styled from "styled-components/native";
 
 import colors from "@shared/styles/colors";
+import { omit } from "@shared/utils/common";
 
 type FontType = "BOLD" | "MEDIUM" | "REGULAR";
 
@@ -74,7 +75,7 @@ class OSMGTextInput extends React.PureComponent<IProps, IStates> {
         onFocus={this.onFocus}
         onBlur={this.onBlur}
         allowFontScaling={false}
-        {..._.omit(otherProps, ["onFocus", "onBlur"])}
+        {...omit(otherProps, "onFocus", "onBlur")}
       />
     );
   }

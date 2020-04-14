@@ -1,5 +1,4 @@
 import AsyncStorage from "@react-native-community/async-storage";
-import _ from "lodash";
 import React from "react";
 import { mst } from "reactotron-mst";
 import Reactotron, {
@@ -10,12 +9,13 @@ import Reactotron, {
 } from "reactotron-react-native";
 
 import { IStore } from "./src/stores/Store";
+import { identity } from "@shared/utils/common";
 
 export const isReactotron = () => {
   return __DEV__;
 };
 
-let overlay = _.identity;
+let overlay = identity;
 export const setupReactotron = (store: IStore) => {
   Reactotron.configure({
     name: "app"

@@ -4,6 +4,7 @@ import {
   traverseObjectKeys,
   traverseObjectSliceStr
 } from "@shared/utils/string";
+import { omit } from "@shared/utils/common";
 
 const EVENT_TYPE_MAX_LENGTH = 40;
 
@@ -33,7 +34,7 @@ export function firebaseAnalyticsFactory(
     }
 
     const isAllKeysUnderLength40 = traverseObjectKeys(
-      _.omit(eventData, ["eventType"]),
+      omit(eventData, "eventType"),
       (key: string) => key.length <= EVENT_TYPE_MAX_LENGTH
     );
 
@@ -42,7 +43,7 @@ export function firebaseAnalyticsFactory(
     }
 
     const parameters = traverseObjectSliceStr(
-      _.omit(eventData, ["eventType"]),
+      omit(eventData, "eventType"),
       100
     );
     funcAnalytics(eventData.eventType, parameters);
