@@ -11,7 +11,7 @@ export const identity = <T>(value?: T) => {
 };
 
 export const omit: Omit = (obj, ...keys) => {
-  let ret = {} as {
+  const ret = {} as {
     [K in keyof typeof obj]: typeof obj[K];
   };
   let key: keyof typeof obj;
