@@ -14,18 +14,19 @@
 - [ ] Builds / releases
   - [x] auto-update version(s)
   - [partial] auto-update changelogs
-  - [ ] Fastlane CI 
+  - [ ] Fastlane CI
     - Feature Review를 하기 위한 설정
       - [ ] IOS AppDistrubution
       - [ ] Android AppDistrubution
     - [ ] AppStore, GoogleStore Delivery
   - Github workflow
-      - [x] Build, Test
-      - [ ] Storybook
-      - [ ] Release
-        - IOS Fastlane
-        - Android Fastlane
+    - [x] Build, Test
+    - [ ] Storybook
+    - [ ] Release
+      - IOS Fastlane
+      - Android Fastlane
 - [ ] Eletron Setting
   - [ ] Webpack
   - [ ] React Router
 - [ ] Force git commit to follow a certain schema
+- [ ] remove lodash
