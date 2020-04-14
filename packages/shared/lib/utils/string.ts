@@ -1,5 +1,3 @@
-import _ from "lodash";
-
 export const toInteger = (value: string | null) => {
   if (!value) {
     return 0;
@@ -15,7 +13,7 @@ export const toInteger = (value: string | null) => {
 
 export const noInfoIfZero = (price: string | null) => {
   const zeroPrices = ["0", "0원", 0];
-  if (_.some(zeroPrices, zeroPrice => zeroPrice === price)) {
+  if (zeroPrices.some(zeroPrice => zeroPrice === price)) {
     return "가격 정보 없음";
   }
   return price;

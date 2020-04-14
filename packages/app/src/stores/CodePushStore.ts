@@ -22,7 +22,7 @@ const CodePushStore = types
   .model("CodePushStore", {
     codePushKey: types.optional(
       types.string,
-      `CODE_PUSH_${_.upperCase(os)}_${version.split(".").join("")}`
+      `CODE_PUSH_${os.toUpperCase()}_${version.split(".").join("")}`
     ),
     currentCodePushData: types.optional(
       types.frozen<ICodePushData>(),

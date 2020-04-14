@@ -1,4 +1,3 @@
-import _ from "lodash";
 import { action } from "@storybook/addon-actions";
 import { storiesOf } from "@storybook/react-native";
 import React, { useState } from "react";
@@ -6,7 +5,7 @@ import { ListRenderItemInfo } from "react-native";
 import styled from "styled-components/native";
 
 import InfiniteList from "src/components/list/InfiniteList";
-import { delay } from "@shared/utils/common";
+import { delay, times } from "@shared/utils/common";
 
 const Container = styled.View``;
 
@@ -27,7 +26,7 @@ const infiniteKeyExtractor = (item: any) => `${item}`;
 
 const InfiniteListView = () => {
   const [size, setSize] = useState(50);
-  const items = _.times(size, index => "" + index);
+  const items = times(size, index => "" + index);
 
   const onMore = async () => {
     await delay(5000);

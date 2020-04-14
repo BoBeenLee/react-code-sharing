@@ -1,14 +1,14 @@
-import _ from "lodash";
 import firebase from "react-native-firebase";
 
 import { firebaseAnalyticsFactory } from "@shared/configs/analytics";
 import { createInjectDecorator } from "@shared/decorators/createInjectDecorator";
+import { once } from "@shared/utils/common";
 
 export function initialize() {
   firebase.analytics().setAnalyticsCollectionEnabled(true);
 }
 
-export const firebaseAnalytics = _.once(() => {
+export const firebaseAnalytics = once(() => {
   const logEvent = (eventName: string, params: object) => {
     firebase.analytics().logEvent(eventName, params);
   };

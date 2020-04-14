@@ -1,4 +1,3 @@
-import _ from "lodash";
 import * as config from "../../config.json";
 
 interface IEnvironment {
@@ -13,10 +12,8 @@ interface IEnvironmentEntry {
   WEBVIEW_URL: string;
 }
 
-const REACT_ENV = _.defaultTo(
-  (config as any).REACT_ENV,
-  "staging"
-) as keyof IEnvironment;
+const REACT_ENV =
+  (config as { REACT_ENV?: keyof IEnvironment })?.REACT_ENV ?? "staging";
 
 // tslint:disable:object-literal-sort-keys
 const env: IEnvironment = {

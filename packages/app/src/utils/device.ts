@@ -1,4 +1,3 @@
-import _ from "lodash";
 import { Dimensions, Platform, StatusBar } from "react-native";
 import DeviceInfo from "react-native-device-info";
 

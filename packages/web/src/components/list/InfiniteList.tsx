@@ -1,4 +1,3 @@
-import _ from "lodash";
 import React, { CSSProperties } from "react";
 import { SizeMe, SizeMeProps } from "react-sizeme";
 import {
@@ -76,8 +75,8 @@ class InfiniteList<T> extends React.PureComponent<IProps<T>> {
         >
           {({ onItemsRendered, ref }) => (
             <List
-              height={_.defaultTo(size.height, 100)}
-              width={_.defaultTo(size.width, 100)}
+              height={size.height ?? 100}
+              width={size.width ?? 100}
               itemCount={itemCount}
               itemSize={getItemSize}
               onItemsRendered={onItemsRendered}

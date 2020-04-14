@@ -1,4 +1,3 @@
-import _ from "lodash";
 import { action } from "@storybook/addon-actions";
 import { storiesOf } from "@storybook/react-native";
 import React from "react";
@@ -6,6 +5,7 @@ import styled from "styled-components/native";
 
 import HelloWorldWebview from "src/components/webview/RNWebview";
 import { IWebviewProps, IOnWebviewProps } from "@shared/webviews/helloworld";
+import { identity } from "@shared/utils/common";
 
 const CenterView = styled.View`
   flex: 1;
@@ -19,7 +19,7 @@ storiesOf("Webview", module)
     return (
       <HelloWorldWebview<IWebviewProps, IOnWebviewProps>
         webviewProps={{ name: "test" }}
-        onWebviewProps={{ onHelloWorld: _.identity }}
+        onWebviewProps={{ onHelloWorld: identity }}
       />
     );
   });

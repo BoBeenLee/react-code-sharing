@@ -1,11 +1,10 @@
 import { number } from "@storybook/addon-knobs";
 import { storiesOf } from "@storybook/react";
-import _ from "lodash";
 import React, { CSSProperties, useState } from "react";
 import styled from "styled-components";
 
 import InfiniteList from "src/components/list/InfiniteList";
-import { delay } from "@shared/utils/common";
+import { delay, times } from "@shared/utils/common";
 
 const Item = styled.div<{ height: number }>`
   width: 200px;
@@ -39,7 +38,7 @@ const getItemSize = () => 70;
 
 storiesOf("List", module).add("InfiniteList", () => {
   const [size, setSize] = useState(200);
-  const items = _.times(size, index => "" + index);
+  const items = times(size, index => "" + index);
 
   const onMore = async () => {
     await delay(5000);

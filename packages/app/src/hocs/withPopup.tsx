@@ -1,9 +1,9 @@
 import hoistNonReactStatic from "hoist-non-react-statics";
-import _ from "lodash";
 import React from "react";
 import styled from "styled-components/native";
 
 import withBackHandler, { IBackHandlerProps } from "src/hocs/withBackHandler";
+import { identity } from "@shared/utils/common";
 
 interface IStates {
   PopupComponent: JSX.Element | null;
@@ -54,7 +54,7 @@ const withPopup = <P extends IPopupProps>(
 
       this.state = {
         PopupComponent: null,
-        closeCallback: _.identity,
+        closeCallback: identity,
         closeOverlay: true
       };
     }

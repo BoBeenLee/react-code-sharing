@@ -1,10 +1,10 @@
-import _ from "lodash";
 import firebase from "react-native-firebase";
 
 import { isProduction } from "src/configs/env";
 import { remoteConfigFactory } from "@shared/configs/remoteConfig";
+import { once } from "@shared/utils/common";
 
-const buildRemoteConfig = _.once(async () => {
+const buildRemoteConfig = once(async () => {
   const remoteConfig = firebase.config();
   if (!isProduction()) {
     remoteConfig.enableDeveloperMode();
@@ -15,7 +15,7 @@ const buildRemoteConfig = _.once(async () => {
   return remoteConfig;
 });
 
-export const firebaseRemoteConfig = _.once(() => {
+export const firebaseRemoteConfig = once(() => {
   const getStringValue = async (key: string) => {
     const remoteConfig = await buildRemoteConfig();
     const value = await remoteConfig.getValue(key);

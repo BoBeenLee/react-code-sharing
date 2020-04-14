@@ -1,5 +1,4 @@
 import hoistNonReactStatic from "hoist-non-react-statics";
-import _ from "lodash";
 import { Navigation } from "react-native-navigation";
 import { compose } from "recompose";
 
@@ -12,6 +11,7 @@ import withStore from "src/hocs/withStore";
 import { SCREEN_IDS } from "src/screens/constant";
 import SplashScreen from "src/screens/SplashScreen";
 import { getRootStore } from "src/stores/Store";
+import { identity } from "@shared/utils/common";
 
 interface IScreenProps {
   id: string;
@@ -33,7 +33,7 @@ const enhanceScreen = (Component: React.ComponentType<any>) => {
     withNavigator,
     withSplash,
     withStore(store),
-    isDevelopment ? withOverlay : _.identity
+    isDevelopment ? withOverlay : identity
   )(Component);
 
   hoistNonReactStatic(EnhancedComponent, Component);
@@ -55,12 +55,12 @@ if (isDevelopment) {
 }
 
 export function registerScreens() {
-  _.forEach(overlaies, overlay => {
+  overlaies.forEach(overlay => {
     const { id, Component } = overlay;
     Navigation.registerComponent(id, () => enhanceOverlayScreen(Component));
   });
 
-  _.forEach(screens, screen => {
+  screens.forEach(screen => {
     const { id, Component } = screen;
     Navigation.registerComponent(id, () => enhanceScreen(Component));
   });

@@ -1,10 +1,9 @@
-import _ from "lodash";
-
 import { firebaseInstance } from "src/configs/firebase";
 import { firebaseAnalyticsFactory } from "@shared/configs/analytics";
 import { createInjectDecorator } from "@shared/decorators/createInjectDecorator";
+import { once } from "@shared/utils/common";
 
-export const firebaseAnalytics = _.once(() => {
+export const firebaseAnalytics = once(() => {
   const logEvent = (eventName: string, params: object) => {
     firebaseInstance()
       .analytics()

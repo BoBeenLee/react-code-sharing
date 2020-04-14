@@ -1,4 +1,15 @@
-import _ from "lodash";
+export const once = <R>(func: (...rest: any[]) => R) => {
+  let isCalled = false,
+    result: R | null = null;
+  return (...rest: any[]): R => {
+    if (isCalled) {
+      return result!;
+    }
+    isCalled = true;
+    result = func(...rest);
+    return result;
+  };
+};
 
 interface Omit {
   <T extends object, K extends [...(keyof T)[]]>(obj: T, ...keys: K): {
@@ -21,6 +32,14 @@ export const omit: Omit = (obj, ...keys) => {
     }
   }
   return ret;
+};
+
+export const times = <T>(size: number, func: (index: number) => T): T[] => {
+  const res = [];
+  for (let i = 0; i < size; i++) {
+    res.push(func(i));
+  }
+  return res;
 };
 
 export const enhanceNoError = (func: any) => async (...args: any[]) => {
@@ -63,7 +82,7 @@ export const filterNull = <T>(iterable: Array<T | null> | null) => {
   if (!iterable) {
     return [];
   }
-  return _.filter(iterable, i => i !== null) as T[];
+  return  iterable.filter(i => i !== null) as T[];
 };
 
 export const filterEmpty = <T>(

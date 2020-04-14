@@ -1,4 +1,3 @@
-import _ from "lodash";
 import React, { PureComponent } from "react";
 import { ViewProps } from "react-native";
 import {
@@ -8,6 +7,7 @@ import {
 } from "react-native-webview";
 import styled from "styled-components/native";
 import isEqual from "react-fast-compare";
+import { omit } from "@shared/utils/common";
 
 export interface IProps<WP, WR> extends WebViewProps {
   style?: ViewProps["style"];
@@ -31,10 +31,11 @@ class RNWebview<WP, WR> extends PureComponent<IProps<WP, WR>> {
   }
 
   public render() {
-    const { style, source, onMessage, ...rest } = _.omit(this.props, [
+    const { style, source, onMessage, ...rest } = omit(
+      this.props,
       "webviewProps",
       "onWebviewProps"
-    ]);
+    );
     return (
       <Container style={style}>
         <WebView

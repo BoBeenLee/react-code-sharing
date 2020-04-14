@@ -1,4 +1,3 @@
-import _ from "lodash";
 import React from "react";
 import {
   Platform,
@@ -48,7 +47,7 @@ class OSMGTextInput extends React.PureComponent<IProps, IStates> {
     fontType: "REGULAR"
   };
 
-  public textInputRef = React.createRef<TextInput>();
+  public textInputRef = React.createRef<any>();
 
   constructor(props: IProps) {
     super(props);
@@ -111,7 +110,7 @@ class OSMGTextInput extends React.PureComponent<IProps, IStates> {
 
   private nativeText = () => {
     const { defaultValue } = this.props;
-    return _.get(this.textInputRef.current, ["_lastNativeText"], defaultValue);
+    return this.textInputRef.current?._lastNativeText ?? defaultValue;
   };
 }
 
