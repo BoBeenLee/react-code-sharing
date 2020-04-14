@@ -82,7 +82,7 @@ export const filterNull = <T>(iterable: Array<T | null> | null) => {
   if (!iterable) {
     return [];
   }
-  return  iterable.filter(i => i !== null) as T[];
+  return iterable.filter(i => i !== null) as T[];
 };
 
 export const filterEmpty = <T>(
