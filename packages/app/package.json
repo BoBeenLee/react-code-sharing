@@ -123,7 +123,6 @@
     "@types/hoist-non-react-statics": "^3.3.1",
     "@types/jest": "^24.0.12",
     "@types/jwt-decode": "^2.2.1",
-    "@types/lodash": "^4.14.147",
     "@types/numeral": "0.0.26",
     "@types/qs": "^6.5.3",
     "@types/react": "^16.9.3",
