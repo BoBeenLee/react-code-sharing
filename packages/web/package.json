@@ -44,7 +44,6 @@
     "gatsby-source-filesystem": "^2.1.36",
     "gatsby-transformer-sharp": "^2.3.4",
     "hoist-non-react-statics": "^3.3.0",
-    "lodash": "^4.17.15",
     "mobile-detect": "^1.4.4",
     "mobx": "^4.9.4",
     "mobx-react": "^5.4.3",

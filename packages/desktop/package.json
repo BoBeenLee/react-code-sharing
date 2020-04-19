@@ -33,7 +33,6 @@
     "firebase": "^7.5.2",
     "framer-motion": "^1.7.0",
     "hoist-non-react-statics": "^3.3.0",
-    "lodash": "^4.17.15",
     "mobile-detect": "^1.4.4",
     "mobx": "^4.9.4",
     "mobx-react": "^5.4.3",

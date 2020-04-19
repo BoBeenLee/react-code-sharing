@@ -1,6 +1,34 @@
-import { uniqueId, omit, once } from "../common";
+import { cond, uniqueId, omit, once, sortedObject } from "../common";
 
 describe("common test", () => {
+  test("cond test", () => {
+    const siteMetadataMap = cond([
+      {
+        key: { isProduction: false },
+        value: {
+          description: "development"
+        }
+      },
+      {
+        key: { isProduction: true },
+        value: {
+          description: "production"
+        }
+      }
+    ]);
+    expect(siteMetadataMap({ isProduction: false })).toEqual({
+      description: "development"
+    });
+    expect(siteMetadataMap({ isProduction: true })).toEqual({
+      description: "production"
+    });
+  });
+  
+  test("sortedObject test", () => {
+    expect(JSON.stringify(sortedObject({ a: 1, b: 2 }))).toEqual(
+      JSON.stringify(sortedObject({ b: 2, a: 1 }))
+    );
+  });
   test("sorting test", () => {
     const arr = ["4", "1", "2", "3"];
     expect(

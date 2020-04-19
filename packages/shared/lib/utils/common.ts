@@ -1,3 +1,26 @@
+export const sortedObject = <T extends object>(obj: T) => {
+  const keys = Object.keys(obj).sort() as Array<keyof T>;
+  return keys.reduce((res, key) => {
+    return {
+      ...res,
+      [key]: obj[key]
+    };
+  }, {}) as T;
+};
+
+export const cond = <K extends object, T>(
+  conds: Array<{ key: K; value: T }>,
+  defaultValue?: T
+) => {
+  return (key: K) => {
+    const targetKey = JSON.stringify(sortedObject(key));
+    return (
+      conds.find(item => JSON.stringify(sortedObject(item.key)) === targetKey)
+        ?.value ?? defaultValue
+    );
+  };
+};
+
 export const uniqueId = (() => {
   const ids: { [key in string]: number } = {};
   return (prefix: string) => {
