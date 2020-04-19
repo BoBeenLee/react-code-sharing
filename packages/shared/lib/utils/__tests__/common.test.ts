@@ -23,7 +23,7 @@ describe("common test", () => {
       description: "production"
     });
   });
-  
+
   test("sortedObject test", () => {
     expect(JSON.stringify(sortedObject({ a: 1, b: 2 }))).toEqual(
       JSON.stringify(sortedObject({ b: 2, a: 1 }))
