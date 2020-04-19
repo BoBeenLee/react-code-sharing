@@ -29,4 +29,4 @@
   - [ ] Webpack
   - [ ] React Router
 - [ ] Force git commit to follow a certain schema
-- [ ] remove lodash
+- [x] remove lodash
