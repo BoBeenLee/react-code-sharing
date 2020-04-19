@@ -1,6 +1,7 @@
-import _ from "lodash";
 import { types } from "mobx-state-tree";
 import Todo, { ITodo } from "./Todo";
+
+import { uniqueId } from "@shared/utils/common";
 
 const PREFIX_TODO_ID = "todo";
 
@@ -27,7 +28,7 @@ const TodoStore = types
       self.todos.push(
         Todo.create({
           name,
-          id: _.uniqueId(PREFIX_TODO_ID),
+          id: uniqueId(PREFIX_TODO_ID),
           order: self.todos.length + 1
         })
       );

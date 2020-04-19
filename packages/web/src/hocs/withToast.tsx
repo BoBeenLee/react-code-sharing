@@ -1,4 +1,3 @@
-import _ from "lodash";
 import { Observer } from "mobx-react";
 import React from "react";
 import { AnimatePresence } from "framer-motion";
@@ -19,14 +18,15 @@ const withToast = (element: any): any => {
       <Observer>
         {() => (
           <AnimatePresence>
-            {_.map(getRootStore().toastStore.toasts, toast => {
+            {getRootStore().toastStore.toasts.map(toast => {
               const { id, message, delay } = toast;
               return (
                 <ToastText
                   key={id}
+                  id={id}
                   message={message}
                   delay={delay}
-                  onFinish={_.partial(onFinish, id)}
+                  onFinish={onFinish}
                 />
               );
             })}

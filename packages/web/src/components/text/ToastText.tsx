@@ -7,9 +7,10 @@ import { media } from "@shared/utils/media";
 
 interface IProps {
   className?: string;
+  id: string;
   message: string;
   delay: number;
-  onFinish: () => void;
+  onFinish: (id: string) => void;
 }
 
 const Container = styled(motion.div)`
@@ -35,7 +36,7 @@ const Message = styled.div`
 `;
 
 function ToastText(props: IProps) {
-  const { className, message } = props;
+  const { className, id, message } = props;
 
   const show = () => {
     const { delay } = props;
@@ -43,7 +44,7 @@ function ToastText(props: IProps) {
   };
   const hide = () => {
     const { onFinish } = props;
-    onFinish();
+    onFinish(id);
   };
 
   useEffect(() => {

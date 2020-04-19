@@ -1,6 +1,6 @@
 import hoistNonReactStatic from "hoist-non-react-statics";
-import _ from "lodash";
 import React from "react";
+import { uniqueId as sharedUniqueId } from "@shared/utils/common";
 
 interface IProps {
   componentId: string;
@@ -34,7 +34,7 @@ const withDisabled = <T extends IDisabledProps, P>(
 
     private wrapperDisabled = (
       func: any,
-      uniqueId: string = _.uniqueId("disabled")
+      uniqueId: string = sharedUniqueId("disabled")
     ) => {
       this.disabledUniqueIds[uniqueId] = false;
       return async (...args: any[]) => {

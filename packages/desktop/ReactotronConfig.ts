@@ -1,11 +1,11 @@
-import _ from "lodash";
 import React from "react";
 import { mst } from "reactotron-mst";
 import Reactotron, { trackGlobalErrors } from "reactotron-react-js";
 
 import { IStore } from "src/stores/Store";
+import { identity } from "@shared/utils/common";
 
-let overlay = _.identity;
+let overlay = identity;
 export const setupReactotron = (store: IStore) => {
   Reactotron
     .configure({

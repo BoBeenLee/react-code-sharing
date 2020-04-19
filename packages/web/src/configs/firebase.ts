@@ -1,11 +1,11 @@
 import firebase from "firebase/app";
 import "firebase/analytics";
 import "firebase/remote-config";
-import _ from "lodash";
 
 import env from "src/configs/env";
+import { once } from "@shared/utils/common";
 
-export const firebaseInstance = _.once(() => {
+export const firebaseInstance = once(() => {
   if (!env.FIREBASE_CONFIG) {
     throw new Error("not exists firebase configs");
   }

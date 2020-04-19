@@ -1,31 +1,16 @@
 import AsyncStorage from "@react-native-community/async-storage";
 
 import { storageFactory } from "@shared/configs/storage";
-import { once } from "@shared/utils/common";
+import { once, isEmpty, filterNull } from "@shared/utils/common";
 
 export const storage = once(() => {
-  const setItem = (key: string, value: string) => {
-    return new Promise((resolve, reject) => {
-      AsyncStorage.multiSet([[key, value]], errors => {
-        if (_.isEmpty(errors)) {
-          resolve(true);
-          return;
-        }
-        reject(_.first(errors));
-      });
-    });
+  const setItem = async (key: string, value: string) => {
+    AsyncStorage.setItem(key, value);
   };
 
-  const getItem = (key: string): Promise<string> => {
-    return new Promise((resolve, reject) => {
-      AsyncStorage.multiGet([key], (errors, result) => {
-        if (_.isEmpty(errors)) {
-          resolve(_.get(_.first(result), ["1"], "")!);
-          return;
-        }
-        reject(_.first(errors));
-      });
-    });
+  const getItem = async (key: string): Promise<string> => {
+    const response = await AsyncStorage.getItem(key);
+    return response ?? "";
   };
 
   const clear = () => {

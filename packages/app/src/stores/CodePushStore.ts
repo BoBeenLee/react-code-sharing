@@ -1,10 +1,10 @@
-import _ from "lodash";
 import { flow, types } from "mobx-state-tree";
 import codePush from "react-native-code-push";
 
 import { firebaseRemoteConfig } from "src/configs/remoteConfig";
 import { storage } from "src/configs/storage";
 import { uniqueID, os, version } from "src/utils/device";
+import { isEmpty, getValue } from "@shared/utils/common";
 
 interface ICodePushData {
   codePushBuild: number;
@@ -58,8 +58,7 @@ const CodePushStore = types
           return;
         }
         if (
-          !_.isEmpty(userIDs) &&
-          _.includes(userIDs, targetDeviceID) &&
+          (userIDs ?? []).includes(targetDeviceID) &&
           self.currentCodePushData.codePushBuild !==
             self.newCodePushData.codePushBuild
         ) {
@@ -67,7 +66,7 @@ const CodePushStore = types
           return;
         }
         if (
-          _.isEmpty(userIDs) &&
+          isEmpty(userIDs) &&
           self.currentCodePushData.codePushBuild !==
             self.newCodePushData.codePushBuild
         ) {
@@ -122,7 +121,7 @@ const CodePushStore = types
   });
 
 export const getCodePushStore = (stores: any): ICodePushStore =>
-  _.get(stores, ["store", "codePushStore"], {});
+  getValue(() => stores.store.codePushStore, {});
 
 export type ICodePushStore = typeof CodePushStore.Type;
 export default CodePushStore;

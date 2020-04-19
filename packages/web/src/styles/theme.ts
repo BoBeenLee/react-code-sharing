@@ -1,8 +1,9 @@
-import _ from "lodash";
 import theme from "styled-theming";
 
+import { defaultEmpty } from "@shared/utils/common";
+
 export const fontEnHeebo = (props: object) =>
-  _.defaultTo(
+  defaultEmpty(
     theme("font", {
       en: "Heebo, Noto Sans KR, sans-serif",
       ko: "Noto Sans KR, Heebo, sans-serif"
@@ -11,7 +12,7 @@ export const fontEnHeebo = (props: object) =>
   );
 
 export const fontEnRoboto = (props: object) =>
-  _.defaultTo(
+  defaultEmpty(
     theme("font", {
       en: "Roboto, Noto Sans KR, sans-serif",
       ko: "Noto Sans KR, Heebo, sans-serif"

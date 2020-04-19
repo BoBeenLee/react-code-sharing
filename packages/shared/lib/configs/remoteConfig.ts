@@ -1,6 +1,4 @@
-import _ from "lodash";
-
-import { isJSON } from "@shared/utils/common";
+import { isJSON, isEmpty } from "@shared/utils/common";
 
 type RemoteConfigType = "test";
 
@@ -14,7 +12,7 @@ export function remoteConfigFactory(
   ) => {
     try {
       const value = await getStringValue(key);
-      return !_.isEmpty(value) ? value : defaultValue;
+      return !isEmpty(value) ? value : defaultValue;
     } catch (error) {
       return defaultValue;
     }

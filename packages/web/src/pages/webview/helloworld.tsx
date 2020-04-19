@@ -1,4 +1,3 @@
-import _ from "lodash";
 import { PageRendererProps } from "gatsby";
 import React from "react";
 
@@ -22,13 +21,14 @@ class HelloWorld extends React.PureComponent<IProps> {
 
   public render() {
     return (
-      <button onClick={_.partial(this.onHelloWorld, "hello2")}>
+      <button onClick={this.onHelloWorld}>
         {this.props.webviewProps.webviewProps.name}
       </button>
     );
   }
 
-  private onHelloWorld = (name: string) => {
+  private onHelloWorld = () => {
+    const name = "hello2";
     this.props.webviewProps.onWebviewProps.onHelloWorld(name);
   };
 }

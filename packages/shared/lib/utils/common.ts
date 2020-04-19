@@ -1,3 +1,15 @@
+export const uniqueId = (() => {
+  const ids: { [key in string]: number } = {};
+  return (prefix: string) => {
+    if (ids[prefix] === undefined) {
+      ids[prefix] = 0;
+      return `${prefix}${ids[prefix]}`;
+    }
+    ids[prefix] += 1;
+    return `${prefix}${ids[prefix]}`;
+  };
+})();
+
 export const once = <R>(func: (...rest: any[]) => R) => {
   let isCalled = false,
     result: R | null = null;
@@ -11,15 +23,36 @@ export const once = <R>(func: (...rest: any[]) => R) => {
   };
 };
 
+export const isNumber = (num: string) => Number.isInteger(Number(num));
+
+export const defaultNumber = (num: string, defaultValue: number) => {
+  return isNumber(num) ? Number(num) : defaultValue;
+};
+
+export const isEmpty = <T>(obj: T | null | undefined) => {
+  if (obj === undefined || obj === null) {
+    return true;
+  }
+  const res = obj as any;
+  return JSON.stringify(res) === JSON.stringify({}) || res === "" || res === [];
+};
+
+export const defaultEmpty = <T>(obj: T | null | undefined, defaultValue: T) => {
+  if (isEmpty(obj)) {
+    return defaultValue;
+  }
+  return obj ?? defaultValue;
+};
+
+export const identity = <T>(value?: T) => {
+  return value;
+};
+
 interface Omit {
   <T extends object, K extends [...(keyof T)[]]>(obj: T, ...keys: K): {
     [K2 in Exclude<keyof T, K[number]>]: T[K2];
   };
 }
-
-export const identity = <T>(value?: T) => {
-  return value;
-};
 
 export const omit: Omit = (obj, ...keys) => {
   const ret = {} as {
@@ -91,8 +124,7 @@ export const filterEmpty = <T>(
   if (!iterable) {
     return [];
   }
-  return _.filter(
-    iterable,
+  return iterable.filter(
     i => i !== null && i !== undefined && (i as any) !== ""
   ) as T[];
 };

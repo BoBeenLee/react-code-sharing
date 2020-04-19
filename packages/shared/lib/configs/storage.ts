@@ -1,6 +1,4 @@
-import _ from "lodash";
-
-import { isJSON } from "@shared/utils/common";
+import { isJSON, isEmpty, defaultNumber } from "@shared/utils/common";
 
 type StorageType = "ACCESS_TOKEN" | "REFRESH_TOKEN" | "test";
 
@@ -19,7 +17,7 @@ export function storageFactory(
   ): Promise<string> => {
     try {
       const itemString = await getItem(key);
-      return _.isEmpty(itemString) ? defaultItem : itemString;
+      return isEmpty(itemString) ? defaultItem : itemString;
     } catch (error) {
       return defaultItem;
     }
@@ -31,7 +29,7 @@ export function storageFactory(
   ): Promise<boolean> => {
     try {
       const itemString = await getItem(key);
-      return _.isEmpty(itemString) ? defaultItem : itemString === "true";
+      return isEmpty(itemString) ? defaultItem : itemString === "true";
     } catch (error) {
       return defaultItem;
     }
@@ -43,7 +41,7 @@ export function storageFactory(
   ): Promise<number> => {
     try {
       const itemString = await getItem(key);
-      return _.isNumber(itemString) ? Number(itemString) : defaultItem;
+      return defaultNumber(itemString, defaultItem);
     } catch (error) {
       return defaultItem;
     }

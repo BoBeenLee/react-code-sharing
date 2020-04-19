@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components/native";
 
 import withBackHandler, { IBackHandlerProps } from "src/hocs/withBackHandler";
-import { identity } from "@shared/utils/common";
+import { identity, isEmpty } from "@shared/utils/common";
 
 interface IStates {
   PopupComponent: JSX.Element | null;
@@ -106,7 +106,7 @@ const withPopup = <P extends IPopupProps>(
 
     private get isShow() {
       const { PopupComponent } = this.state;
-      return !_.isEmpty(PopupComponent);
+      return !isEmpty(PopupComponent);
     }
 
     private get Popup() {

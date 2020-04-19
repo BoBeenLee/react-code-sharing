@@ -1,5 +1,6 @@
-import _ from "lodash";
 import { getSnapshot, types } from "mobx-state-tree";
+
+import { uniqueId } from "@shared/utils/common";
 
 interface IToastData {
   id: string;
@@ -17,7 +18,12 @@ const ToastStore = types
     return {
       get toasts() {
         const toastMap = getSnapshot(self.toastMap);
-        return _.orderBy(_.values(toastMap), ["id"], ["asc"]);
+        const sortedValues = Object.values(toastMap).sort(
+          (itemA: IToastData, itemB: IToastData) => {
+            return itemA.id > itemB.id ? 1 : -1;
+          }
+        );
+        return sortedValues;
       }
     };
   })
@@ -26,7 +32,7 @@ const ToastStore = types
       message: string,
       delaySeconds: number | null
     ) => {
-      const id = _.uniqueId();
+      const id = uniqueId("toast");
       self.toastMap.set(id, {
         delay: delaySeconds || DEFAULT_DELAY_SECONDS,
         id,
