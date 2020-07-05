@@ -1,5 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Layout, Navigation, LayoutComponent, AnimationOptions } from "react-native-navigation";
+import {
+  Layout,
+  Navigation,
+  LayoutComponent,
+  AnimationOptions
+} from "react-native-navigation";
 
 import { SCREEN_IDS } from "src/screens/constant";
 import { pushTransition } from "src/screens/styles/animations";
@@ -151,7 +156,7 @@ const pushOptions = async ({
   componentId,
   nextComponentId,
   params,
-  animtaions = pushTransition,
+  animtaions = pushTransition
 }: {
   componentId: string;
   nextComponentId: string;
@@ -163,7 +168,7 @@ const pushOptions = async ({
       component: {
         name: nextComponentId,
         options: {
-          animations: animtaions,
+          animations: animtaions
         },
         passProps: params
       }

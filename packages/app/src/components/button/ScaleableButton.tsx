@@ -14,7 +14,9 @@ interface IProps extends TouchableOpacityProps {
   children: React.ReactNode;
 }
 
-const Container = styled(Animated.createAnimatedComponent(TouchableOpacity) as any)`
+const Container = styled(
+  Animated.createAnimatedComponent(TouchableOpacity) as any
+)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
