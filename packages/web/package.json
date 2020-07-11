@@ -55,7 +55,7 @@
     "react-helmet": "^5.2.0",
     "react-native": "0.62.2",
     "react-native-vector-icons": "^6.6.0",
-    "react-native-web": "^0.13.1",
+    "react-native-web": "^0.11.7",
     "react-responsive": "^8.0.3",
     "react-sizeme": "^2.6.12",
     "react-window": "^1.8.5",
