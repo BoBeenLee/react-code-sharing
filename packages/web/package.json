@@ -25,7 +25,7 @@
     "release": "release-it --ci"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.6",
+    "babel-plugin-styled-components": "^1.10.7",
     "firebase": "^7.5.2",
     "framer-motion": "^1.7.0",
     "gatsby": "^2.24.2",
@@ -61,7 +61,7 @@
     "react-window": "^1.8.5",
     "react-window-infinite-loader": "^1.0.5",
     "recompose": "^0.30.0",
-    "styled-components": "^4.2.0",
+    "styled-components": "^5.1.1",
     "styled-theming": "^2.2.0",
     "uuid": "^3.3.3"
   },
@@ -87,7 +87,7 @@
     "@types/react-window": "^1.8.1",
     "@types/react-window-infinite-loader": "^1.0.2",
     "@types/recompose": "^0.30.7",
-    "@types/styled-components": "^4.1.14",
+    "@types/styled-components": "^5.1.1",
     "@types/styled-theming": "^2.2.2",
     "@types/uuid": "^3.4.6",
     "@typescript-eslint/eslint-plugin": "^2.13.0",
@@ -112,7 +112,7 @@
     "reactotron-react-js": "^3.3.7",
     "release-it": "^12.4.3",
     "ts-jest": "^25.2.0",
-    "typescript": "^3.7.4"
+    "typescript": "^3.9.6"
   },
   "keywords": [
     "gatsby"
