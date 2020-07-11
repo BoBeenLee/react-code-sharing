@@ -2,7 +2,7 @@
 const path = require(`path`);
 
 module.exports = {
-  setupFilesAfterEnv: ["<rootDir>src/setupTests.js"],
+  setupFiles: ["<rootDir>/src/__tests__/jest.globals.ts"],
   moduleDirectories: ["node_modules", path.resolve(__dirname)],
   moduleNameMapper: {
     ".+\\.(css|styl|less|sass|scss)$": `identity-obj-proxy`,

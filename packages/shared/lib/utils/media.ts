@@ -1,7 +1,10 @@
-import { css } from "styled-components";
+import { css, CSSObject, SimpleInterpolation } from "styled-components";
 
 const media = {
-  desktop: (width?: number) => (first: any, ...args: any[]) =>
+  desktop: (width?: number) => (
+    first: TemplateStringsArray | CSSObject,
+    ...args: SimpleInterpolation[]
+  ) =>
     width === undefined
       ? css`
           @media (min-width: 769px) {
@@ -13,7 +16,10 @@ const media = {
           ${css(first, ...args)};
         `
       : css``,
-  tablet: (width?: number) => (first: any, ...args: any[]) =>
+  tablet: (width?: number) => (
+    first: TemplateStringsArray | CSSObject,
+    ...args: SimpleInterpolation[]
+  ) =>
     width === undefined
       ? css`
           @media (max-width: 768px) and (min-width: 361px) {
@@ -25,7 +31,10 @@ const media = {
           ${css(first, ...args)};
         `
       : css``,
-  mobile: (width?: number) => (first: any, ...args: any[]) =>
+  mobile: (width?: number) => (
+    first: TemplateStringsArray | CSSObject,
+    ...args: SimpleInterpolation[]
+  ) =>
     width === undefined
       ? css`
           @media (max-width: 360px) {
@@ -37,7 +46,10 @@ const media = {
           ${css(first, ...args)};
         `
       : css``,
-  tabletAndDesktop: (width?: number) => (first: any, ...args: any[]) =>
+  tabletAndDesktop: (width?: number) => (
+    first: TemplateStringsArray | CSSObject,
+    ...args: SimpleInterpolation[]
+  ) =>
     width === undefined
       ? css`
           @media (min-width: 361px) {
