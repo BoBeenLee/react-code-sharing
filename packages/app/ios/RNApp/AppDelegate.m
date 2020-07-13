@@ -14,7 +14,6 @@
 #import <ReactNativeNavigation/ReactNativeNavigation.h>
 #import "RNSplashScreen.h"
 #import <KakaoOpenSDK/KakaoOpenSDK.h>
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import "RNFirebaseLinks.h"
 #import "RNFirebaseNotifications.h"
 #import "RNFirebaseMessaging.h"
@@ -27,7 +26,6 @@
     [FIROptions defaultOptions].deepLinkURLScheme = @"rnapp";
     [FIRApp configure];
     [RNFirebaseNotifications configure];
-    [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
   
     NSURL *jsCodeLocation;
     #if DEBUG
@@ -70,10 +68,7 @@ fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHand
   if ([KOSession isKakaoAccountLoginCallback:url]) {
     return [KOSession handleOpenURL:url];
   }
-  return [[FBSDKApplicationDelegate sharedInstance] application:application
-                                                        openURL:url
-                                              sourceApplication:sourceApplication
-                                                     annotation:annotation];
+  return false;
 }
 
 - (BOOL)application:(UIApplication *)application
@@ -93,7 +88,6 @@ continueUserActivity:(NSUserActivity *)userActivity
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-  [FBSDKAppEvents activateApp];
   [KOSession handleDidBecomeActive];
 }
 

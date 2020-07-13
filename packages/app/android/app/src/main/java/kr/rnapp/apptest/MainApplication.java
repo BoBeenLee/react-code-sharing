@@ -37,8 +37,6 @@ import com.dooboolab.kakaologins.RNKakaoLoginsPackage;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
-import com.facebook.reactnative.androidsdk.FBSDKPackage;
-import com.facebook.appevents.AppEventsLogger;
 
 import com.PTR.IDFA.IDFAPackage;
 
@@ -50,7 +48,6 @@ import com.oblador.vectoricons.VectorIconsPackage;
 import com.horcrux.svg.SvgPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.appsflyer.reactnative.RNAppsFlyerPackage;
-import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.beefe.picker.PickerViewPackage;
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
@@ -107,6 +104,5 @@ public class MainApplication extends NavigationApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        AppEventsLogger.activateApp(this);
     }
 }
