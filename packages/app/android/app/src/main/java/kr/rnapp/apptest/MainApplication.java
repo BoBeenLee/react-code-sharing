@@ -19,15 +19,6 @@ import com.reactnativenavigation.NavigationApplication;
 import com.reactnativenavigation.react.NavigationReactNativeHost;
 import com.reactnativenavigation.react.ReactGateway;
 
-import io.invertase.firebase.RNFirebasePackage;
-import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
-import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
-import io.invertase.firebase.fabric.crashlytics.RNFirebaseCrashlyticsPackage;
-import io.invertase.firebase.instanceid.RNFirebaseInstanceIdPackage;
-import io.invertase.firebase.links.RNFirebaseLinksPackage;
-import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
-import io.invertase.firebase.config.RNFirebaseRemoteConfigPackage;
-
 import com.microsoft.codepush.react.CodePush;
 import com.airbnb.android.react.lottie.LottiePackage;
 
@@ -56,6 +47,7 @@ import com.swmansion.reanimated.ReanimatedPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.bugsnag.BugsnagReactNative;
 import com.reactnativecommunity.rnpermissions.RNPermissionsPackage;
+import androidx.multidex.MultiDex;
 
 public class MainApplication extends NavigationApplication {
     private final ReactNativeHost mReactNativeHost = new NavigationReactNativeHost(this) {
@@ -74,14 +66,6 @@ public class MainApplication extends NavigationApplication {
         protected List<ReactPackage> getPackages() {
             List<ReactPackage> packages = new PackageList(this).getPackages();
             packages.addAll(Arrays.<ReactPackage>asList(
-                    new RNFirebasePackage(),
-                    new RNFirebaseAnalyticsPackage(),
-                    new RNFirebaseMessagingPackage(),
-                    new RNFirebaseCrashlyticsPackage(),
-                    new RNFirebaseInstanceIdPackage(),
-                    new RNFirebaseLinksPackage(),
-                    new RNFirebaseNotificationsPackage(),
-                    new RNFirebaseRemoteConfigPackage(),
                     new LottiePackage(),
                     new CodePush(getString(R.string.reactNativeCodePush_androidDeploymentKey), MainApplication.this, getUseDeveloperSupport(),
                             R.string.CodePushPublicKey),
@@ -95,6 +79,12 @@ public class MainApplication extends NavigationApplication {
           return "index";
         }
     };
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
 
     @Override
     public ReactNativeHost getReactNativeHost() {

@@ -1,22 +1,22 @@
-import firebase from "react-native-firebase";
+import rnFirebaseAnalytics from "@react-native-firebase/analytics";
 
 import { firebaseAnalyticsFactory } from "@shared/configs/analytics";
 import { createInjectDecorator } from "@shared/decorators/createInjectDecorator";
 import { once } from "@shared/utils/common";
 
 export function initialize() {
-  firebase.analytics().setAnalyticsCollectionEnabled(true);
+  rnFirebaseAnalytics().setAnalyticsCollectionEnabled(true);
 }
 
 export const firebaseAnalytics = once(() => {
   const logEvent = (eventName: string, params: object) => {
-    firebase.analytics().logEvent(eventName, params);
+    rnFirebaseAnalytics().logEvent(eventName, params);
   };
   const setUserId = (userId: string) => {
-    firebase.analytics().setUserId(userId);
+    rnFirebaseAnalytics().setUserId(userId);
   };
   const setCurrentScreen = (screenName: string) => {
-    firebase.analytics().setCurrentScreen(screenName);
+    rnFirebaseAnalytics().setCurrentScreen(screenName);
   };
   return firebaseAnalyticsFactory(logEvent, setUserId, setCurrentScreen);
 });
