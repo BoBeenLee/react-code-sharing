@@ -151,3 +151,13 @@ export const filterEmpty = <T>(
     i => i !== null && i !== undefined && (i as any) !== ""
   ) as T[];
 };
+
+export const mergeRefs = <T>(...refs: Array<React.Ref<T>>) => (ref: T) => {
+  refs.forEach((resolvableRef) => {
+    if (typeof resolvableRef === "function") {
+      resolvableRef(ref);
+    } else {
+      (resolvableRef as any).current = ref;
+    }
+  });
+};

@@ -1,47 +1,48 @@
 import React, { CSSProperties } from "react";
-import { SizeMe, SizeMeProps } from "react-sizeme";
 import {
   VariableSizeList as List,
-  ListChildComponentProps
+  ListChildComponentProps,
 } from "react-window";
+import { WindowScroller } from "react-virtualized";
 import InfiniteLoader from "react-window-infinite-loader";
 import styled from "styled-components";
 
+import { mergeRefs } from "@shared/utils/common";
 import ListLoading from "@shared/components/loading/ListLoading";
-
-const Container = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-`;
 
 export interface IProps<T> {
   className?: string;
   hasMore: boolean;
   items: T[];
+  width: number;
   getItemSize: (index: number) => number;
   renderItem: (style: CSSProperties, item: T, index: number) => JSX.Element;
   onMore: (startIndex: number, stopIndex: number) => Promise<any> | null;
   LoadingComponent?: React.ReactNode;
 }
 
-class InfiniteList<T> extends React.PureComponent<IProps<T>> {
-  public render() {
-    return (
-      <SizeMe monitorHeight={true} refreshRate={32}>
-        {this.renderInfinteList}
-      </SizeMe>
-    );
+const Content = styled(List)`
+  overflow: unset !important;
+`;
+
+class WindowInfiniteList<T> extends React.PureComponent<IProps<T>> {
+  public listRef: React.RefObject<any>;
+
+  constructor(props: IProps<T>) {
+    super(props);
+    this.listRef = React.createRef<any>();
   }
 
-  private renderInfinteList = ({ size }: SizeMeProps) => {
+  public render() {
+    return this.renderInfinteList;
+  }
+
+  private get renderInfinteList() {
     const {
       className,
       hasMore,
       renderItem,
+      width,
       items,
       getItemSize,
       onMore,
@@ -67,28 +68,38 @@ class InfiniteList<T> extends React.PureComponent<IProps<T>> {
     };
 
     return (
-      <Container className={className}>
+      <React.Fragment>
+        <WindowScroller onScroll={this.handleScroll}>
+          {() => <div />}
+        </WindowScroller>
         <InfiniteLoader
           isItemLoaded={isItemLoaded}
           itemCount={itemCount}
           loadMoreItems={loadMoreItems}
         >
           {({ onItemsRendered, ref }) => (
-            <List
-              height={size.height ?? 100}
-              width={size.width ?? 100}
+            <Content
+              ref={mergeRefs(ref, this.listRef)}
               itemCount={itemCount}
               itemSize={getItemSize}
+              width={width}
+              height={window.innerHeight}
               onItemsRendered={onItemsRendered}
-              ref={ref}
+              className={`window-scroller-override ${className}`}
             >
               {Item}
-            </List>
+            </Content>
           )}
         </InfiniteLoader>
-      </Container>
+      </React.Fragment>
     );
+  }
+
+  private handleScroll = ({ scrollTop }: any) => {
+    if (this.listRef.current) {
+      this.listRef.current.scrollTo(scrollTop);
+    }
   };
 }
 
-export default InfiniteList;
+export default WindowInfiniteList;

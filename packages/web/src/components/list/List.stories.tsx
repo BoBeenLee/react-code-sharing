@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import React, { CSSProperties, useState } from "react";
 import styled from "styled-components";
 
-import InfiniteList from "src/components/list/InfiniteList";
+import WindowInfiniteList from "src/components/list/WindowInfiniteList";
 import { delay, times } from "@shared/utils/common";
 
 const Item = styled.div<{ height: number }>`
@@ -20,11 +20,7 @@ const InfiniteItem = styled.div`
   margin-bottom: 5px;
 `;
 
-const InfiniteListView = styled(InfiniteList)`
-  display: flex;
-  flex: 1;
-  height: 100%;
-`;
+const WindowInfiniteListView = styled(WindowInfiniteList)``;
 
 const renderInfiniteItem = (style: CSSProperties, item: any, index: number) => {
   return (
@@ -46,12 +42,16 @@ storiesOf("List", module).add("InfiniteList", () => {
   };
 
   return (
-    <InfiniteListView
-      hasMore={true}
-      items={items}
-      getItemSize={getItemSize}
-      renderItem={renderInfiniteItem}
-      onMore={onMore}
-    />
+    <React.Fragment>
+      <div style={{ height: 1000 }}>asdfads</div>
+      <WindowInfiniteListView
+        hasMore={true}
+        width={1000}
+        items={items}
+        getItemSize={getItemSize}
+        renderItem={renderInfiniteItem}
+        onMore={onMore}
+      />
+    </React.Fragment>
   );
 });
