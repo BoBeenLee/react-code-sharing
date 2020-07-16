@@ -1,7 +1,7 @@
 import React, { CSSProperties } from "react";
 import {
   VariableSizeList as List,
-  ListChildComponentProps,
+  ListChildComponentProps
 } from "react-window";
 import { WindowScroller } from "react-virtualized";
 import InfiniteLoader from "react-window-infinite-loader";
