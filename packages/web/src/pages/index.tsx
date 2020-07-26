@@ -27,7 +27,6 @@ interface IProps extends PageRendererProps, IInject {
 )
 @observer
 class IndexPage extends React.Component<IProps> {
-
   public componentDidMount() {
     testAPI();
   }

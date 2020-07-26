@@ -5,7 +5,7 @@ type EnvironmentPropsByEnv = {
   development: EnvironmentProps;
   staging: EnvironmentProps;
   storybook: EnvironmentProps;
-}
+};
 
 interface EnvironmentProps {
   REACT_ENV: string;
@@ -14,7 +14,8 @@ interface EnvironmentProps {
 }
 
 const REACT_ENV =
-  (config as { REACT_ENV?: keyof EnvironmentPropsByEnv })?.REACT_ENV ?? "staging";
+  (config as { REACT_ENV?: keyof EnvironmentPropsByEnv })?.REACT_ENV ??
+  "staging";
 
 // tslint:disable:object-literal-sort-keys
 const env: EnvironmentPropsByEnv = {
@@ -40,7 +41,8 @@ const env: EnvironmentPropsByEnv = {
   }
 };
 
-export const isDevelopment = () => REACT_ENV === "development" || REACT_ENV === "staging";
+export const isDevelopment = () =>
+  REACT_ENV === "development" || REACT_ENV === "staging";
 
 export const isProduction = () => REACT_ENV === "production";
 
