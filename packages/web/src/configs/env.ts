@@ -1,7 +1,7 @@
 type EnvironmentPropsByEnv = {
   production: EnvironmentProps;
   staging: EnvironmentProps;
-}
+};
 
 interface EnvironmentProps {
   FIREBASE_CONFIG?: any;
@@ -21,7 +21,7 @@ const env: EnvironmentPropsByEnv = {
       appId: "1:757274443049:web:ea967cb66d9dbf8f85cb38",
       measurementId: "G-3RXWEWDG32"
     },
-    API_URL: "",
+    API_URL: ""
   },
   staging: {
     FIREBASE_CONFIG: {
@@ -34,7 +34,7 @@ const env: EnvironmentPropsByEnv = {
       appId: "1:757274443049:web:ea967cb66d9dbf8f85cb38",
       measurementId: "G-3RXWEWDG32"
     },
-    API_URL: "",
+    API_URL: ""
   }
 };
 
