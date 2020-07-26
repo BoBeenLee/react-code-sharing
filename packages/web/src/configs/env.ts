@@ -1,14 +1,15 @@
-interface IEnvironment {
-  production: IEnvironmentEntry;
-  staging: IEnvironmentEntry;
+type EnvironmentPropsByEnv = {
+  production: EnvironmentProps;
+  staging: EnvironmentProps;
 }
 
-interface IEnvironmentEntry {
+interface EnvironmentProps {
   FIREBASE_CONFIG?: any;
+  API_URL: string;
 }
 
 // tslint:disable:object-literal-sort-keys
-const env: IEnvironment = {
+const env: EnvironmentPropsByEnv = {
   production: {
     FIREBASE_CONFIG: {
       apiKey: "AIzaSyDdFJKoVQTL_EgUcy0BOQFaVGEk1fktPrU",
@@ -19,7 +20,8 @@ const env: IEnvironment = {
       messagingSenderId: "757274443049",
       appId: "1:757274443049:web:ea967cb66d9dbf8f85cb38",
       measurementId: "G-3RXWEWDG32"
-    }
+    },
+    API_URL: "",
   },
   staging: {
     FIREBASE_CONFIG: {
@@ -31,10 +33,13 @@ const env: IEnvironment = {
       messagingSenderId: "757274443049",
       appId: "1:757274443049:web:ea967cb66d9dbf8f85cb38",
       measurementId: "G-3RXWEWDG32"
-    }
+    },
+    API_URL: "",
   }
 };
 
+export const isDevelopment = () => process.env.GATSBY_ENV === "development";
+
 export const isProduction = () => process.env.GATSBY_ENV === "production";
 
-export default env[process.env.GATSBY_ENV as keyof IEnvironment] || {};
+export default env[process.env.GATSBY_ENV as keyof EnvironmentPropsByEnv] || {};

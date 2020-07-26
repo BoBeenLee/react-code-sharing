@@ -12,6 +12,7 @@ import { iosStatusBarHeight } from "src/utils/device";
 
 import { test } from "@shared/sharedTest";
 import HelloworldButton from "src/components/button/HelloworldButton";
+import { test as testAPI } from "@shared/apis/test";
 
 interface IInject {
   store: IStore;
@@ -51,6 +52,7 @@ class SplashScreen extends React.PureComponent<IInject, IStates> {
 
   public componentDidMount() {
     this.props.store.initializeApp();
+    testAPI();
   }
 
   public render() {

@@ -10,6 +10,7 @@ import { test } from "@shared/sharedTest";
 import Layout from "src/components/common/Layout";
 import SEO from "src/components/common/SEO";
 import { IStore, getRootStore } from "src/stores/Store";
+import { test as testAPI } from "@shared/apis/test";
 
 interface IInject {
   store: IStore;
@@ -26,6 +27,11 @@ interface IProps extends PageRendererProps, IInject {
 )
 @observer
 class IndexPage extends React.Component<IProps> {
+
+  public componentDidMount() {
+    testAPI();
+  }
+
   public render() {
     const { todoTest } = this.props.store.todoStore;
     return (

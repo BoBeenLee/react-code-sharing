@@ -1,8 +1,9 @@
 import React from "react";
 import { TextProps } from "react-native";
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 
 import colors from "@shared/styles/colors";
+import { isWeb } from "@shared/utils/media";
 
 type FontType = "BOLD" | "MEDIUM" | "REGULAR";
 
@@ -21,7 +22,11 @@ const Text = styled.Text<{ fontType: FontType }>`
   font-family: ${({ fontType }) => fontTypeToFont[fontType]};
   letter-spacing: -0.5px;
   color: ${colors.gray900};
-  include-font-padding: false;
+  ${isWeb()
+    ? css``
+    : css`
+        include-font-padding: false;
+      `}
 `;
 
 function RNText({ fontType = "REGULAR", ...props }: ITextProps) {

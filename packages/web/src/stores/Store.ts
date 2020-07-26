@@ -1,7 +1,11 @@
 import { flow, types } from "mobx-state-tree";
 
+import { isDevelopment } from "src/configs/env";
 import TodoStore from "@shared/stores/TodoStore";
 import ToastStore from "@shared/stores/ToastStore";
+import { initialize as initializeRequestAPI } from "@shared/apis/requestAPI";
+import { initialize as initializeServer } from "@shared/apis/__mocks__/server";
+import env from "src/configs/env";
 
 const Store = types
   .model({
@@ -10,7 +14,10 @@ const Store = types
   })
   .actions(self => {
     const initializeApp = flow(function*() {
-      // TODO
+      if (isDevelopment()) {
+        initializeServer();
+      }
+      initializeRequestAPI(env.API_URL);
     });
     return { initializeApp };
   });
