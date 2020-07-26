@@ -1,7 +1,7 @@
 import { Platform } from "react-native";
 import { css, CSSObject, SimpleInterpolation } from "styled-components";
 
-export const isWeb = () => Platform.OS === "web"
+export const isWeb = () => Platform.OS === "web";
 
 const media = {
   desktop: (width?: number) => (
