@@ -25,6 +25,7 @@
     "release": "release-it --ci"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "babel-plugin-styled-components": "^1.10.7",
     "firebase": "^7.5.2",
     "framer-motion": "^1.7.0",
@@ -49,6 +50,7 @@
     "mobx-react": "^6.2.2",
     "mobx-state-tree": "^3.16.0",
     "qs": "^6.9.1",
+    "miragejs": "^0.1.40",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-fast-compare": "^3.0.1",

@@ -5,17 +5,17 @@ import { registerScreens } from "src/screens";
 import { start as navigatorStart } from "src/utils/navigator";
 
 async function start() {
-    registerScreens();
+  registerScreens();
 
-    Navigation.events().registerAppLaunchedListener(() => {
-        navigatorStart();
-    });
+  Navigation.events().registerAppLaunchedListener(() => {
+    navigatorStart();
+  });
 }
 
 if (isStorybook()) {
-    // tslint:disable-next-line:no-var-requires
-    const startStorybook = require("/storybook/storybook").default;
-    startStorybook();
+  // tslint:disable-next-line:no-var-requires
+  const startStorybook = require("/storybook/storybook").default;
+  startStorybook();
 } else {
-    start();
+  start();
 }

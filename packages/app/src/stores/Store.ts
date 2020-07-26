@@ -1,9 +1,13 @@
 import { flow, types } from "mobx-state-tree";
 import { AppState, AppStateStatus } from "react-native";
 
+import { isDevelopment } from "src/configs/env";
 import CodePushStore from "src/stores/CodePushStore";
-import TodoStore from "@shared/stores/TodoStore";
 import { initialize as initializeAnalytics } from "src/configs/analytics";
+import TodoStore from "@shared/stores/TodoStore";
+import { initialize as initializeRequestAPI } from "@shared/apis/requestAPI";
+import { initialize as initializeServer } from "@shared/apis/__mocks__/server";
+import env from "src/configs/env";
 
 const Store = types
   .model({
@@ -17,6 +21,10 @@ const Store = types
     };
 
     const initializeApp = flow(function*() {
+      if (isDevelopment()) {
+        initializeServer();
+      }
+      initializeRequestAPI(env.API_URL);
       yield self.codePushStore.initialize();
       initializeAnalytics();
     });
