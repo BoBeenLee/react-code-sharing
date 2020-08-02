@@ -121,9 +121,9 @@ const withPopup = <P extends IPopupProps>(
       }
       return withBackHandler(
         (props: React.PropsWithChildren<IBackHandlerProps>) => {
-          const { addBackButtonListener } = props;
-          if (addBackButtonListener) {
-            addBackButtonListener(this.onBackgroundPress);
+          const { backHandlerProps } = props;
+          if (backHandlerProps?.addBackButtonListener) {
+            backHandlerProps.addBackButtonListener(this.onBackgroundPress);
           }
           return (
             <PopupContainer>
