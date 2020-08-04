@@ -1,5 +1,6 @@
 import { Provider } from "mobx-react";
 import React from "react";
+import "mobx-react-lite/batchingForReactDom";
 
 import { IStore } from "src/stores/Store";
 
