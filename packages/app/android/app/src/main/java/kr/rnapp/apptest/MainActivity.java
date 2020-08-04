@@ -6,7 +6,7 @@ import android.os.Bundle;
 import kr.rnapp.apptest.MainApplication;
 
 import com.reactnativenavigation.NavigationActivity;
-import com.reactnativenavigation.utils.CommandListenerAdapter;
+import com.reactnativenavigation.react.CommandListenerAdapter;
 import com.reactnativenavigation.viewcontrollers.navigator.Navigator;
 import android.content.Intent;
 import android.webkit.WebView;
