@@ -2,22 +2,24 @@ import hoistNonReactStatic from "hoist-non-react-statics";
 import React from "react";
 import styled from "styled-components/native";
 
-import withBackHandler, { IBackHandlerProps } from "src/hocs/withBackHandler";
+import withBackHandler, { BackHandlerProps } from "src/hocs/withBackHandler";
 import { identity, isEmpty } from "@shared/utils/common";
 
-interface IStates {
+type States = {
   PopupComponent: JSX.Element | null;
   closeOverlay: boolean;
   closeCallback: () => void;
 }
 
-export interface IPopupProps {
-  showPopup: (
-    PopupComponent: JSX.Element | null,
-    closeOverlay?: boolean
-  ) => void;
-  setClosePopupCallback: (closeCallback: () => void) => void;
-}
+export type PopupProps = {
+  popupProps: {
+    showPopup: (
+      PopupComponent: JSX.Element | null,
+      closeOverlay?: boolean
+    ) => void;
+    setClosePopupCallback: (closeCallback: () => void) => void;
+  };
+};
 
 const Container = styled.View`
   width: 100%;
@@ -42,14 +44,14 @@ const PopupTouchableOverlay = styled.TouchableOpacity.attrs({
   height: 100%;
 `;
 
-const withPopup = <P extends IPopupProps>(
+const withPopup = <P extends PopupProps>(
   TargetComponent: React.ComponentType<P>
 ): any => {
   const WithPopup = class WithPopupAnonymous extends React.PureComponent<
-    Subtract<P, IPopupProps>,
-    IStates
+    Subtract<P, PopupProps>,
+    States
   > {
-    constructor(props: Subtract<P, IPopupProps>) {
+    constructor(props: Subtract<P, PopupProps>) {
       super(props);
 
       this.state = {
@@ -65,12 +67,18 @@ const withPopup = <P extends IPopupProps>(
         <Container>
           <TargetComponent
             {...(this.props as P)}
-            showPopup={this.showPopup}
-            setClosePopupCallback={this.setCloseCallback}
+            popupProps={this.popupProps}
           />
           {this.isShow ? <Popup /> : null}
         </Container>
       );
+    }
+
+    private get popupProps() {
+      return {
+        showPopup: this.showPopup,
+        setClosePopupCallback: this.setCloseCallback
+      }
     }
 
     private showPopup = (
@@ -120,7 +128,7 @@ const withPopup = <P extends IPopupProps>(
         );
       }
       return withBackHandler(
-        (props: React.PropsWithChildren<IBackHandlerProps>) => {
+        (props: React.PropsWithChildren<BackHandlerProps>) => {
           const { backHandlerProps } = props;
           if (backHandlerProps?.addBackButtonListener) {
             backHandlerProps.addBackButtonListener(this.onBackgroundPress);

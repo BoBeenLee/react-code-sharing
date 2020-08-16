@@ -5,7 +5,7 @@ import { Navigation } from "react-native-navigation";
 import { setCurrentComponent } from "src/utils/navigator";
 import { firebaseAnalytics } from "src/configs/analytics";
 
-interface IProps {
+type Props = {
   componentId: string;
 }
 
@@ -13,9 +13,9 @@ const withNavigator = <P extends object>(
   TargetComponent: React.ComponentType<P>
 ): any => {
   const WithNavigator = class WithNavigatorAnonymous extends React.PureComponent<
-    P & IProps
+    P & Props
   > {
-    constructor(props: P & IProps) {
+    constructor(props: P & Props) {
       super(props);
       Navigation.events().bindComponent(this);
     }
