@@ -12,7 +12,7 @@
     "android:log": "adb logcat '*:S' ReactNative:V ReactNativeJS:V",
     "android:release": "npm run android:remove || node node_modules/react-native/local-cli/cli.js run-android --variant=release",
     "android:release:open": "open ./android/app/build/outputs/apk",
-    "android:aab": "./android && ./gradlew clean && ./gradlew bundleRelease",
+    "android:aab": "cd ./android && ./gradlew clean && ./gradlew bundleRelease",
     "android:aab:open": "open ./android/app/build/outputs/bundle/release",
     "android:remove": "adb uninstall kr.rnapp.app",
     "android-bugsnag": "npm run android-bundle-release && npm run android-bugsnag-upload",
