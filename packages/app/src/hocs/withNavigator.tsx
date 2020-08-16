@@ -7,7 +7,7 @@ import { firebaseAnalytics } from "src/configs/analytics";
 
 type Props = {
   componentId: string;
-}
+};
 
 const withNavigator = <P extends object>(
   TargetComponent: React.ComponentType<P>

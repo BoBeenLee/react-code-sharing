@@ -3,7 +3,8 @@ import {
   Layout,
   Navigation,
   LayoutComponent,
-  AnimationOptions
+  AnimationOptions,
+  LayoutStackChildren
 } from "react-native-navigation";
 
 import { SCREEN_IDS } from "src/screens/constant";
@@ -23,7 +24,7 @@ const start = () => {
       orientation: ["portrait"]
     },
     statusBar: {
-      backgroundColor: colors.green50,
+      backgroundColor: colors.white,
       style: "dark"
     },
     topBar: topbars.emptyTopBar()
@@ -188,7 +189,15 @@ const showModal = async (params: Layout) =>
     await Navigation.showModal(params);
   }, String(params.component?.name) ?? "showModal")(params);
 
-const showStackModal = async (componentId: string, params?: object) =>
+const showStackModal = async ({
+  componentId,
+  params,
+  layouts = []
+}: {
+  componentId: string;
+  params?: object;
+  layouts?: LayoutStackChildren[];
+}) =>
   await protectedMultiClick(async () => {
     await Navigation.showModal({
       stack: {
@@ -198,7 +207,8 @@ const showStackModal = async (componentId: string, params?: object) =>
               name: componentId,
               passProps: params
             }
-          }
+          },
+          ...layouts
         ]
       }
     });

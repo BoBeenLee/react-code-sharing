@@ -9,7 +9,7 @@ type States = {
   PopupComponent: JSX.Element | null;
   closeOverlay: boolean;
   closeCallback: () => void;
-}
+};
 
 export type PopupProps = {
   popupProps: {
@@ -78,7 +78,7 @@ const withPopup = <P extends PopupProps>(
       return {
         showPopup: this.showPopup,
         setClosePopupCallback: this.setCloseCallback
-      }
+      };
     }
 
     private showPopup = (

@@ -6,7 +6,7 @@ export type BackHandlerProps = {
   backHandlerProps: {
     addBackButtonListener: (callback: () => boolean) => void;
   };
-}
+};
 
 const withBackHandler = <P extends BackHandlerProps>(
   TargetComponent: React.ComponentType<P>
