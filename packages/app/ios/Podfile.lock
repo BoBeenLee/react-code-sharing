@@ -1,12 +1,6 @@
 PODS:
-  - AppsFlyerFramework (4.10.4)
   - Base64 (1.1.2)
   - boost-for-react-native (1.63.0)
-  - BugsnagReactNative (2.23.3):
-    - BugsnagReactNative/Core (= 2.23.3)
-    - React
-  - BugsnagReactNative/Core (2.23.3):
-    - React
   - BVLinearGradient (2.5.6):
     - React
   - CodePush (6.2.1):
@@ -164,10 +158,6 @@ PODS:
   - nanopb/encode (1.30905.0)
   - Permission-Notifications (2.0.6):
     - RNPermissions
-  - Picker (4.3.7):
-    - Picker/Core (= 4.3.7)
-  - Picker/Core (4.3.7):
-    - React
   - PromisesObjC (1.2.9)
   - Protobuf (3.12.0)
   - QBImagePickerController (3.4.0)
@@ -337,11 +327,6 @@ PODS:
     - React-cxxreact (= 0.63.2)
     - React-jsi (= 0.63.2)
   - React-jsinspector (0.63.2)
-  - react-native-appsflyer (1.4.7):
-    - AppsFlyerFramework (~> 4.10.4)
-    - React
-  - react-native-idfa (4.1.0):
-    - React
   - react-native-image-resizer (1.1.0):
     - React
   - react-native-splash-screen (3.2.0):
@@ -467,7 +452,6 @@ PODS:
   - Yoga (1.14.0)
 
 DEPENDENCIES:
-  - BugsnagReactNative (from `../node_modules/bugsnag-react-native`)
   - BVLinearGradient (from `../node_modules/react-native-linear-gradient`)
   - CodePush (from `../node_modules/react-native-code-push`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
@@ -479,7 +463,6 @@ DEPENDENCIES:
   - lottie-ios (from `../node_modules/lottie-ios`)
   - lottie-react-native (from `../node_modules/lottie-react-native`)
   - Permission-Notifications (from `../node_modules/react-native-permissions/ios/Notifications.podspec`)
-  - Picker (from `../node_modules/react-native-picker`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
   - React (from `../node_modules/react-native/`)
@@ -492,8 +475,6 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
-  - react-native-appsflyer (from `../node_modules/react-native-appsflyer`)
-  - react-native-idfa (from `../node_modules/react-native-idfa`)
   - react-native-image-resizer (from `../node_modules/react-native-image-resizer`)
   - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - react-native-webview (from `../node_modules/react-native-webview`)
@@ -528,7 +509,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - AppsFlyerFramework
     - Base64
     - boost-for-react-native
     - Firebase
@@ -556,8 +536,6 @@ SPEC REPOS:
     - SSZipArchive
 
 EXTERNAL SOURCES:
-  BugsnagReactNative:
-    :path: "../node_modules/bugsnag-react-native"
   BVLinearGradient:
     :path: "../node_modules/react-native-linear-gradient"
   CodePush:
@@ -580,8 +558,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/lottie-react-native"
   Permission-Notifications:
     :path: "../node_modules/react-native-permissions/ios/Notifications.podspec"
-  Picker:
-    :path: "../node_modules/react-native-picker"
   RCTRequired:
     :path: "../node_modules/react-native/Libraries/RCTRequired"
   RCTTypeSafety:
@@ -602,10 +578,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
-  react-native-appsflyer:
-    :path: "../node_modules/react-native-appsflyer"
-  react-native-idfa:
-    :path: "../node_modules/react-native-idfa"
   react-native-image-resizer:
     :path: "../node_modules/react-native-image-resizer"
   react-native-splash-screen:
@@ -670,10 +642,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  AppsFlyerFramework: aeb793095c1b33170ae30bef66652c0645f409be
   Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
-  BugsnagReactNative: 34f9500e304c2667ce7a3e76037d91e41eca2ffe
   BVLinearGradient: e3aad03778a456d77928f594a649e96995f1c872
   CodePush: 4b21ce24113167513a6fd1602718b22e322069b2
   DoubleConversion: cde416483dac037923206447da6e1454df403714
@@ -703,7 +673,6 @@ SPEC CHECKSUMS:
   lottie-react-native: a664f59f1f298c2696dd0ae07b15cbdfc433cb02
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   Permission-Notifications: 407fd49975376178cc3c6f85d79dfb5ccf812851
-  Picker: 4f1722c94059567cabd80e53d0ef72ca290d2b93
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   Protobuf: 2793fcd0622a00b546c60e7cbbcc493e043e9bb9
   QBImagePickerController: d54cf93db6decf26baf6ed3472f336ef35cae022
@@ -717,8 +686,6 @@ SPEC CHECKSUMS:
   React-jsi: 54245e1d5f4b690dec614a73a3795964eeef13a8
   React-jsiexecutor: 8ca588cc921e70590820ce72b8789b02c67cce38
   React-jsinspector: b14e62ebe7a66e9231e9581279909f2fc3db6606
-  react-native-appsflyer: 6837f0921f1fee84cb3fcbec437c1a607e0e37a5
-  react-native-idfa: fbd14ac276f0deee5c6f6d235365bd5512732bb9
   react-native-image-resizer: 9dfb844937574db849fd18a56d8e6c607b0a31d8
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-webview: e2c0bce9a1a7c7edd4eb30f0c3016fce216245ce
