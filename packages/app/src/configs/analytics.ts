@@ -16,7 +16,10 @@ export const firebaseAnalytics = once(() => {
     rnFirebaseAnalytics().setUserId(userId);
   };
   const setCurrentScreen = (screenName: string) => {
-    rnFirebaseAnalytics().setCurrentScreen(screenName);
+    rnFirebaseAnalytics().logScreenView({
+      screen_name: screenName,
+      screen_class: screenName
+    });
   };
   return firebaseAnalyticsFactory(logEvent, setUserId, setCurrentScreen);
 });

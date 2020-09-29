@@ -3,7 +3,7 @@ import { RegisteredStyle, ViewStyle } from "react-native";
 import styled from "styled-components/native";
 
 import colors from "@shared/styles/colors";
-import { iosStatusBarHeight } from "src/utils/device";
+import { iosStatusBarHeight } from "src/configs/device";
 
 interface IProps {
   children?: React.ReactNode;

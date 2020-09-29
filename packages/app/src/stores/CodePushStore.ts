@@ -3,7 +3,7 @@ import codePush from "react-native-code-push";
 
 import { firebaseRemoteConfig } from "src/configs/remoteConfig";
 import { storage } from "src/configs/storage";
-import { uniqueID, os, version } from "src/utils/device";
+import { uniqueID, os, version } from "src/configs/device";
 import { isEmpty, getValue } from "@shared/utils/common";
 
 interface ICodePushData {
@@ -42,12 +42,17 @@ const CodePushStore = types
     };
   })
   .actions(self => {
+    const getCurrentCodePushData = flow(function*() {
+      return yield storage().getJSONWithDefault<ICodePushData>(
+        self.codePushKey as any,
+        INITIAL_CODE_PUSH_DATA
+      );
+    });
+
     const initialize = flow(function*() {
       try {
         const targetDeviceID = uniqueID;
-        self.currentCodePushData = yield storage().getJSONWithDefault<
-          ICodePushData
-        >(self.codePushKey as any, INITIAL_CODE_PUSH_DATA);
+        self.currentCodePushData = yield getCurrentCodePushData();
         self.newCodePushData = yield firebaseRemoteConfig().getJSONWithDefault<
           ICodePushData
         >(self.codePushKey as any, INITIAL_CODE_PUSH_DATA);
@@ -113,6 +118,7 @@ const CodePushStore = types
     });
 
     return {
+      getCurrentCodePushData,
       checkCodePushAvailability,
       initialize,
       notifyAppReady,

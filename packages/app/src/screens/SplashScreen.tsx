@@ -5,14 +5,14 @@ import styled from "styled-components/native";
 
 import XEIcon from "@shared/components/icon/XEIcon";
 import { Bold12, Bold20 } from "@shared/components/text/Typographies";
-import ScaleableButton from "src/components/button/ScaleableButton";
 import images from "@shared/images";
-import { IStore } from "src/stores/Store";
-import { iosStatusBarHeight } from "src/utils/device";
-
 import { test } from "@shared/sharedTest";
-import HelloworldButton from "src/components/button/HelloworldButton";
 import { test as testAPI } from "@shared/apis/test";
+import ScaleableButton from "src/components/button/ScaleableButton";
+import { IStore } from "src/stores/Store";
+import { iosStatusBarHeight } from "src/configs/device";
+import HelloworldButton from "src/components/button/HelloworldButton";
+import DeveloperScreen from "src/screens/DeveloperScreen";
 
 interface IInject {
   store: IStore;
@@ -33,6 +33,22 @@ const Container = styled.View`
 const Name = styled(Bold20)`
   color: #000;
 `;
+
+const DevelopButton = styled.TouchableOpacity`
+  position: absolute;
+  top: 50px;
+  left: 0px;
+`;
+
+const DeveloperButtonView = styled.View`
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+`;
+
 
 @inject(
   ({ store }: { store: IStore }): IInject => ({
@@ -81,6 +97,9 @@ class SplashScreen extends React.PureComponent<IInject, IStates> {
           source={images.animation}
         />
         <XEIcon name="close" color="#800" size={50} />
+        <DevelopButton onPress={DeveloperScreen.open}>
+          <DeveloperButtonView />
+        </DevelopButton>
       </Container>
     );
   }

@@ -1,6 +1,6 @@
 // tslint:disable:object-literal-sort-keys
 const colors = {
-  black50: "#80000000",
+  black50: "#000",
   black70: "rgba(33,33,33,.7)",
   white: "#ffffff",
   gray20: "#fafafa",

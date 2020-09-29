@@ -5,6 +5,7 @@ import { isDevelopment } from "src/configs/env";
 import CodePushStore from "src/stores/CodePushStore";
 import { initialize as initializeAnalytics } from "src/configs/analytics";
 import TodoStore from "@shared/stores/TodoStore";
+import ToastStore from "@shared/stores/ToastStore";
 import { initialize as initializeRequestAPI } from "@shared/apis/requestAPI";
 import { initialize as initializeServer } from "@shared/apis/__mocks__/server";
 import env from "src/configs/env";
@@ -13,7 +14,8 @@ const Store = types
   .model({
     appStateStatus: types.frozen<AppStateStatus>(AppState.currentState),
     codePushStore: types.optional(CodePushStore, {}),
-    todoStore: types.optional(TodoStore, {})
+    todoStore: types.optional(TodoStore, {}),
+    toastStore: types.optional(ToastStore, {})
   })
   .actions(self => {
     const setAppStateStatus = (appState: AppStateStatus) => {
