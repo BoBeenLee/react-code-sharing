@@ -1,4 +1,4 @@
-// eslint-disable @typescript-eslint/camelcase
+/* eslint-disable @typescript-eslint/camelcase */
 import rnFirebaseAnalytics from "@react-native-firebase/analytics";
 
 import { firebaseAnalyticsFactory } from "@shared/configs/analytics";
