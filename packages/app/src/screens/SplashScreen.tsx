@@ -49,7 +49,6 @@ const DeveloperButtonView = styled.View`
   background-color: black;
 `;
 
-
 @inject(
   ({ store }: { store: IStore }): IInject => ({
     store
