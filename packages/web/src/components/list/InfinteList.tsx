@@ -1,7 +1,7 @@
 import React, { CSSProperties } from "react";
 import {
   VariableSizeList as List,
-  ListChildComponentProps,
+  ListChildComponentProps
 } from "react-window";
 import InfiniteLoader from "react-window-infinite-loader";
 import styled from "styled-components";
@@ -40,14 +40,10 @@ class InfiniteList<T> extends React.PureComponent<Props<T>> {
       items,
       getItemSize,
       onMore,
-      LoadingComponent = (
-        <Loading>
-          loading
-        </Loading>
-      ),
+      LoadingComponent = <Loading>loading</Loading>,
       EmptyComponent,
       width,
-      height,
+      height
     } = this.props;
 
     // If there are more items to be loaded then add an extra row to hold a loading indicator.
