@@ -58,7 +58,7 @@ class WindowInfiniteList<T> extends React.PureComponent<Props<T>> {
       HeaderComponent,
       BottomComponent,
       EmptyComponent,
-      LoadingComponent = "Loading",
+      LoadingComponent = "Loading"
     } = this.props;
 
     const headerIndex = HeaderComponent ? 1 : 0;
