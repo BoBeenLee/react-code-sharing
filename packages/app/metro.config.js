@@ -6,7 +6,7 @@
  */
 
 const { getDefaultConfig } = require("metro-config");
-const blacklist = require('metro-config/src/defaults/blacklist');
+const exclusionList = require('metro-config/src/defaults/exclusionList');
 const path = require("path");
 
 const installedDependencies = require("./package.json").dependencies;
@@ -35,7 +35,7 @@ module.exports = (async () => {
       assetExts: assetExts.filter(ext => ext !== "svg"),
       sourceExts: [...sourceExts, "svg"],
       extraNodeModules,
-      blacklistRE: blacklist([/..\/shared\/node_modules\/react\/.*/, /..\/shared\/node_modules\/react-dom\/.*/])
+      blacklistRE: exclusionList([/..\/shared\/node_modules\/react\/.*/, /..\/shared\/node_modules\/react-dom\/.*/])
     },
     watchFolders: [path.resolve(__dirname, "../shared/lib")],
     projectRoot: path.resolve(__dirname)

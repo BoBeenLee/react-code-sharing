@@ -1,0 +1,26 @@
+{
+  "folders": [
+    {
+      "name": "root",
+      "path": "."
+    },
+    {
+      "path": "packages/desktop"
+    },
+    {
+      "path": "packages/web"
+    },
+    {
+      "path": "packages/shared"
+    },
+    {
+      "path": "packages/app"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "packages/*/*": true
+    },
+    "typescript.tsdk": "react-code-sharing/node_modules/typescript/lib"
+  }
+}
